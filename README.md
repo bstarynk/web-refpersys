@@ -57,7 +57,7 @@ see the `LICENSE.md` markdown file for more.
 	homepage: http://starynkevitch.net/Basile/
 	
 	92340 Bourg La Reine, near Paris, France.  
-	Usual timezone `TZ=MEST`
+	Usual timezone `TZ=Europe/Paris` (so `MEST` on summer, `CET` on winter).
  
 -	Abhishek Chakravarti  
 	<abhishek@taranjali.org> or <chakravarti.avishek@gmail.com>
