@@ -28,7 +28,6 @@ for building websites.
 ## Installing the RefPerSys website
 
 See the `Makefile` for Linux. run `make` to build the tarball, and
-<<<<<<< HEAD
 `make install` is using some `install-refpersys-web-page.sh` shell
 script (that you might have in your `$HOME/bin/`). 
 
