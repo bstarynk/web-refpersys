@@ -6,7 +6,7 @@
 HUGO= hugo
 RM= rm -vf
 BASH= bash
-.PHONY: all clean install export
+.PHONY: all clean install archive
 
 ################ default target should run Hugo
 all: gitid.bash
@@ -27,10 +27,8 @@ clean:
 install: all
 	[ -x $HOME/bin/install-refpersys-website.sh ] && $HOME/bin/install-refpersys-website.sh
 
-################ exporting an archive to $HOME/tmp/
-export: gitid.bash
-	@head -v $^ ; printf "======\n"
-	$(BASH) -cxv "source gitid.bash ; export RPSWEB_GITID ; git archive --prefix=web-refpersys-$$RPSWEB_GITID/ -o $$HOME/tmp/web-refpersys-$$RPSWEB_GITID.tar.gz -v --worktree-attributes $$RPSWEB_GITID"
-	$(BASH) -cxv "source gitid.bash ; export RPSWEB_GITID ; ln -sv $$HOME/tmp/web-refpersys-$$RPSWEB_GITID.tar.gz $$HOME/tmp/web-refpersys.tar.gz ; ls -ls $$HOME/tmp/web-refpersys*tar.gz"
+################ making an archive to $HOME/tmp/
+archive: gitid.bash archive-web-refpersys.bash
+	./archive-web-refpersys.bash
 
 ## end of Makefile

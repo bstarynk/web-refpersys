@@ -31,5 +31,8 @@ open source static site generator coded in
 ## installing the RefPerSys website.
 
 See the `Makefile` for Linux. run `make` to build the tarball, and
-`make install` is using some `install-refpersys-web-page.sh` shell script
-(that you might have in your `$HOME/bin/`)
+`make install` is using some `install-refpersys-web-page.sh` shell
+script (that you might have in your `$HOME/bin/`). 
+
+The `make archive` command produces a `tar.gz` archive in your
+`$HOME/tmp/` directory of this `git` repository.
