@@ -19,8 +19,8 @@ http://starynkevitch.net/Basile/refpersys-design.pdf
 
 ## Tools
 
-These web pages are using the [Hugo](https://gohugo.io/) framework (an
-open source static site generator coded in [Go](http://go-lang.org/))
+These web pages are using the [Zola](https://www.getzola.org/) framework (an
+open source static site generator coded in [Rust](https://www.rust-lang.org/)
 for building websites.
 
 

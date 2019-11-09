@@ -2,8 +2,8 @@
 ## for Linux, e.g. Debian
 ## public domain
 
-# https://gohugo.io/
-HUGO= hugo
+# https://www.getzola.org/
+ZOLA= zola
 RM= rm -vf
 BASH= bash
 .PHONY: all clean install archive
@@ -25,7 +25,7 @@ clean:
 ################ installing
 
 install: all
-	[ -x $HOME/bin/install-refpersys-website.sh ] && $HOME/bin/install-refpersys-website.sh
+	[ -x $$HOME/bin/install-refpersys-website.sh ] && $$HOME/bin/install-refpersys-website.sh $(shell pwd)
 
 ################ making an archive to $HOME/tmp/
 archive: gitid.bash archive-web-refpersys.bash
