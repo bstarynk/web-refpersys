@@ -1,2 +1,27 @@
 /* file style-refpersys.css on refpersys.org - CCBYSA4 licensed, see https://creativecommons.org/licenses/by-sa/4.0/ */
 /*  © Copyright 2019 The Reflective Persistent System Team - http://refpersys.org */
+
+body {
+    background-color: ivory;
+}
+
+span.cl_tt {
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+table.cl_devtable {
+     border: 1px solid black;
+     border-collapse: collapse;
+}
+
+th, td {
+    padding: 8px;
+    background-color: beige;
+}
+
+caption {
+    font-size: 85%;
+    background-color: Alice Blue;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* end of file style-refpersys.css */
