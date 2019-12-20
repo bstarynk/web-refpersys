@@ -1,0 +1,175 @@
+<!doctype html>
+<html>
+  <head>
+
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  </head>
+  <body text="#000000" bgcolor="#FFFFFF">
+    <p>Hello all (and notably Abhishek)<br>
+    </p>
+    <p><br>
+    </p>
+    <p>Above all, <font color="red"><b>some discussion in written
+          English to </b><b><tt><a class="moz-txt-link-abbreviated" href="mailto:team@refpersys.org">team@refpersys.org</a></tt></b><b> is
+          needed before any implementation or coding effort.</b></font>
+      Let me start it. Once we agreed on the detailed design, we can add
+      a few paragraphs to <tt>refpersys-design.tex</tt> then code the
+      interface using Qt5.<br>
+    </p>
+    <p><br>
+    </p>
+    <p>First, the <a moz-do-not-send="true"
+        href="https://github.com/bstarynk/bismon/">bismon</a> GUI
+      interface using GTK is a example of mistake to avoid. Just play
+      with it to understand why. Or read the <a moz-do-not-send="true"
+        href="http://starynkevitch.net/Basile/bismon-chariot-doc.pdf">draft
+        report</a> (and feel free to ask questions in written English
+      here on <tt><a class="moz-txt-link-abbreviated" href="mailto:team@refpersys.org">team@refpersys.org</a></tt> about it). I won't repeat in
+      this email what I did write in English elsewhere.<br>
+    </p>
+    <p><br>
+    </p>
+    <p>Then, I would like all of us to first discuss how we would input
+      the following rule. Assume that RefPerSys is able to load and dump
+      a persistent state (that is quite easy, we are not far from that),
+      in a way similar to Bismon. In other words, assume that our <a
+        moz-do-not-send="true"
+        href="https://gitlab.com/bstarynk/refpersys/-/milestones/1">primordial
+        persistence milestone #1</a> has been reached (we are not far
+      from that, and I foresee no conceptual difficulty, since Bismon
+      did it two years ago; it is just a matter of coding).</p>
+    <p>Read again J.Pitrat's paper on <i>implementation of a reflexive
+        system</i> (FGCS vol 16, 1996, cited in our ECAI submission). It
+      is available (by <tt>ssh</tt>) on <tt>ours.starynkevitch.net</tt>
+      as <tt>$HOME/biblio/reflective-system-pitrat:1996.pdf</tt><br>
+    </p>
+    <p>How would you input the example in its §2.1, second column of
+      page 236?<br>
+    </p>
+    <p><br>
+    </p>
+    <p>Refer also to Pitrat's paper <i>A Step toward an Artificial
+        Artificial Intelligence Scientist </i>on <a
+        moz-do-not-send="true"
+href="https://pdfs.semanticscholar.org/2117/9600b3f05c0af399f9acbfc6e7b6d24daf03.pdf">https://pdfs.semanticscholar.org/2117/9600b3f05c0af399f9acbfc6e7b6d24daf03.pdf</a></p>
+    <p>In page 9 is mentioned <span style="left: 353.333px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.849123);">SIG</span><span style="left: 385.667px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.944314);">MA</span><span style="left: 417.833px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.861);">(I*F</span><span style="left: 452.333px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.823226);">(I);</span><span style="left: 477.833px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.832857);"> I</span><span style="left:
+        489.49999999999994px; top: 762px; font-size: 20px; font-family:
+        sans-serif;">∈</span><span style="left: 503.833px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.792857);">[1:</span><span style="left: 526.167px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.807879);">6], </span><span style="left: 552.667px;
+        top: 764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.899487);">MOD</span><span style="left: 599.333px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.813488);">(I,2)</span><span style="left:
+        634.3333333333334px; top: 764.177734375px; font-size: 20px;
+        font-family: serif;">=</span><span style="left: 645.833px; top:
+        764.178px; font-size: 20px; font-family: serif; transform:
+        scaleX(0.793333);">0)</span></p>
+    <p>I would like RefPerSys to use the ∑ Unicode character  <tt>U+2211
+        N-ARY SUMMATION</tt>  instead of SIGMA. We really want to use
+      UTF-8 in 2020!</p>
+    <p><br>
+    </p>
+    <p>Yet another example is basic arithmetic laws. We all know that <font
+        color="purple"><b>∀ x ∈ ℤ, x² ≥ 0</b></font></p>
+    <p>Notice that all this is Unicode characters (notably <tt>U+2200
+        FOR ALL</tt>, <tt>U+2208 ELEMENT OF</tt>, <tt>U+2124
+        DOUBLE-STRUCK CAPITAL Z</tt>, <tt>U+00B2 SUPERSCRIPT TWO</tt>,
+      <tt>U+2265 GREATER-THAN OR EQUAL TO</tt>). I really want that
+      formula to appear <i>exactly</i> like above on the screen (in
+      CAIA, it used some ugly Fortran like syntax). Of course the purple
+      color might be different, and I am not against using different
+      colors for x (a variable) and for <font color="purple"><b>ℤ </b><font
+          color="black">(a constant), both being reified as RefPerSys
+          objects.</font><b><font color="black"> </font></b></font><b>How
+        would we type</b> (that is enter with our hands) <b>that
+        formula?</b> What concrete keypresses and mouse actions? Think
+      of course of some abstract syntax tree representing it. Observe
+      that neither Indian QWERTY keyboard or French AZERTY keyboard
+      layout has a key for them - with a possible exception for <tt>U+00B2
+        SUPERSCRIPT TWO </tt>which might be the top left key, if I
+      configured my AZERTY keyboard correctly.<br>
+      <tt></tt></p>
+    <p>I don't even know yet today if we should use or subclass <a
+        moz-do-not-send="true"
+        href="https://doc.qt.io/qt-5/qtextdocument.html">QTextDocument</a>
+      and <a moz-do-not-send="true"
+        href="https://doc.qt.io/qt-5/qtextedit.html">QTextEdit</a> (so
+      use Qt <a moz-do-not-send="true"
+        href="https://doc.qt.io/qt-5/richtext.html">Rich Text Processing</a>)
+      or use Qt <a moz-do-not-send="true"
+        href="https://doc.qt.io/qt-5/graphicsview.html">Graphics View
+        Framework</a><br>
+    </p>
+    <p>We also should rapidly be able to input some documentation, à la
+      wiki or markdown, mentioning objects by objids, and having at
+      least bold, italics, teletype (some equivalent of <tt>&lt;b&gt;
+        &lt;i&gt; &lt;tt&gt;</tt> in HTML) and some kind of internal
+      hyperlink. The conceptual model but not the syntax nor the
+      implementation of <a moz-do-not-send="true"
+        href="https://www.gnu.org/software/texinfo/">GNU texinfo</a>
+      could be inspirational.</p>
+    <p>I found very inspirational the old <i>Centaur</i> system from
+      INRIA. Read this <a moz-do-not-send="true"
+        href="https://hal.inria.fr/hal-01531246/document"><i>Cokace: A
+          Centaur-based environment forCommonKADS Conceptual Modelling
+          Language</i></a> paper and this <a moz-do-not-send="true"
+        href="https://hal.inria.fr/inria-00075774/document">Centaur :
+        the system</a> one.</p>
+    <p>As software, Centaur is dead (it ran on computers and operating
+      systems that do not exist anymore). But I had the privilege to
+      discuss about Centaur with the late <a moz-do-not-send="true"
+        href="https://en.wikipedia.org/wiki/Gilles_Kahn"><i>Gilles Kahn</i></a>
+      when I was at INRIA. He was the head of INRIA, but still a very
+      accessible guy. He was quite critical on his past achievement, but
+      the impression I got from him was that Centaur (1990) failed
+      because the computers were too slow (so many basic interactions
+      took a second, which for a human being is a lot: we need any
+      editor to react in less than a tenth of second for each elementary
+      action like a keypress). Today, our computers are at least a
+      hundred faster! So I guess we should be inspired by Centaur.</p>
+    <p>I myself remembered the time (1990) when <tt>emacs</tt> was too
+      slow. Today it is definitely fast enough (because computers are
+      faster).</p>
+    <p>I am waiting for your opinion (in particular, how do you think
+      the input of <font color="purple"><b>∀ x ∈ ℤ, x² ≥ 0 </b></font>should
+      happen, assume that we really want to see something similar on the
+      screen). I am sometimes dreaming that we somehow type the <font
+        color="purple"><b>≥</b></font><b> </b>and that triggers two
+      empty colored boxes around it to be filled so<b> <font
+          color="red">□</font> </b><font color="purple"><b>≥ </b></font><b><font
+          color="red">□</font> </b>but the red boxes are <u>not</u>
+      Utf8 characters but just blank areas (think of <tt>&lt;input&gt;</tt>
+      in HTML5) where the keyboard focus can go.</p>
+    <p>We need to design our GUI well enough. An intuition is that we
+      should use the keyboard (so the function keys) because it is
+      faster than the mouse (a human can type 10 keys per second, but
+      only 3 mouse actions per second). We may also want some contextual
+      menus (at least to explain us what function keys could be
+      pressed).</p>
+    <p><font color="red"><b>I am impatiently waiting for your comments.</b></font>
+      You probably have more experience than I do (e.g. in Web interface
+      design).</p>
+    <p>Cheers<br>
+      <span style="left: 645.833px; top: 764.178px; font-size: 20px;
+        font-family: serif; transform: scaleX(0.793333);"></span></p>
+    <pre class="moz-signature" cols="72">-- 
+Basile STARYNKEVITCH   == <a class="moz-txt-link-freetext" href="http://starynkevitch.net/Basile">http://starynkevitch.net/Basile</a>
+opinions are mine only - les opinions sont seulement miennes
+Bourg La Reine, France; <a class="moz-txt-link-rfc2396E" href="mailto:basile@starynkevitch.net">&lt;basile@starynkevitch.net&gt;</a>
+(mobile phone: cf my web page / voir ma page web...)
+</pre>
+  </body>
+</html>
