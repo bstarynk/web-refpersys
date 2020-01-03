@@ -48,6 +48,9 @@ unless otherwise specified. The copyright belongs to the *RefPerSys team* ;
 see the `LICENSE.md` markdown file for more.
 
 
+## Logo
+
+Designed by Gaëtan Tapon (Paris, France)
 
 ## Team
 

@@ -5,8 +5,39 @@ body {
     background-color: ivory;
 }
 
+header {
+    margin: auto;
+    padding: 10px;
+}
+
+nav {
+    padding: 4px;
+    font-size: 90%;
+    background-color: peachpuff;
+}
+
+a.cl_navlink {
+    font-size: 90%;
+    margin: 3px;
+    padding: 2px;
+}
+
+footer {
+    padding: 10px;
+    font-size: 85%;
+}
+
+img.cl_logo {
+    margin: auto;
+}
+
 span.cl_tt {
     font-family: "Lucida Console", Monaco, monospace;
+}
+
+span.cl_small {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 75%;
 }
 
 table.cl_devtable {

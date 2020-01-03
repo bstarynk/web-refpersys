@@ -9,24 +9,42 @@
   <title>RefPerSys : a free software AGI project (GPLv3+)</title>
 </head>
 <body lang="en" >
+
+  <header>
+  <img class='cl_logo' src='refpersys_logo.svg' alt='refpersys logo' width='600'/><br>
+  <span class='cl_small'>SVG logo by Gaëtan Tapon (Paris, France)</span>
+  </header>
+  
   <h1><i>RefPerSys</i>, a <a href=
   'https://www.gnu.org/philosophy/free-sw.en.html'>free
   software</a> symbolic <a href=
   'https://en.wikipedia.org/wiki/Artificial_general_intelligence'>artificial
-  general intelligence</a> project</h1>
+      general intelligence</a> project</h1>
+
+  
+  <nav>
+    <a class='cl_navlink' href='#wip_id'>work in progress</a>
+    <a class='cl_navlink' href='#team_id'>team</a>
+    <a class='cl_navlink' href='#designideas_id'>design ideas</a>
+    <a class='cl_navlink' href='#documents_id'>documents</a>
+    <a class='cl_navlink' href='#dependencies_id'>dependencies</a>
+    <a class='cl_navlink' href='#download_id'>download code</a>
+  </nav>
+
+  
   <h2>RefPerSys - <a href='http://refpersys.org/' style=
   'color: brown; font-family: Verdana, Sans-serif; font-size: 120%; font-weight: bold'>
   refpersys.org</a></h2>
   <p>An acronym for <b>Ref</b>lexive <b>Per</b>sistent
   <b>Sys</b>tem. This is an ambitious <b><a href=
   'https://en.wikipedia.org/wiki/Research' style=
-  'color: red'>research</a> project</b> (still unfunded, in 2019 it
+  'color: red'>research</a> project</b> (still unfunded, in 2019 - 2020 it
   is a hobby project; also very risky!), done on spare time with an
   <a href='https://en.wikipedia.org/wiki/Open_science'>open
   science</a> mindset and ethics.</p>
   <!-- **************************************************************** -->
-  <h2>Early work in progress</h2>
-  <p>We have in 2019 a lot of ideas, but not much code (on <a href=
+  <h2 id='wip_id'>Early work in progress</h2>
+  <p>We have in 2019 - 2020 a lot of ideas, but not much code (on <a href=
   'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a>).
   Done by passionate developers on their spare time. <b>Volunteers
   wanted</b>; please send an email (introducing yourself) to
@@ -34,8 +52,8 @@
   'mailto:basile@starynkevitch.net'><span class='cl_tt'>basile@starynkevitch.net</span></a>
   (near Paris, France, homepage <a href=
   'http://starynkevitch.net/Basile/'>here</a>) for more.</p>
-  <h3>The <i>RefPerSys</i> development team</h3>
-  <p>The following persons are working (at end of 2019) on
+  <h3 id='team_id'>The <i>RefPerSys</i> development team</h3>
+  <p>The following persons are working (at end of 2019 or start of 2020) on
   <i>RefPerSys</i> on their spare time from their home and are the
   copyright owners of the embryonic software.</p>
   <table class='cl_devtable'>
@@ -115,7 +133,7 @@
     </tbody>
   </table>
   <!-- **************************************************************** -->
-  <h2>design ideas</h2>
+  <h2 id='designideas_id'>design ideas</h2>
   <ul>
     <li>a mostly <a href=
     'https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence'>
@@ -170,22 +188,24 @@
   'color: brown; font-weight: bold;'>draft document</span> giving
   some design ideas is downloadable as <a href=
   'http://starynkevitch.net/Basile/refpersys-design.pdf'><span class='cl_tt'>refpersys-design.pdf</span></a>.
-  We are improving it in 2019.</p>
-  <p>The currently existing (in 2019, on <a href=
+  We are improving it in 2019 and 2020.</p>
+  <p>The currently existing (in 2019 or 2020), on <a href=
   'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a>) code
   base is a bit disappointing, even to the <i>Refpersys</i> team.
   But we have a lot of fun doing it. It is constantly improving,
   publicly available, still unreleased, <a href=
   'https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha'>
-  α-stage</a>.</p>
+      α-stage</a>.</p>
+  
   <!-- **************************************************************** -->
-  <h2>documents</h2>
+  <h2 id='documents_id'>documents</h2>
   <ul>
     <li>The <a href=
     'http://starynkevitch.net/Basile/refpersys-design.pdf'>RefPerSys
     high-level goals and design ideas</a> draft report (work in
-    progress, 2019, mentioned above).
+    progress, 2019 - 2020, mentioned above).
     </li>
+    
     <li>A draft of a short hightlight paper (2 pages) submitted to
     <a href='http://ecai2020.eu/'>ECAI2020</a> about the <a href=
     'ecai2020-highlight-refpersys.pdf'>Development and Architecture
@@ -194,11 +214,15 @@
     we are aware that this conference is very selective). That paper
     was not accepted, but one (out of three) of the reviews has been
     very encouraging, saying : <q>The concept of the paper is
-    good. However, the writing skill / style is not satisfactory.</q>.
+    good. However, the writing skill / style is not
+    satisfactory.</q>. That paper explains our roadmap and vision.
     </li>
+    
+    <li>Our <a href='https://gitlab.com/bstarynk/refpersys/-/wikis'>wiki</a>
+    contain topics which are discussed and work in progress.</li>
   </ul>
   <!-- **************************************************************** -->
-  <h2>dependencies</h2>
+  <h2 id='dependencies_id'>dependencies</h2>
   <p>We list here some uncommon dependencies, and give a source
     tarball (compressed
     by <a href='https://www.sourceware.org/bzip2/'>bzip2</a>) for
@@ -217,38 +241,24 @@
       <span class='cl_tt'>00eb0b094d107a1583218bf1347b7124</span>;
     </li>
     
-    <li>the <a href=
-    'https://github.com/hjson/hjson-cpp'>Hjson-CPP</a> library is a
-    C++ library for <a href='http://hjson.org/'>Hjson</a>, a compact
-    derivative of the textual
-    (so <a href='http://git-scm.com/'>git</a>
-    friendly) <a href='http://json.org/'>JSON</a> format. We had
-    to <a href='https://en.wikipedia.org/wiki/Fork_(software_development)'>fork</a>
-    that library because of
-    its <a href='https://github.com/hjson/hjson-cpp/issues/22'>issue
-    #22</a>, with the code
-    on <a href='https://github.com/bstarynk/hjson-cpp'><span class='cl_tt'>github.com/bstarynk/hjson-cpp</span></a>
-    whose source tarball
-    is <a href='hjson-cpp-snapshot.tar.bz2'><span class='cl_tt'>hjson-cpp-snapshot.tar.bz2</span></a>
-    of
-    md5sum <span class='cl_tt'>e1301b61d41107521e8b66ff5019b3cb</span>;
-    </li>
-    
   </ul>
 
   <p>The <i>RefPerSys</i> software depends on many other common stuff,
     notably a recent <a href='http://gcc.gnu.org/'>GCC</a> compiler
-    for <a href='https://en.wikipedia.org/wiki/C%2B%2B17'>C++17</a>, a
+    for <a href='https://en.wikipedia.org/wiki/C%2B%2B17'>C++17</a>
+    with its standard library, a
     recent <a href='https://kernel.org/'>Linux kernel</a> and C
     standard library
     (e.g. <a href='https://www.gnu.org/software/libc/'>GNU glibc</a>
-    or <a href='http://musl-libc.org/'>Musl Libc</a>), and
+    or <a href='http://musl-libc.org/'>Musl Libc</a>),
+    the <a href='https://github.com/open-source-parsers/jsoncpp'>JsonCPP</a>
+    library (for persistence) and
     the <a href='https://www.qt.io/'>Qt</a> graphical toolkit. A
     multi-core <i>x86-64</i> Linux computer with more than 16Gbytes of
     RAM and at least 100Gbytes of free disk space is recommended.</p>
   
   <!-- **************************************************************** -->
-  <h2>download α-stage source code</h2>
+  <h2 id='download_id'>download α-stage source code</h2>
   <p>The <a href=
   'https://www.gnu.org/licenses/gpl-3.0.en.html'>GPLv3+
   licensed</a> <a href=
@@ -263,7 +273,7 @@
   obsolete or might not even compile.<br>
   We practically are using <a href='http://git-scm.com'>git</a> as
   a <q>centralized</q> version control system, because we are very
-  few and sill don't understand well in 2019 how a genuinely
+  few and sill don't understand well in 2019 or 2020 how a genuinely
   <a href=
   'https://en.wikipedia.org/wiki/Distributed_version_control'>distributed
   version control system</a> could play nice with a <a href=
@@ -281,12 +291,12 @@
   <hr>
   <footer>
     This <a href='http://refpersys.org'><span class='cl_tt'>refpersys.org</span></a>
-    website is updated quite often in 2019, it is © <i>RefPerSys
-    team</i> 2019, under <a rel="license" href=
+    website is updated quite often in 2019 or 2020, it is © <i>RefPerSys
+    team</i> 2019 - 2020, under <a rel="license" href=
     "http://creativecommons.org/licenses/by-sa/4.0/"><img alt=
     "Creative Commons License" style="border-width:0" src=
     "https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
-    This web page is licensed under a <a rel="license" href=
+    This web site is (except when written otherwise) licensed under a <a rel="license" href=
     "http://creativecommons.org/licenses/by-sa/4.0/">Creative
     Commons Attribution-ShareAlike 4.0 International License</a>.
     The legal publisher is <span style=
