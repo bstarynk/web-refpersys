@@ -1,5 +1,5 @@
 /* file style-refpersys.css on refpersys.org - CCBYSA4 licensed, see https://creativecommons.org/licenses/by-sa/4.0/ */
-/*  © Copyright 2019 The Reflective Persistent System Team - http://refpersys.org */
+/*  © Copyright 2019 - 2020 The Reflective Persistent System Team - http://refpersys.org */
 
 body {
     background-color: ivory;
@@ -29,6 +29,15 @@ footer {
 
 img.cl_logo {
     margin: auto;
+}
+
+p.cl_french {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 85%;
+    background-color: lightcyan;
+    color: darkolivegreen;
+    border: 1px solid black;
+    padding: 4px;
 }
 
 span.cl_tt {
