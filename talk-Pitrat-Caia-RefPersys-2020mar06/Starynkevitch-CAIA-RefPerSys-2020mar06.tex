@@ -1,0 +1,69 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% file Starynkevitch-CAIA-RefPerSys-2020mar06.tex
+% github.com/bstarynk/web-refpersys
+% subdirectory piotr ~/web-refpersys/
+% inspired by http://cse.unl.edu/~cbourke/latex/UNLTheme.tex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[xcolor=svgnames,final,smaller,a4]{beamer}
+\usepackage{relsize}
+\usepackage{luacode}
+\usepackage{xcolor}
+\usepackage{alltt}
+\usepackage{wasysym}
+\usepackage{hyperref}
+
+
+\hypersetup{
+  colorlinks   = true, %Colours links instead of ugly boxes
+  urlcolor     = NavyBlue, %Colour for external hyperlinks
+  linkcolor    = DarkGreen, %Colour of internal links
+  citecolor   = DarkMagenta, %Colour of citations
+  frenchlinks = true,
+}
+
+\usetheme[hideothersubsections]{CAIA - RefPerSys}
+
+\title{\textsc{From CAIA to RefPerSys} \\
+  reflexive, introspective, meta- based AI systems}
+
+\author[B.Starynkevitch]{Basile \textsc{Starynkevitch} - \href{http://starynkevitch.net/Basile/}{\texttt{starynkevitch.net/Basile}}\\ \href{mailto:basile@starynkevitch.net}{\color{blue}{\texttt{basile@starynkevitch.net}}}
+
+  \institute{\textit{RefPerSys} - \href{http://refpersys.org}{\color{red}{\texttt{refpersys.org}}}}
+
+  \date{March 6\textsuperscript{th}, 2020}
+
+ \begin{luacode*}
+   local gitpip=io.popen("git log --no-color --format=oneline -1 --abbrev=16 --abbrev-commit -q | cut -d' ' -f1")
+   gitid=gitpip:read()
+   gitpip:close()
+ \end{luacode*}
+ \newcommand{\mygitid}{\luadirect{tex.print(gitid)}}
+ \newcommand{\RefPerSys}{\href{http://refpersys.org}{\textsc{RefPerSys}}}
+  \begin{document}
+
+ \begin{frame}
+   
+   
+   \begin{relsize}{-1}
+        \titlepage
+        \textcolor{brown}{{\large \textbf{Opinions are only mines}} 
+        
+        \begin{center}
+         
+
+          git \texttt{\mygitid}
+        \end{center} 
+
+        My employer (or the funding agencies at work) would probably
+        disagree with most of my opinions here. Any agreement with its
+        policies or positions is accidental.
+   \end{relsize}
+\end{frame}
+  \end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Local Variables: ;;
+%% compile-command: "./build.sh" ;;
+%% End: ;;
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
