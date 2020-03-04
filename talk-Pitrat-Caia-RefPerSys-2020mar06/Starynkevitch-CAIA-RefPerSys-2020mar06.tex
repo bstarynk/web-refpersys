@@ -22,16 +22,15 @@
   frenchlinks = true,
 }
 
-\usetheme[hideothersubsections]{CAIA - RefPerSys}
+\usetheme{AnnArbor}
 
-\title{\textsc{From CAIA to RefPerSys} \\
+\title[From CAIA to RefPerSys]{\textsc{From CAIA to RefPerSys} \\
   reflexive, introspective, meta- based AI systems}
 
-\author[B.Starynkevitch]{Basile \textsc{Starynkevitch} - \href{http://starynkevitch.net/Basile/}{\texttt{starynkevitch.net/Basile}}\\ \href{mailto:basile@starynkevitch.net}{\color{blue}{\texttt{basile@starynkevitch.net}}}
-
+\author[B.Starynkevitch]{Basile \textsc{Starynkevitch} - \href{http://starynkevitch.net/Basile/}{\texttt{starynkevitch.net/Basile}}\\ \href{mailto:basile@starynkevitch.net}{\color{blue}{\texttt{basile@starynkevitch.net}}} - \textsc{92340  Bourg-La-Reine}, France}
   \institute{\textit{RefPerSys} - \href{http://refpersys.org}{\color{red}{\texttt{refpersys.org}}}}
 
-  \date{March 6\textsuperscript{th}, 2020}
+  \date[March 6 \textsuperscript{th}, 2020]{Paris, March 6\textsuperscript{th}, 2020 - seminar in honor of the late J.Pitrat}
 
  \begin{luacode*}
    local gitpip=io.popen("git log --no-color --format=oneline -1 --abbrev=16 --abbrev-commit -q | cut -d' ' -f1")
@@ -43,20 +42,17 @@
   \begin{document}
 
  \begin{frame}
-   
-   
    \begin{relsize}{-1}
-        \titlepage
-        \textcolor{brown}{{\large \textbf{Opinions are only mines}} 
+     \titlepage
+     
+        \textcolor{brown}{{\large \textbf{Opinions are only mines}}} 
         
         \begin{center}
-         
-
           git \texttt{\mygitid}
         \end{center} 
 
-        My employer (or the funding agencies at work) would probably
-        disagree with most of my opinions here. Any agreement with its
+        My employer {\relsize{-0.5}{(or funding agencies at work)}} would probably
+        disagree with most of my opinions here. Any agreement with my employer's
         policies or positions is accidental.
    \end{relsize}
 \end{frame}
