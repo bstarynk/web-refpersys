@@ -466,7 +466,7 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
  \end{frame}
 
  \begin{frame}
-   \frametitle{The Magical Number Seven, $\pm$ Two}
+   \frametitle{The Magical Number $7 \pm 2$ }
 
    \begin{block}{\href{https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two}{Miller's law} (1956)}
      the number of objects an average person can hold in working
@@ -524,25 +524,57 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    
  \end{frame}
 
+\begin{frame}
+ \frametitle{What should really matter in an AI system}
+%%
+%% \begin{itemize}
+%%   
+%% \item \textcolor{red}{\textbf{explicit some
+%%     \href{https://en.wikipedia.org/wiki/Trusted_computing_base}{trusted
+%%       computer base}}}, that is all the things
+
+%%   \begin{itemize}
+%%   \item hardware components (motherboard, keyboard, mouse, screen, Ethernet)
+%%   \item low-level software components (firmware: BIOS, UEFI, graphics card firmware)
+%%   \item operating system kernel (Linux kernel)
+%%   \item middleware software components (compiler, user interface,
+%%     operating system, file systems, databases)
+%%   \end{itemize}
+     
+%%   the AI system depends on. Getting rid of every software component
+%%   is practically futile (billions of lines in a Linux desktop ; see
+%%   also
+%%   \href{http://linuxfromscratch.org/}{\texttt{\textcolor{Sienna}{linuxfromscratch.org}}}
+%%   which is bootstrapped).
+
+%%   \item \textcolor{red}{\textbf{take advantage of most
+%%       \emph{existing} computing resources}} (multi-core, cache
+%%     locality, disk, MMU) \textcolor{red}{\textbf{and
+%%         \emph{existing} software components}}.
+%%
+%%   \item \textcolor{red}{\textbf{give \emph{declarative} knowledge
+%%       to your AI system about efficiently using \emph{existing}
+%%       open source software components}} which are choosen by humans
+       
+%%   \end{itemize}
+
+ \end{frame}
+
  \begin{frame}
-   \frametitle{What should really matter in an AI system}
+   \frametitle{AI software and computers ``are'' semantics networks}
+ 
 
-   \begin{itemize}
-   \item explicit some \href{https://en.wikipedia.org/wiki/Trusted_computing_base}{trusted computer base}, that is all the \begin{itemize}
-   \item hardware components (motherboard, keyboard, mouse, screen, Ethernet)
-   \item low-level software components (firmware: BIOS, UEFI, graphics card firmware)
-   \item operating system kernel (Linux kernel)
-   \item middleware software components (compiler, user interface,
-     operating system, file systems, databases)
-   \end{itemize}
-     the AI system depends on. Getting rid of every software component is practically futile (billions of lines in a Linux desktop ; see also \href{http://linuxfromscratch.org/}{\texttt{\textcolor{Sienna}{linuxfromscratch.org}}} which is bootstrapped).
+ From wikipedia \href{https://en.wikipedia.org/wiki/Semantic_network}{Semantic network} 
 
-     \item take advantage of most existing computing resources
-       (multi-core, cache locality, disk, MMU) and existing software
-       components.
+ \bigskip
 
-     \item \textcolor{red}{\textbf{give \emph{declarative} knowledge to your AI system about efficiently using \emph{existing} open source software components}} which are choosen by humans
-   \end{itemize}
+ \begin{center}
+ \includegraphics[width=0.60\textwidth]{Semantic-Net}
+ \end{center}
+ 
+ \bigskip
+ 
+$\Rightarrow$ Flexible frame represention
  \end{frame}
  
   \end{document}
