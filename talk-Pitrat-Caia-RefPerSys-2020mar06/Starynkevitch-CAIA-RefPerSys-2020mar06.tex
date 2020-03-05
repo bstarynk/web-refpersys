@@ -526,37 +526,37 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
 
 \begin{frame}
  \frametitle{What should really matter in an AI system}
-%%
-%% \begin{itemize}
-%%   
-%% \item \textcolor{red}{\textbf{explicit some
-%%     \href{https://en.wikipedia.org/wiki/Trusted_computing_base}{trusted
-%%       computer base}}}, that is all the things
 
-%%   \begin{itemize}
-%%   \item hardware components (motherboard, keyboard, mouse, screen, Ethernet)
-%%   \item low-level software components (firmware: BIOS, UEFI, graphics card firmware)
-%%   \item operating system kernel (Linux kernel)
-%%   \item middleware software components (compiler, user interface,
-%%     operating system, file systems, databases)
-%%   \end{itemize}
+ \begin{itemize}
+   
+ \item \textcolor{red}{\textbf{explicit some
+     \href{https://en.wikipedia.org/wiki/Trusted_computing_base}{trusted
+       computer base}}}, that is all the things
+
+   \begin{itemize}
+   \item hardware components (motherboard, keyboard, mouse, screen, Ethernet)
+   \item low-level software components (firmware: BIOS, UEFI, graphics card firmware)
+   \item operating system kernel (Linux kernel)
+   \item middleware software components (compiler, user interface,
+     operating system, file systems, databases)
+   \end{itemize}
+   
+   the AI system depends on. Getting rid of every software component
+   is practically futile {\relsize{-1}{(billions of source lines in a Linux desktop ; see
+   also
+   \href{http://linuxfromscratch.org/}{\texttt{\textcolor{Sienna}{linuxfromscratch.org}}}
+   which is bootstrapped)}}.
+
+   \item \textcolor{red}{\textbf{take advantage of most
+       \emph{existing} computing resources}} (multi-core, cache
+     locality, disk, MMU, Internet) \textcolor{red}{\textbf{and
+         \emph{existing} software components}}.
+
+   \item \textcolor{red}{\textbf{give \emph{declarative} knowledge
+       to your AI system about efficiently using \emph{existing}
+       open source software components}} which are choosen by humans
      
-%%   the AI system depends on. Getting rid of every software component
-%%   is practically futile (billions of lines in a Linux desktop ; see
-%%   also
-%%   \href{http://linuxfromscratch.org/}{\texttt{\textcolor{Sienna}{linuxfromscratch.org}}}
-%%   which is bootstrapped).
-
-%%   \item \textcolor{red}{\textbf{take advantage of most
-%%       \emph{existing} computing resources}} (multi-core, cache
-%%     locality, disk, MMU) \textcolor{red}{\textbf{and
-%%         \emph{existing} software components}}.
-%%
-%%   \item \textcolor{red}{\textbf{give \emph{declarative} knowledge
-%%       to your AI system about efficiently using \emph{existing}
-%%       open source software components}} which are choosen by humans
-       
-%%   \end{itemize}
+   \end{itemize}
 
  \end{frame}
 
@@ -564,17 +564,67 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    \frametitle{AI software and computers ``are'' semantics networks}
  
 
- From wikipedia \href{https://en.wikipedia.org/wiki/Semantic_network}{Semantic network} 
+ From wikipedia
+ \href{https://en.wikipedia.org/wiki/Semantic_network}{Semantic
+   network} {\relsize{-1}{(but imagine hundred of thousands of nodes and labelled arrows)}}
 
  \bigskip
 
  \begin{center}
- \includegraphics[width=0.60\textwidth]{Semantic-Net}
+ \includegraphics[width=0.55\textwidth]{Semantic-Net}
  \end{center}
  
  \bigskip
  
-$\Rightarrow$ Flexible frame represention
+ $\Rightarrow$ Flexible frame representation, including knowledge
+ representation of various ``expertises'' about how to use existing
+ ``trusted'' software components (cf
+ \href{https://www.decoder-project.eu/}{\textsc{Decoder}} project) and
+ how to generate code.
+ \end{frame}
+
+ \begin{frame}
+   \frametitle{Brook's law}
+
+   From \href{https://en.wikipedia.org/wiki/The_Mythical_Man-Month}{\textit{The Mythical Man-Month}} (F.Brooks, 1975):
+
+   Its central theme is that "adding manpower to a late software project makes it later".
+
+   \medskip
+
+   and there is \href{https://en.wikipedia.org/wiki/No_Silver_Bullet}{\textit{No silver bullet}}
+
+   \hrule
+
+   Communication between software developers (or between artificial intelligence researchers) matters.
+   \emph{Open source} software is an effective communication channel.
+
+   \medskip
+
+   \href{https://en.wikipedia.org/wiki/Heisenbug}{Heisenbugs} and
+   heisenmetabugs.  Also
+   \href{https://en.wikipedia.org/wiki/Cargo_cult_programming}{Cargo
+     cult programming}
+   
+ \end{frame}
+
+ \begin{frame}
+   \frametitle{Hofstater's law}
+
+   \begin{block}{\href{https://en.wikipedia.org/wiki/Hofstadter's_law}{Hofstadter's law}}
+     It always takes longer than you expect, even when you take into account Hofstadter's Law.
+   \end{block}
+
+   Very true of development of AI systems.
+
+   \bigskip
+
+   Related:
+   \href{https://en.wikipedia.org/wiki/I_Am_a_Strange_Loop}{\textit{I
+       am a strange loop}} and
+   \href{https://en.wikipedia.org/wiki/Ship_of_Theseus}{Ship of
+     Theseus paradox} (relevant to bootstrapped AI systems)
+   
  \end{frame}
  
   \end{document}
