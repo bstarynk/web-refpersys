@@ -22,8 +22,10 @@
   citecolor   = DarkMagenta, %Colour of citations
   frenchlinks = true,
 }
-
-\usetheme{AnnArbor}
+\useoutertheme{split}
+\usecolortheme{whale}
+\setbeamercolor*{titlelike}{parent=structure}
+%\usetheme{AnnArbor}
 
 \title[From CAIA to RefPerSys]{\textsc{From CAIA to RefPerSys} \\
   reflexive, introspective, meta- based AI systems}
@@ -48,7 +50,7 @@
    \begin{relsize}{-0.5}
      \titlepage
      
-     {\textcolor{brown}{{\large \textbf{Opinions are only mines}}}} \hspace{0.5cm}{\relsize{-1}{git commit \texttt{\mygitid}}}
+     {\textcolor{brown}{{\large \textbf{Opinions are only mine}}}} \hspace{0.5cm}{\relsize{-1}{git commit \texttt{\mygitid}}}
 
    \begin{relsize}{-0.5}
        {these slides are under} \raisebox{-0.2cm}{\includegraphics[width=0.12\textwidth]{CC-BY-SA-4}} \href{https://creativecommons.org/licenses/by-sa/4.0/}{Creative Commons Attribution-ShareAlike 4.0 International}
@@ -213,7 +215,11 @@
    
 
    \begin{itemize}
-   \item \href{https://en.wikipedia.org/wiki/Publish_or_perish}{publish or perish}. Pitrat observed that there is not enough insentive to make AI \emph{software systems} and favored experimental approaches.
+   \item
+     \href{https://en.wikipedia.org/wiki/Publish_or_perish}{publish or
+       perish}. Pitrat observed that there is not enough incentive to
+     make real-sized AI \emph{software systems} (not toy demos) and
+     favoring experimental approaches.
 
    \item \href{https://www.nber.org/papers/w7600}{\textit{The Simple Economics of Open Source}}
 
@@ -366,7 +372,7 @@ costs.
 
 
  \begin{frame}
-   \frametitle{source code mesurement of \textsc{Caia}}
+   \frametitle{source code measurement of \textsc{Caia}}
 
    From \href{https://github.com/bstarynk/caia-pitrat}{\texttt{github.com/bstarynk/caia-pitrat}}, the C lines being generated :
 
@@ -395,7 +401,7 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
  \end{frame}
  
  \begin{frame}
-   \frametitle{other source code mesures}
+   \frametitle{other source code measures}
 
  \begin{tabular}{lcp{0.55\textwidth}}
    \textbf{software} & \textbf{source size} & \\
@@ -408,6 +414,7 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    glibc 2.31 & 1.257MLOC & GNU C library \href{https://www.gnu.org/software/libc/}{\texttt{www.gnu.org/software/libc/}} \\
    libbacktrace & 18.9KLOC & backtracking {\relsize{-1.5}{\href{https://github.com/ianlancetaylor/libbacktrace}{\texttt{github.com/ianlancetaylor/libbacktrace}}}} \\
    Qt5 & 23.799MLOC & a C++ GUI toolkit \href{https://qt.io/}{\texttt{qt.io}}\\
+   GNU readline & 36.6KLOC & a line editor library \href{https://www.gnu.org/software/readline/}{\texttt{www.gnu.org/software/readline/}} \\
  \end{tabular}
  
  \end{frame}
@@ -434,8 +441,110 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    Disabling optimizations would lower \textsc{Caia} performance by
    perhaps 30\%. See also
    \href{https://en.wikipedia.org/wiki/Tiny_C_Compiler}{TinyCC}.
+ \end{frame}
+
+ \begin{frame}
+   \frametitle{The Joel Test: 12 Steps to Better Code}
+   From \href{https://dev.to/checkgit/the-joel-test-20-years-later-1kjk}{\texttt{dev.to/checkgit/the-joel-test-20-years-later-1kjk}}
+   \begin{relsize}{-1.0}
+     \begin{enumerate}
+       \item Do you use \href{http://git-scm.com/}{Git}, or some lesser source control system?
+       \item Can you build and release in one step?
+       \item Do you build and test before merging to master? \textcolor{red}{\texttt{\relsize{+1}{make bootstrap}}} in \href{https://gcc.gnu.org/}{\textit{GCC}}
+    \item Do you have a bug database?
+    \item Do you fix bugs before writing new code?
+    \item Do you have an up-to-date schedule?
+    \item Do you write a spec before writing code?
+    \item Do programmers have quiet working conditions free of interruptions?
+    \item Do you use the best development tools money can buy?
+    \item Do you have human testers?
+    \item Do you have automated testing?
+     \end{enumerate}
+   \end{relsize}
+   with \href{https://en.wikipedia.org/wiki/Code_review}{code reviews}
+   (e.g. \href{https://gcc.gnu.org/ml/gcc-patches/}{\texttt{gcc-patches@gcc.gnu.org}})
+ \end{frame}
+
+ \begin{frame}
+   \frametitle{The Magical Number Seven, $\pm$ Two}
+
+   \begin{block}{\href{https://en.wikipedia.org/wiki/The_Magical_Number_Seven,_Plus_or_Minus_Two}{Miller's law} (1956)}
+     the number of objects an average person can hold in working
+     memory is about seven
+   \end{block}
+
+   \bigskip
+   
+   This empirically holds for software developers, computer scientists
+   and human artificial intelligence researchers.
+
+   \medskip
+   
+   $\rightarrow$ a software whose
+   \href{https://en.wikipedia.org/wiki/Cyclomatic_complexity}{cyclomatic
+     complexity} (Mc.Cabe 1976) is above 7 will probably remain
+   undebuggable, and complex software are always buggy.
+
+   \medskip
+   
+   $\rightarrow$ avoid spaghetti code in human written programs. But that does not matter for machine generated code.
+
+ \end{frame}
+
+ \begin{frame}
+   \frametitle{Miller's law in AI}
+   
+   
+   $\rightarrow$ the types of functions in human written functional
+   style programs remains reasonable. Pathological cases of
+   \href{https://en.wikipedia.org/wiki/Type_inference}{type inference}
+   are practically rare.
+
+   \medskip
+   So \href{https://en.wikipedia.org/wiki/Modular_programming}{modular
+     programming}\footnote{Generated code could be non-modular!} or
+   \href{https://en.wikipedia.org/wiki/Object-oriented_programming}{object-oriented
+     programming} is for humans. Hence
+   \href{https://en.wikipedia.org/wiki/Just-in-time_compilation}{Just-in-time
+     compilation} techniques (e.g. devirtualization of
+   \href{https://en.wikipedia.org/wiki/Virtual_method_table}{virtual
+     method tables}) are practically efficient.
+
+
+   \medskip
+
+   Few functions get much more than 6 or 7 arguments
+
+
+   \begin{block}{Miller's law in AI system}
+   Is there one? Do AI systems have a short memory threshold?
+
+   Is the 7 threshold related to mathematical properties of semantic networks (diameter of reference graphs)
+   \end{block}
    
  \end{frame}
+
+ \begin{frame}
+   \frametitle{What should really matter in an AI system}
+
+   \begin{itemize}
+   \item explicit some \href{https://en.wikipedia.org/wiki/Trusted_computing_base}{trusted computer base}, that is all the \begin{itemize}
+   \item hardware components (motherboard, keyboard, mouse, screen, Ethernet)
+   \item low-level software components (firmware: BIOS, UEFI, graphics card firmware)
+   \item operating system kernel (Linux kernel)
+   \item middleware software components (compiler, user interface,
+     operating system, file systems, databases)
+   \end{itemize}
+     the AI system depends on. Getting rid of every software component is practically futile (billions of lines in a Linux desktop ; see also \href{http://linuxfromscratch.org/}{\texttt{\textcolor{Sienna}{linuxfromscratch.org}}} which is bootstrapped).
+
+     \item take advantage of most existing computing resources
+       (multi-core, cache locality, disk, MMU) and existing software
+       components.
+
+     \item \textcolor{red}{\textbf{give \emph{declarative} knowledge to your AI system about efficiently using \emph{existing} open source software components}} which are choosen by humans
+   \end{itemize}
+ \end{frame}
+ 
   \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
