@@ -39,6 +39,8 @@
  \end{luacode*}
  \newcommand{\mygitid}{\luadirect{tex.print(gitid)}}
  \newcommand{\RefPerSys}{\href{http://refpersys.org}{\textsc{RefPerSys}}}
+
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \begin{document}
 
  \begin{frame}
@@ -59,13 +61,19 @@
    \end{relsize}
  \end{frame}
 
+\begin{frame}{Overview}
+\tableofcontents
+\end{frame}
 
  \section{What is AI?}
-
+ \label{sec:what-is-ai}
+ 
  \begin{frame}
    \frametitle{What is AI?}
    \begin{itemize}
-   \item \textcolor{red}{\large \textbf{A}}rtificial  \textcolor{red}{\large \textbf{I}}ntelligence
+   \item \textcolor{red}{\large \textbf{A}}rtificial
+     \textcolor{red}{\large \textbf{I}}ntelligence (and
+     \href{https://en.wikipedia.org/wiki/AI_winter}{AI winter} - predicted by J.Pitrat)
      \begin{itemize}
        \item \textbf{A}rtificial \textbf{G}eneral \textbf{I}ntelligence 
        \item symbolic \textbf{A}rtificial \textbf{I}ntelligence
@@ -73,8 +81,16 @@
        \item\textbf{A}rtificial \textbf{I}ntelligence applications
      \end{itemize}
    \item \textcolor{red}{\large \textbf{A}}dvanced  \textcolor{red}{\large \textbf{I}}nformatics
-   \item \textbf{A}bstract \textbf{I}nterpretation {\relsize{-1}{(a technique for static program analysis, by Cousot)}}\\
-     $\rightarrow$ it could be the next AI winter
+   \item \textbf{A}bstract \textbf{I}nterpretation {\relsize{-1}{(a
+       technique for static program analysis, by
+       Cousot)}}\\
+     $\rightarrow$ IMHO it could be the next ``AI winter''\\
+     \relsize{-1}{I am impatiently waiting for
+       \href{http://frama-c.com/}{Frama-C} fully automated analysis of
+       \href{https://www.tensorflow.org/}{\textsc{TensorFlow}} C++
+       code (its \href{https://floating-point-gui.de/}{floating point} precision issues), or of
+       \href{https://github.com/bstarynk/caia-pitrat/}{\textsc{Caia}}
+       C code {\large \smiley{}}; the ``\textcolor{brown}{robust AI}'' buzzword....}
    \end{itemize}
 
 
@@ -272,7 +288,7 @@
            \href{https://en.wikipedia.org/wiki/Self-awareness}{self-awareness}
            and
            \href{https://en.wikipedia.org/wiki/Introspection}{introspection}
-           for intelligent systems (on Linux with
+           for intelligent systems (on Linux could be done with
            \href{https://github.com/ianlancetaylor/libbacktrace}{\texttt{libbacktrace}},
            conceptually related to
            \href{https://dl.acm.org/doi/10.1007/BF01019459}{the
@@ -283,6 +299,37 @@
    \href{http://man7.org/linux/man-pages/man4/random.4.html}{\texttt{random(4)}} on Linux),
    \textcolor{red}{\textbf{experimental reproducibility is \emph{ethically} important}}.
  \end{frame}
+
+
+ \section{Engineering aspects of AI software systems}
+ \label{sec:engineering-ai}
+ 
+ \begin{frame}
+   \frametitle{Engineering aspects of software}
+
+   We need a computer to run a software:
+
+   \begin{center}
+     \includegraphics[width=0.3\textwidth]{black-box-computer-small}\\
+     (photo by \href{http://matthieu-starynkevitch.com/}{Matthieu Starynkevitch})
+   \end{center}
+
+   But J.Pitrat wrote (in \href{https://onlinelibrary.wiley.com/doi/book/10.1002/9780470611791}{\textit{Artificial Beings}}, §4 p67):
+   \begin{quote}
+     The black box is the opposite of consciousness, and we must \textcolor{brown}{always} avoid it
+   \end{quote}
+   and later (\textit{Artificial Beings} p259):
+     \begin{quote}
+       \textsc{Caia} uses \textcolor{brown}{two} programs that it has not written: \href{http://gcc.gnu.org/}{\textsc{Gcc}} and \href{https://https://en.wikipedia.org/wiki/Linux}{\textsc{Linux}}
+     \end{quote}
+     
+   {\relsize{-2}{emphasis is mine; I will dare doing some nitpicking}}
+
+   My black box runs \textsc{Caia} {\large \smiley{}}
+ \end{frame}
+
+
+ 
   \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
