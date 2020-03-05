@@ -312,26 +312,41 @@
  \label{sec:engineering-ai}
  
  \begin{frame}
-   \frametitle{Engineering aspects of software}
+   \frametitle{Engineering aspects of software (1/2)}
 
    We need a computer to run a software:
 
    \begin{center}
-     \includegraphics[width=0.3\textwidth]{black-box-computer-small}\\
+     \includegraphics[width=0.55\textwidth]{black-box-computer-small}\\
      (photo by \href{http://matthieu-starynkevitch.com/}{Matthieu Starynkevitch})
    \end{center}
 
+   \relsize{-0.5}{(we look inside the box and see things -cables- which are \emph{not} inside but reflected)}
+ \end{frame}
+
+ \begin{frame}
+   \frametitle{Engineering aspects of software (2/2)}
+ 
    But J.Pitrat wrote (in \href{https://onlinelibrary.wiley.com/doi/book/10.1002/9780470611791}{\textit{Artificial Beings}}, §4 p67):
+   
+   \begin{relsize}{+1}
    \begin{quote}
      The black box is the opposite of consciousness, and we must \textcolor{brown}{always} avoid it
    \end{quote}
+   \end{relsize}
+   
    and later (\textit{Artificial Beings} p259):
-     \begin{quote}
+
+   \begin{relsize}{+1}
+   \begin{quote}
        \textsc{Caia} uses \textcolor{brown}{two} programs that it has not written: \href{http://gcc.gnu.org/}{\textsc{Gcc}} and \href{https://https://en.wikipedia.org/wiki/Linux}{\textsc{Linux}}
      \end{quote}
-     
+   \end{relsize}
+   
    {\relsize{-2}{emphasis is mine; I will dare doing some nitpicking}}
 
+   \bigskip
+   
    My black box runs \textsc{Caia} {\large \smiley{}}
  \end{frame}
 
@@ -594,8 +609,12 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
 
    and there is \href{https://en.wikipedia.org/wiki/No_Silver_Bullet}{\textit{No silver bullet}}
 
+   \smallskip
+   
    \hrule
 
+   \medskip
+   
    Communication between software developers (or between artificial intelligence researchers) matters.
    \emph{Open source} software is an effective communication channel.
 
@@ -604,7 +623,9 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    \href{https://en.wikipedia.org/wiki/Heisenbug}{Heisenbugs} and
    heisenmetabugs.  Also
    \href{https://en.wikipedia.org/wiki/Cargo_cult_programming}{Cargo
-     cult programming}
+     cult programming} and
+   \href{https://en.wikipedia.org/wiki/Rubber_duck_debugging}{rubber
+     duck debugging} (and usefulness of code reviews, even by junior programmers)
    
  \end{frame}
 
@@ -615,7 +636,10 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
      It always takes longer than you expect, even when you take into account Hofstadter's Law.
    \end{block}
 
-   Very true of development of AI systems.
+   Very true of development of AI systems (or of preparing slides like
+   these ones). See
+   \href{https://en.wikipedia.org/wiki/Gödel,_Escher,_Bach}{\textit{Gödel,
+       Escher, Bach: An Eternal Golden Braid}}
 
    \bigskip
 
@@ -626,6 +650,31 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
      Theseus paradox} (relevant to bootstrapped AI systems)
    
  \end{frame}
+
+ \begin{frame}
+   \frametitle{the staircase development model of bootstrapped AI}
+
+   Illustrated with \RefPerSys, applicable to CAIA:
+
+   \begin{center}
+     \includegraphics[width=0.4\textwidth]{spiral-stairs}
+   \end{center}
+
+   \smallskip
+   
+
+  \begin{quote}
+    \begin{relsize}{-0.5}
+    Each new feature -or small incremental change or a few of them
+    (small \texttt{git commit}s) - of {\RefPerSys} enables us to build
+    and \textbf{generate} the next version of {\RefPerSys}, and a next
+    feature is then added to that \textit{improved} version, and so on
+    repeatedly, etc....
+    \end{relsize}
+  \end{quote}
+   
+ \end{frame}
+ 
  
   \end{document}
 
