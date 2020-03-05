@@ -720,7 +720,7 @@ Observe the buggy generated \texttt{dx.h}
  
  \begin{frame}
    \frametitle{some software I wrote for J.Pitrat}
-
+m
    \begin{itemize}
      \item \texttt{manydl.c} under \texttt{git clone
        \href{https://github.com/bstarynk/misc-basile.git}{https://github.com/bstarynk/misc-basile.git}}
@@ -730,7 +730,7 @@ Observe the buggy generated \texttt{dx.h}
        ``simultaneously'' many hundreds of thousands of plugins.
 
     \item\texttt{git clone
-      \href{https://github.com/bstarynk/minil.git}{https://github.com/bstarynk/minil.git}}
+      \href{https://github.com/bstarynk/minil.git}{https://github.com/bstarynsk/minil.git}}
       deals with dynamically allocated frames (persisted in
       \href{http://json.org}{JSON} format with
       \href{http://www.digip.org/jansson/}{\texttt{libjansson}}) and
@@ -749,7 +749,7 @@ Observe the buggy generated \texttt{dx.h}
   \begin{frame}
      \frametitle{{\RefPerSys} - early work in progress}
 
-     A future successor to CAIA for Linux (GPLv3+, open science). A
+     A future successor to CAIA for Linux/x86-64 (GPLv3+, open science). A
      bootstrapped AI system. An acronym for \textbf{Ref}lexive
      \textbf{Per}sistent \textbf{Sys}tem. See
      \href{http://refpersys.org/}{\large\texttt{\textbf{\textcolor{red}{refpersys.org}}}}
@@ -762,9 +762,146 @@ Observe the buggy generated \texttt{dx.h}
      \end{center}
      
      With contributions from Abhishek Chakravarti and Nimesh Neema (India). Active additional contributors welcome.
-     
- \end{frame}
+
+     Coded in C++ (some of which is generated). For Qt graphical interface.
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{immutable values of \RefPerSys}
+
+    Each value has a class. ObjVLisp model. Most values are immutable, except objects. They are dynamically allocated and garbage collected
+
+    \begin{itemize}
+    \item tagged 63 bits integers
+    \item boxed doubles
+    \item boxed UTF-8 strings
+    \item mutable objects
+    \item ascending sets of objects
+    \item tuples of objects
+    \item closures (the closed ``variables'' are values, the connective gives the function)
+    \item immutable instances with components (values)
+    \item boxed Qt pointers (to widgets)
+      \item boxed JSON
+      \item etc \ldots
+    \end{itemize}
+    
+  \end{frame}
+  
  
+
+  \begin{frame}
+    \frametitle{mutable objects of \RefPerSys}
+s
+    Each object has :
+    \begin{itemize}
+    \item a fixed random ``globally'' unique object id (96 bits) externally represented by a oid string like \texttt{\_02iWbXmFx8f04ldLRt}. So objects are comparable by their oid.
+    \item a mutex for multi-thread locking
+      \item a modification time (double)
+      \item a mutable class (itself an object reference)
+      \item a space (itself an object reference, or nil) for persistence
+    \item a finite mapping (varying with time) for attribute entries. Each entry has a key which is an object, associated to a non-nil value. Every key is different.
+    \item a varying vector for object components
+    \item an optional mutable payload
+      \item two atomic C++ function pointers (one for magic attribute getting, another for applying closures having that object as connective).
+    \end{itemize}
+    
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{mutable payload in objects of \RefPerSys}
+
+    They hold any additional data not fitting elsewhere:
+    \begin{itemize}
+    \item class information (method dictionnary + superclass)
+    \item symbol information
+    \item string buffers
+    \item mutable vectors of doubles
+    \item mutable vectors of values
+    \item mutable sets (e.g. \texttt{std::set})
+    \item mutable relations
+    \item dictionnaries associating strings to values or object
+    \item Qt windows
+    \item file or process or database handles
+    \item etc...
+    \end{itemize}
+
+    Objects and their payload may represent a semantics network
+  \end{frame}
+   
+  \begin{frame}
+    \frametitle{persistence in \RefPerSys}
+    The entire heap is dumped before exit and reloaded just after startup. Using JSON (so in a textual format friendly to \texttt{git}).
+
+    \begin{itemize}
+    \item some values are transient (Qt widgets, transient closures or instances).
+    \item most values are persistent.
+    \item objects are shared and persistent in their space.
+    \item continuations (call stack) are not persisted
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{graphical user interface in \RefPerSys}
+    \begin{itemize}
+    \item several Qt windows
+    \item auto-completion
+    \item syntax oriented editor (Centaur inspired)
+    \item model view controller approach above flexible \RefPerSys object model
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{agenda machinery in \RefPerSys}
+
+    To be implemented:
+    
+    \begin{itemize}
+    \item multi-threaded, multi-workers (e.g. a dozen of worker threads)
+    \item several queues of tasklets
+    \item each tasket is an object, conceptually a sort of bytecode VM
+    \item each worker thread runs a tasklet for a few milliseconds. That run could modify the agenda by adding/removing/reorganizing tasklets in it
+    \item the Qt GUI may add tasklets to the agenda
+      \item the agenda should be partly persistent
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{future work}
+    \begin{itemize}
+    \item generating most of C++ code (Quine), including persistence and GC
+    \item perhaps interfacing \texttt{libgccjit}  -runtime generation of code
+    \item rule based approach
+    \item metarules compiled to code
+    \item richer frame model
+    \item climbing the staircase with higher-level (more declarative) repretentations
+    \end{itemize}
+  \end{frame}
+  
+  \begin{frame}
+    \frametitle{a difficult problem for AI systems}
+
+    \medskip
+    
+    Finding seed funding and real life problems. Should require some AI (self-application of \RefPerSys~ on that problem).
+
+    \bigskip
+    
+    Generating more and more complex C++ programs (GCC or Firefox plugins; FastCGI programs; embedded Linux code?)
+    
+  \end{frame}
+
+  
+  \begin{frame}
+    \frametitle{your help is needed}
+
+    Contributing your time to grow \RefPerSys
+
+    Contributing old hardware, books.
+
+    Sponsoring (travel, workshops)
+
+    
+  \end{frame}
   \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
