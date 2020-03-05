@@ -397,7 +397,7 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
  \begin{frame}
    \frametitle{other source code mesures}
 
- \begin{tabular}{lcp{0.4\textwidth}}
+ \begin{tabular}{lcp{0.55\textwidth}}
    \textbf{software} & \textbf{source size} & \\
    CAIA & 506KLOC & \textsc{Caia} as before \\
    Linux 3.6 & 15.9 MSLOC & the Linux 3.6 kernel on \href{https://kernel.org/}{\texttt{kernel.org}} \\
@@ -406,10 +406,35 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    binutils 2.34 & 2.104MLOC & GNU assembler and linker \href{https://www.gnu.org/software/binutils/}{\texttt{www.gnu.org/software/binutils/}} \\
    bash 5.0 & 124KLOC & GNU Bourne Again SHell \href{https://www.gnu.org/software/bash/}{\texttt{www.gnu.org/software/bash/}} \\
    glibc 2.31 & 1.257MLOC & GNU C library \href{https://www.gnu.org/software/libc/}{\texttt{www.gnu.org/software/libc/}} \\
-   libbacktrace & 18.9KLOC & backtracing \href{https://github.com/ianlancetaylor/libbacktrace}{\texttt{github.com/ianlancetaylor/libbacktrace}} \\
-   Qt5 & ??? & a C++ GUI toolkit \href{https://qt.io/}{\texttt{qt.io}}\\
+   libbacktrace & 18.9KLOC & backtracking {\relsize{-1.5}{\href{https://github.com/ianlancetaylor/libbacktrace}{\texttt{github.com/ianlancetaylor/libbacktrace}}}} \\
+   Qt5 & 23.799MLOC & a C++ GUI toolkit \href{https://qt.io/}{\texttt{qt.io}}\\
  \end{tabular}
  
+ \end{frame}
+ \begin{frame}
+   \frametitle{illusion about C compiler}
+
+   J.Pitrat told me:
+   \begin{quote}
+     Only a small amount of the C language is used by \textsc{Caia} so I don't depend that much on GCC
+   \end{quote}
+
+   But \href{https://gcc.gnu.org/onlinedocs/gcc/Invoking-GCC.html}{using} \texttt{gcc -O2 -ftime-report} shows that about 80\% of GCC optimization passes are used.
+
+   \bigskip
+   
+   See some pages of
+   \href{http://starynkevitch.net/Basile/bismon-chariot-doc.pdf}{my
+     Bismon draft report} for an explanation.
+
+   GCC optimizations are surprising.
+
+   \bigskip
+
+   Disabling optimizations would lower \textsc{Caia} performance by
+   perhaps 30\%. See also
+   \href{https://en.wikipedia.org/wiki/Tiny_C_Compiler}{TinyCC}.
+   
  \end{frame}
   \end{document}
 
