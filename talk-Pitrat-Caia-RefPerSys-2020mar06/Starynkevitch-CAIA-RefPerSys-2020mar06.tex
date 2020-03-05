@@ -604,6 +604,11 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    From \href{https://en.wikipedia.org/wiki/The_Mythical_Man-Month}{\textit{The Mythical Man-Month}} (F.Brooks, 1975):
 
    Its central theme is that "adding manpower to a late software project makes it later".
+   
+   {\relsize{-1}{while it takes one woman nine months to make one baby, "nine women can't make a baby in one month"}
+
+   it takes some incompressible time to make a bootstrapped AI system.}
+   
 
    \medskip
 
@@ -868,7 +873,7 @@ s
   \begin{frame}
     \frametitle{future work}
     \begin{itemize}
-    \item generating most of C++ code (Quine), including persistence and GC
+    \item generating most of C++ code (Quine), including persistence, Qt, GC
     \item perhaps interfacing \texttt{libgccjit}  -runtime generation of code
     \item rule based approach
     \item metarules compiled to code
@@ -880,9 +885,12 @@ s
       \item self-tuning approach à la
         \href{https://en.wikipedia.org/wiki/MILEPOST\_GCC}{MILEPOST
           GCC}
-      \item declarative knowledge about other major C++ open source libraries
+      \item declarative knowledge about other major C++ open source libraries and generate C++ code calling them.
     \end{itemize}
   \end{frame}
+ 
+
+  %%%%%%% @@@TODO why C++ and not something else
   
   \begin{frame}
     \frametitle{a difficult problem for AI systems}
@@ -893,7 +901,11 @@ s
 
     \bigskip
     
-    Generating more and more complex C++ programs (GCC or Firefox plugins; FastCGI programs; embedded Linux code?)
+    Generating more and more complex C++ programs (GCC or Firefox
+    plugins; FastCGI programs; embedded Linux code?). Inspiration from
+    obsolete \href{http://www.starynkevitch.net/Basile/gcc-melt/}{GCC
+      MELT} experience {\relsize{-1}{(was a Lispy DSL translated to
+        C++ for GCC plugins)}}
     
   \end{frame}
 
@@ -901,12 +913,27 @@ s
   \begin{frame}
     \frametitle{your help is needed}
 
+    \medskip
+
+    mailing list hosting for low traffic publicly archived
+    \texttt{list@refpersys.org} (using
+    \href{http://list.org/}{MailMan} or
+    \href{https://www.sympa.org/}{Sympa}....)
+    \medskip
+    
     Contributing your time to grow \RefPerSys
 
+    \medskip
+    
     Contributing old hardware, books.
 
+    \medskip
+    
     Sponsoring (travel, workshops)
 
+    \medskip
+
+    Finding funding (HorizonEurope?)
     
   \end{frame}
   \end{document}
