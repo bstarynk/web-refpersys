@@ -11,6 +11,7 @@
 \usepackage{xcolor}
 \usepackage{alltt}
 \usepackage{wasysym}
+\usepackage{verbatim}
 \usepackage{hyperref}
 
 
@@ -329,7 +330,87 @@
  \end{frame}
 
 
+ \begin{frame}
+   \frametitle{D.Wheeler's \texttt{sloccount}}
+
+ A \textbf{machine learning} approach to \textbf{\textcolor{red}{estimate software development costs}} by
+ counting source lines of code (SLOC), and free (GPL) software
+ measuring that, on
+ \href{https://dwheeler.com/sloccount/}{\textbf{\texttt{dwheeler.com/sloccount/}}}.
+
+ A good programmer is rumored to be able to write about 30K SLOC per
+ year and this depends not much on the programming language used by
+ him (if he is expert on that language).
+ \medskip
  
+
+ Some figures (from \href{https://en.wikipedia.org/wiki/Source_lines_of_code}{Source lines of code} wikipage) :
+ \begin{tabular}{lcp{0.4\textwidth}}
+   \textbf{software} & \textbf{source size} & \\
+   Debian 7 & 419 MSLOC & the old Debian 7 distribution \\
+   Linux 3.6 & 15.9 MSLOC & the Linux 3.6 kernel \\
+ \end{tabular}
+
+ \bigskip
+ 
+\href{https://en.wikipedia.org/wiki/Software_development_effort_estimation}{Estimating
+  software development costs} is tricky: half of software projects are
+``failing''; refactoring a code base may involve replacing ten
+thousands lines by just one thousand of better lines.
+
+\medskip
+
+But software code size remains a good measure for its development
+costs.
+ \end{frame}
+
+
+ \begin{frame}
+   \frametitle{source code mesurement of \textsc{Caia}}
+
+   From \href{https://github.com/bstarynk/caia-pitrat}{\texttt{github.com/bstarynk/caia-pitrat}}, the C lines being generated :
+
+   \begin{relsize}{-1}
+   \begin{alltt}
+  SLOC	Directory	SLOC-by-Language (Sorted)\\
+506558  caia-pitrat     ansic=506160,sh=281,perl=63,cpp=54\\
+
+Totals grouped by language (dominant language first):\\
+ansic:       506160 (99.92\%)\\
+sh:             281 (0.06\%)\\
+perl:            63 (0.01\%)\\
+cpp:             54 (0.01\%)\\
+
+Total Physical \textcolor{Navy}{\textbf{Source Lines of Code}} (SLOC)                = \textcolor{red}{\textbf{\large 506,558}}\\
+Development Effort Estimate, \textcolor{Navy}{\textbf{Person-Years}} (Person-Months) = \textcolor{red}{138.32} (1,659.86)\\
+ (Basic COCOMO model, Person-Months = 2.4 * (KSLOC**1.05))\\
+Schedule Estimate, Years (Months)                         = 3.49 (41.84)\\
+ (Basic COCOMO model, Months = 2.5 * (person-months**0.38))\\
+Estimated Average Number of Developers (Effort/Schedule)  = 39.67\\
+\textcolor{Navy}{\textbf{Total Estimated Cost to Develop}}                           = {\relsize{+1}{\textcolor{red}{\$ 18,685,394}}}\\
+ (average salary = \$56,286/year, overhead = 2.40).\\
+SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
+   \end{alltt}
+   \end{relsize}
+ \end{frame}
+ 
+ \begin{frame}
+   \frametitle{other source code mesures}
+
+ \begin{tabular}{lcp{0.4\textwidth}}
+   \textbf{software} & \textbf{source size} & \\
+   CAIA & 506KLOC & \textsc{Caia} as before \\
+   Linux 3.6 & 15.9 MSLOC & the Linux 3.6 kernel on \href{https://kernel.org/}{\texttt{kernel.org}} \\
+   Xorg 1.12 & 406KLOC & The X11 window display server on \href{https://www.x.org/}{\texttt{www.x.org}}  \\
+   GCC 9.2 & 5.605MLOC & The GCC compiler on \href{https://gcc.gnu.org/}{\texttt{gcc.gnu.org}} \\
+   binutils 2.34 & 2.104MLOC & GNU assembler and linker \href{https://www.gnu.org/software/binutils/}{\texttt{www.gnu.org/software/binutils/}} \\
+   bash 5.0 & 124KLOC & GNU Bourne Again SHell \href{https://www.gnu.org/software/bash/}{\texttt{www.gnu.org/software/bash/}} \\
+   glibc 2.31 & 1.257MLOC & GNU C library \href{https://www.gnu.org/software/libc/}{\texttt{www.gnu.org/software/libc/}} \\
+   libbacktrace & 18.9KLOC & backtracing \href{https://github.com/ianlancetaylor/libbacktrace}{\texttt{github.com/ianlancetaylor/libbacktrace}} \\
+   Qt5 & ??? & a C++ GUI toolkit \href{https://qt.io/}{\texttt{qt.io}}\\
+ \end{tabular}
+ 
+ \end{frame}
   \end{document}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
