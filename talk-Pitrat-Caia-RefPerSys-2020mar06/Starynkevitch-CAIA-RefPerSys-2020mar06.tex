@@ -889,8 +889,72 @@ s
     \end{itemize}
   \end{frame}
  
+  \begin{frame}
+    \frametitle{why generate C++? ~ (1/2)}
 
-  %%%%%%% @@@TODO why C++ and not something else
+    Mostly for social reasons: C++11 or C++17 is well known, with robust compilers. Also
+    \begin{itemize}
+    \item C++11 has powerful \href{https://en.cppreference.com/w/cpp/container}{standard containers}
+    \item C++ is compatible with C, and \texttt{dlopen}-able on
+      Linux: \href{https://www.tldp.org/HOWTO/html_single/C++-dlopen/}{C++
+        dlopen mini HowTo}
+      \item I worked inside \href{http://gcc.gnu.org/}{GCC}, which
+        accepts
+        \href{https://gcc.gnu.org/onlinedocs/gccint/Plugins.html}{plugins}
+        coded in C++.
+      \item C++ is multi-threaded
+      \item C++17 don't have
+        \href{https://en.wikipedia.org/wiki/Flexible_array_member}{flexible
+          array members} yet but in practice on Linux/x86-64 we can use
+        with care (as in C89) last fields which are arrays of dimension
+        0.
+      \item C++ has \href{https://en.cppreference.com/w/cpp/language/lambda}{closures} and smart pointers.
+    \end{itemize}
+
+  \end{frame}
+
+  
+  \begin{frame}
+    \frametitle{why generate C++? ~ (2/2)}
+
+    Also
+    \begin{itemize}
+
+      \item existing C++ compilers optimize very well (but slowly).
+      \item C++ on Linux is compatible with
+        \href{https://gcc.gnu.org/onlinedocs/jit/}{libgccjit} and/or
+        \href{https://asmjit.com/}{asmjit} for just-in-time
+        generation of code at runtime.
+      \item many reputable interesting C++ (or C) libraries exist
+        (\href{https://github.com/open-source-parsers/jsoncpp}{JsonCpp},
+        \href{https://tensorflow.org/}{TensorFlow},
+        \href{https://project.inria.fr/gudhi/}{Ghudi},
+        \href{https://qt.io/}{Qt},
+        \href{https://pocoproject.org/}{POCO},
+        \href{https://gmplib.org/}{GMPlib} etc....)
+    \end{itemize}
+
+    \bigskip
+    
+   But C++ is an ugly monster
+   (\href{http://www.open-std.org/jtc1/sc22/wg21/docs/papers/2012/n3337.pdf}{n3337}
+   has 1324 pages) which I don't know and it is compiled slowly. Be aware
+   and scared of
+   \href{http://blog.llvm.org/2011/05/what-every-c-programmer-should-know.html}{undefined
+     behavior}.
+
+   \medskip
+   
+    Other language implementations could have been considered:
+    \href{http://rust-lang.org/}{Rust},
+    \href{https://go-lang.org/}{Go}, \href{https://sbcl.org/}{SBCL},
+    \href{https://www-sop.inria.fr/mimosa/fp/Bigloo/}{Bigloo},
+    \href{https://ocaml.org/}{Ocaml},
+    \href{http://www.tldp.org/HOWTO/Assembly-HOWTO/}{assembler}
+  \end{frame}
+  
+
+
   
   \begin{frame}
     \frametitle{a difficult problem for AI systems}
