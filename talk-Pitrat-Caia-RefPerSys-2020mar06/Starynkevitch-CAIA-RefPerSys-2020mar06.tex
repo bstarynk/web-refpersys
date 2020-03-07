@@ -66,7 +66,9 @@
 
  \begin{frame}{Overview}
 
-   These slides are downloadable from
+   These slides contain
+   \href{https://en.wikipedia.org/wiki/Hyperlink}{hyperlink}s and are
+   downloadable from
    \href{http://refpersys.org/Starynkevitch-CAIA-RefPerSys-2020mar06.pdf}{\texttt{refpersys.org/Starynkevitch-CAIA-RefPerSys-2020mar06.pdf}}
 
    \bigskip
@@ -395,7 +397,7 @@ costs.
  \begin{frame}
    \frametitle{source code measurement of \textsc{Caia}}
 
-   From \href{https://github.com/bstarynk/caia-pitrat}{\texttt{github.com/bstarynk/caia-pitrat}}, the C lines being generated :
+   From \href{https://github.com/bstarynk/caia-pitrat}{\texttt{github.com/bstarynk/caia-pitrat}}, \emph{all} its C lines being generated :
 
    \begin{relsize}{-1}
    \begin{alltt}
@@ -694,18 +696,18 @@ SLOCCount, Copyright (C) 2001-2004 David A. Wheeler
    \frametitle{CAIA demo}
 
    \texttt{git clone
-     \href{https://github.com/bstarynk/caia-pitrat.git}{https://github.com/bstarynk/caia-pitrat.git}}. You
+     \href{https://github.com/bstarynk/caia-pitrat.git}{https://github.com/bstarynk/caia-pitrat.git}}. All its C code has been self-generated. You
    need 250Mbytes of disk space.
 
    \texttt{cd caia-su-24feb2016}
    
-Observe the buggy generated \texttt{dx.h} 
+Observe the buggy generated \texttt{dx.h} (missing \texttt{extern}).
 
    \texttt{make} perhaps needed twice (15 minutes of CPU time).
 
    \texttt{./caia}
 
-   Observe the \texttt{ed} like user interface. Try \texttt{L EDITE} perhaps twice.
+   Observe the \href{https://en.wikipedia.org/wiki/Ed_(text_editor)}{\texttt{ed}} like user interface. Try \texttt{L EDITE} perhaps twice.
     
    Look into \texttt{\_*} persistent data files. Too small to be
    friendly with most file systems. See figure on
@@ -764,7 +766,7 @@ m
      bootstrapped AI system. An acronym for \textbf{Ref}lexive
      \textbf{Per}sistent \textbf{Sys}tem. See
      \href{http://refpersys.org/}{\large\texttt{\textbf{\textcolor{red}{refpersys.org}}}}
-     and code (C++ and persistent JSON data) on
+     and code (C++ and \href{https://en.wikipedia.org/wiki/Persistence_(computer_science)}{persistent} JSON data) on
      \href{https://gitlab.com/bstarynk/refpersys/}{\texttt{\textbf{https://gitlab.com/bstarynk/refpersys/}}}
 
      \begin{center}
@@ -780,7 +782,7 @@ m
   \begin{frame}
     \frametitle{immutable values of \RefPerSys}
 
-    Each value has a class. ObjVLisp model. Most values are immutable, except objects. They are dynamically allocated and garbage collected
+    Each value has a class. \href{https://pdfs.semanticscholar.org/051f/852ac2883a694c51151c88490603867f5ffb.pdf}{ObjVLisp} model. Most values are immutable, except objects. They are dynamically allocated and garbage collected
 
     \begin{itemize}
     \item tagged 63 bits integers
@@ -841,22 +843,29 @@ s
    
   \begin{frame}
     \frametitle{persistence in \RefPerSys}
-    The entire heap is dumped before exit and reloaded just after startup. Using JSON (so in a textual format friendly to \texttt{git}).
+    The entire heap is dumped before exit and reloaded just after startup. Using \href{http://json.org/}{JSON} (so in a textual format friendly to \href{https://git-scm.com/}{\texttt{git}}).
+
+    \bigskip
 
     \begin{itemize}
     \item some values are transient (Qt widgets, transient closures or instances).
     \item most values are persistent.
     \item objects are shared and persistent in their space.
-    \item continuations (call stack) are not persisted; using \texttt{libbacktrace}
+    \item \href{https://en.wikipedia.org/wiki/Continuation}{continuations} (call stacks) are not persisted yet; using \href{https://github.com/ianlancetaylor/libbacktrace}{\texttt{libbacktrace}}
     \end{itemize}
   \end{frame}
 
   \begin{frame}
     \frametitle{graphical user interface in \RefPerSys}
+
+    Work in progress in march 2020.
+
+    \bigskip
+    
     \begin{itemize}
     \item several Qt windows
     \item auto-completion
-    \item syntax oriented editor (Centaur inspired)
+    \item syntax oriented editor (\href{https://hal.inria.fr/inria-00075774}{Centaur} inspired)
     \item model view controller approach above flexible \RefPerSys object model
     \end{itemize}
   \end{frame}
@@ -879,12 +888,14 @@ s
   \begin{frame}
     \frametitle{future work}
     \begin{itemize}
-    \item generating most of C++ code (Quine), including persistence, Qt, GC
+    \item generating most of C++ code
+      (\href{https://en.wikipedia.org/wiki/Quine_(computing)}{Quine}),
+      including persistence, Qt, GC
     \item perhaps interfacing \texttt{libgccjit}  -runtime generation of code
     \item rule based approach
     \item metarules compiled to code
     \item richer frame model
-    \item climbing the staircase with higher-level (more declarative) representations
+    \item climbing the staircase with higher-level (more \href{https://en.wikipedia.org/wiki/Declarative_programming}{declarative}) representations
     \item declarative knowledge to use machine learning libraries
         \href{https://www.tensorflow.org/}{\textit{TensorFlow}},
         \href{http://gudhi.gforge.inria.fr/}{\textit{Ghudi}}
