@@ -53,8 +53,9 @@
 
   <!-- **************************************************************** -->
   <h2 id='wip_id'>Early work in progress</h2>
-  <p>We have in 2019 - 2020 a lot of ideas, but not much code (on <a href=
-  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a>).
+  <p>We have in 2019 - 2020 a lot of ideas, and some code for <a href='https://en.wikipedia.org/wiki/Linux'>Linux</a>; in summer 2020: 15KLOC measured by <a href='https://dwheeler.com/sloccount/'>Wheeler&apos;s <span class='cl_tt'>sloccount</span><a> software. That code is on <a href=
+  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a> and mirrored on <a href=
+  'https://github.com/bstarynk/refpersys'><span class='cl_tt'>github</span></a>.
   Done by passionate developers on their spare time. <b>Volunteers
   wanted</b>; please send an email (introducing yourself) to
   <a href=
@@ -255,13 +256,165 @@
   some design ideas is downloadable as <a href=
   'http://starynkevitch.net/Basile/refpersys-design.pdf'><span class='cl_tt'>refpersys-design.pdf</span></a>.
   We are improving it in 2019 and 2020.</p>
-  <p>The currently existing (in 2019 or 2020), on <a href=
-  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a>) code
-  base is a bit disappointing, even to the <i>Refpersys</i> team.
-  But we have a lot of fun doing it. It is constantly improving,
-  publicly available, still unreleased, <a href=
+  <p>The currently <i>temporary</i> existing (in 2019 or 2020),
+  on <a href=
+  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a>
+  code base is a bit disappointing (since in summer 2020 most of it is
+  still hand-coded by us, not yet generated), even to
+  the <i>Refpersys</i> team.  But we have a lot of fun doing it. It is
+  constantly improving, publicly available, still unreleased, <a href=
   'https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha'>
-	  α-stage</a>. We are aware of the <a href='https://en.wikipedia.org/wiki/Replication_crisis'>replication crisis</a>.</p>
+  α-stage</a>. We are aware of
+  the <a href='https://en.wikipedia.org/wiki/Replication_crisis'>replication
+  crisis</a>. <b>We hope to generate most of <i>RefPerSys</i> C++ code
+  at end of 2020.</b> The external libraries used by <i>RefPerSys</i>
+  may evolve with time, with the hope to provide some partial
+  semi-formal description of their properties to the system. We are
+  aware
+  of <a href='https://en.wikipedia.org/wiki/Rice%27s_theorem'>Rice&apos;s
+  theorem</a>.</p>
+
+  <p>The major insight of <i>RefPerSys</i> is to <b>generate</b> most
+  of (and hopefully <i>all</i>) <b>its C++ code from higher level
+  representations</b>, based upon a cyclic graph of objects in virtual
+  memory. That entire graph, called <b>the persistent heap</b>, is
+  loaded at startup, and dumped at shutdown, from textual files (and
+  later, external databases). It
+  is <a href='https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)'>garbage-collected</a>.</p>
+  
+  <h3 id='valobj_id'>values and objects in <i>RefPerSys</i></h3>
+
+  <p>The persistent heap contains immutable values and mutable
+  objects. Each value is practically speaking a 64 bits word, often a
+  pointer (which can refer to an object in memory, or to a small
+  memory zone holding some data, conceptually
+  some <a href='https://en.wikipedia.org/wiki/Tagged_union'>tagged
+  union</a>). Values are hashed and ordered, and are a The <i>nil</i>
+  pointer usually represents a missing value.<br/>
+
+    <b>Immutable values</b> include:
+    <ul>
+      <li>tagged 63-bits integers</li>
+      <li>boxed floating point numbers</li>
+      <li><a href='https://utf8everywhere.org/'>UTF-8</a> encoded
+	strings</li>
+      <li>sequence of object references</li>
+      <li>finite and ordered set of object references. So membership
+	test is in <i>O(log n)</i></li>
+      <li>immutable instances (containing, like objects do, a class, a
+      set of attributes and/or a sequence of components, both being
+      fixed)</li>
+      <li>closures; the closed code is represented as an object
+      (called the connective object), and the closed values
+      (represented as a sequence) are arbitrary and could be nil.</li>
+      <li>etc... (e.g. small vector of floats or of 32 bits integers, or <a href='http://json.org'>JSON</a> values)</li>
+    </ul>
+
+    <br/>
+
+    Only <b>objects are mutable</b>. Since <i>RefPerSys</i> is
+    multi-<a href='https://en.wikipedia.org/wiki/Thread_(computing)'>threaded</a>,
+    access to or update of objects require some synchronization
+    (with <a href='https://en.wikipedia.org/wiki/Lock_(computer_science)'>mutexes</a>
+    etc...). Objects have each a (hopefully) globally
+    unique <i>objid</i> which is textually representable, for
+    example <span class='cl_tt'>_8J6vNYtP5E800eCr5t</span>. <b>Objects
+      are quite heavy but flexible data structures</b> containing:
+    <ul>
+      <li>Their unique <i>objid</i></li>
+      <li>Their mutex lock</li>
+      <li>The <b>class</b> of that object, itself an object reference</li>
+      <li>The <b>space</b> of that object, used for persistence (e.g. all
+      objects in the same space goes into the same file or database);
+	it is an object reference</li>
+      <li>The <b>modification time</b> of that object.</li>
+      <li>A finite and updatable <b>map of attributes</b>, made of
+      attribute entries. Each such entry has an attribute (itself an
+      object reference) with an associated non-nil value. All
+      attributes of a given objects are different.</li>
+      <li>An updatable and resizable <b>vector of components</b>, each component being a value or nil</li>
+      <li>optional <b>pointers to C++ functions</b> to apply closures or to get magical attributes.</li>
+      <li>Some extra optional <b>payload</b>. Object payloads contain
+	data which does not fit into the general <i>ObjVLisp</i>
+	inspired model, e.g. GUI widgets, file handles, dictionnaries
+	mapping string to values, etc...</li>
+      </ul>
+    Some of the above fields
+    are <span class='cl_tt'>std::atomic</span> in C++, for performance
+    reasons (to avoid locking the entire object). Even the
+    object&apos;s class or space or payload or internal function
+    pointers could change during runtime.</p>
+
+  <p><b>Most</b> (but not all) <b>objects are persistent</b> (so reloaded at startup
+  and dumped to disk or databases at shutdown).</p>
+  
+  <h3 id='valobj_id'>metaprogramming and introspection in <i>RefPerSys</i></h3>
+
+  <p>An important feature of <i>RefPerSys</i>
+    is <b><a href='https://en.wikipedia.org/wiki/Metaprogramming'>meta-programming</a></b>
+    and code generation. <b>During its runtime, the
+    multi-threaded <span class='cl_tt'>refpersys</span> <a href='https://en.wikipedia.org/wiki/Process_(computing)'>process</a>
+    should generate C++ or C code</b>, compile that code into
+    some <a href='https://www.akkadia.org/drepper/dsohowto.pdf'>shared
+    library</a>,
+    then <a href='http://man7.org/linux/man-pages/man3/dlopen.3.html'>dlopen</a>
+    that generated shared object, and get function pointers inside it
+    using
+    then <a href='http://man7.org/linux/man-pages/man3/dlsym.3.html'>dlsym</a>. See
+    also <a href='https://tldp.org/HOWTO/Program-Library-HOWTO/'>the
+    Program Library HOWTO</a>, and
+    the <a href='https://tldp.org/HOWTO/html_single/C++-dlopen/'>C++
+    dlopen mini HOWTO</a> and
+    the <a href='https://github.com/bstarynk/misc-basile/blob/master/manydl.c'><span class='cl_tt'>manydl.c</span>
+    example</a>. Generated C++ code could be temporary or persistent
+    (in that later case, it is version-controlled).</p>
+    
+  <p>Another important feature of <i>RefPerSys</i>
+    is <b>introspection</b> coupled with
+    runtime <a href='https://en.wikipedia.org/wiki/Profiling_(computer_programming)'>profiling</a>
+    (see
+    also <a href='http://man7.org/linux/man-pages/man7/time.7.html'>time(7)</a>...)
+    which is reasonably possible in generated C++ code with the help
+    of the garbage collector (explicit
+    GC-ed <a href='https://en.wikipedia.org/wiki/Call_stack#CALL-FRAME'>call
+    frames</a> being singly-linked lists)
+    and/or <a href='https://github.com/ianlancetaylor/libbacktrace'>Ian
+    Taylor's <span class='cl_tt'>libbacktrace</span> library</a> and
+    the <a href='http://man7.org/linux/man-pages/man3/dladdr.3.html'>dladdr(3)</a>
+    function. During its runtime, <i>RefPerSys</i> can inspect most of
+    its call stacks. <b>We later hope to use <a href='https://en.wikipedia.org/wiki/Machine_learning'>machine learning</a> techniques</b>
+    on the profiling data and get some dynamic optimization, tailored
+    to the concrete problems approached and actual applications
+    of <i>RefPerSys</i>.
+
+    <h3 id='declknow_id'>declarative knowledge and bootstrapping in <i>RefPerSys</i></h3>
+
+  <p>The insight of <i>RefPerSys</i> is to represent
+  high-level <a href='https://en.wikipedia.org/wiki/Expert_system'>expert
+  system</a> rules, fact bases and machine learning artefacts as
+  collections of objects. The C++ generator should be described by
+  meta-rules compiled by itself to C++ code. So we are taking
+  a <a href='https://en.wikipedia.org/wiki/Bootstrapping_(compilers)'>bootstrapping</a>
+  approach, first generating C++ code by hand-written C++ code, then
+  replacing some of it by generated C++ code from higher-level
+  knowledge representations, then progressively and incrementally
+  improving these representations by higher-level and more abstract
+    constructs. This should be worked on in 2021.</p>
+
+  <p>In practice, <i>RefPerSys</i> requires some graphical user
+  interface
+  with <a href='https://en.wikipedia.org/wiki/Autocomplete'>autocompletion</a>
+  facilities, and displaying graphically small parts of its heap
+  (perhaps
+  as <a href='https://en.wikipedia.org/wiki/Abstract_syntax_tree'>abstract
+  syntax trees</a> or nested boxes), inspired by the
+  past <a href='https://hal.inria.fr/inria-00075774'>Centaur
+  system.</a>. It is well known that GUI toolkits
+  like <a href='http://qt.io/'>Qt</a>
+  or <a href='https://fltk.org/'>FLTK</a> are more easily used with
+  C++ code generators, which are parts of <i>RefPerSys</i>. So we need
+  to work a lot.</p>
+    
   <!-- **************************************************************** -->
   <h2 id='talks_id'>talks</h2>
 
@@ -355,12 +508,7 @@
   α-stage</a> embryonic <a href=
   'https://www.gnu.org/philosophy/free-sw.en.html'>free software</a>
   source code of <i>RefPerSys</i> is on <a href=
-  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab.com/bstarynk/refpersys</span></a>.
-  Only the <a href=
-  'https://gitlab.com/bstarynk/refpersys/tree/master'><span class='cl_tt'>master</span>
-  branch</a> is interesting. Other <span class='cl_tt'>git</span>
-  branches are obsolete, temporary work, or might not even
-  compile.<br>  We practically are
+  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab.com/bstarynk/refpersys</span></a>.<br>  We practically are
   using <a href='http://git-scm.com'>git</a> as a <q>centralized</q>
   version control system, because we are very few and sill don't
   understand well in 2019 or 2020 how a genuinely
@@ -402,7 +550,15 @@
       prefixed <span class='cl_tt'>RPS_</span>
       or <span class='cl_tt'>REFPERSYS_</span>,
       see <a href='https://man7.org/linux/man-pages/man7/environ.7.html'><span class='cl_tt'>environ(7)</span></a>
-      for more) that could be relevant.</p>
+    for more) that could be relevant.</p>
+
+<p>It is preferable to <b>download <i>RefPerSys</i> from
+    <a href='https://gitlab.com/bstarynk/refpersys'> <span class='cl_tt'>gitlab.com/bstarynk/refpersys</span></a>
+    and look into the active <span class='cl_tt'>git</span> branches,
+    then to build it on your Linux computer.</b>  The build time
+    with <span class='cl_tt'>make</span> could last one or a few
+    minutes.</p>
+  
   <!-- **************************************************************** -->
   <h2 id='forum_id'>forum</h2>
 
@@ -458,11 +614,11 @@ some <a href='https://en.wikipedia.org/wiki/Machine_learning'>machine
 learning</a> techniques, we believe it may become
   useful... However, <b>the priority</b> in 2020 <b>is to generate most</b> (hopefully all) <b>of the C++ code of the  <i>RefPerSys</i> system</b>. Contact <a href='mailto:team@refpersys.org'><span class='cl_tt'>team@refpersys.org</span></a>.</p>
 
-<p>Of course, any real-world potential concrete application
-of <i>RefPerSy</i> (e.g. health sector, smart cities, smart grids,
+<p>Of course, <b>any real-world potential concrete application
+    of <i>RefPerSys</i></b> (e.g. health sector, smart cities, smart grids,
 smart web, perhaps robot planning, civilian autonomous vehicles or
-drones, etc....)  would require some support and a little bit of
-funding. We all are excited by this project, and we all want to have
+drones, etc....) <b>would require some support and a little bit of
+    funding</b>. We all are excited by this project, and we all want to have
 some read-world application for it and expect such applications to
 fund partly our research work.</p>
 
