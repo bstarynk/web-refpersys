@@ -36,7 +36,16 @@ p.cl_french {
     font-size: 85%;
     background-color: lightcyan;
     color: darkolivegreen;
-    border: 1px solid black;
+    border: 2px solid black;
+    padding: 4px;
+}
+
+p.cl_russian {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 85%;
+    background-color: lavenderblush;
+    color: darkolivegreen;
+    border: 2px solid black;
     padding: 4px;
 }
 
