@@ -49,6 +49,15 @@ p.cl_russian {
     padding: 4px;
 }
 
+p.cl_english {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 85%;
+    background-color: peachpuff;
+    color: darkolivegreen;
+    border: 2px solid black;
+    padding: 4px;
+}
+
 span.cl_tt {
     font-family: "Lucida Console", Monaco, monospace;
 }
