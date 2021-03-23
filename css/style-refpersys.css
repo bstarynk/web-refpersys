@@ -1,5 +1,5 @@
 /* file style-refpersys.css on refpersys.org - CCBYSA4 licensed, see https://creativecommons.org/licenses/by-sa/4.0/ */
-/*  © Copyright 2019 - 2020 The Reflective Persistent System Team - http://refpersys.org */
+/*  © Copyright 2019 - 2021 The Reflective Persistent System Team - http://refpersys.org */
 
 body {
     background-color: ivory;
@@ -55,6 +55,15 @@ p.cl_english {
     background-color: peachpuff;
     color: darkolivegreen;
     border: 2px solid black;
+    padding: 4px;
+}
+
+p.cl_small {
+    font-family: Times, serif;
+    font-size: 85%;
+    background-color: azure;
+    color: brown;
+    boder: 3px dash black;
     padding: 4px;
 }
 
