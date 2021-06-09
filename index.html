@@ -1,920 +1,886 @@
 <!DOCTYPE html>
 <html>
 <head>
-     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/> 
-  <link rel="stylesheet" href="css/style-refpersys.css">
-  <title>RefPerSys : a free software AGI project (GPLv3+)</title>
+<meta name="generator" content=
+"HTML Tidy for HTML5 for Linux version 5.6.0">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="css/style-refpersys.css">
+<title>RefPerSys : a free software AGI project (GPLv3+)</title>
 </head>
-<body lang="en" >
+<body lang="en">
+<header><img class='cl_logo' src='refpersys_logo.svg' alt=
+'refpersys logo' width='600'><br>
+<span class='cl_small'>SVG logo by <a href=
+'mailto:tapon.gaetan@gmail.com'>Gaëtan Tapon</a> (Paris,
+France)</span></header>
+<h1><i>RefPerSys</i>, a <a href=
+'https://www.gnu.org/philosophy/free-sw.en.html'>free software</a>
+symbolic <a href=
+'https://en.wikipedia.org/wiki/Artificial_general_intelligence'>artificial
+general intelligence</a> project</h1>
+<p lang='fr' class='cl_french'>&nbsp;<img src='Flag_of_France.svg'
+alt='French flag'> <a href=
+'http://refpersys.org/'><i>RefPerSys</i></a> (voir <a href=
+'http://refpersys.org/'>refpersys.org</a>) est un projet (en 2020
+et 2021, bénévole) de recherches et un logiciel libre en
+intelligence artificielle, inspiré par les travaux de feu <a href=
+'https://fr.wikipedia.org/wiki/Jacques_Pitrat'>Jacques Pitrat</a>
+(1934 - oct.2019). Voir la <a href=
+'https://afia.asso.fr/journee-hommage-j-pitrat/'>journée d'hommage
+à J.Pitrat</a>. Le lecteur est supposé capable de lire
+l'anglais.<br>
+<b>Nous recherchons une source de financement possible</b> (via
+<b>des applications</b>), par exemple non-exhaustif (en 2021) via
+l'<a href='https://anr.fr/fr/'>Agence Nationale pour la
+Recherche</a> - en s'intégrant dans un montage de projet -, appel
+<a href=
+'https://anr.fr/fileadmin/aap/2021/aapg-2021-v1.1.pdf'>AAPG2021</a>,
+axes §2.1 <small>(sciences de base pour l'énergie)</small>, §2.2
+<small>(Une énergie durable, propre, sûre et efficace)</small>,
+§3.8 <small>Neurosciences intégratives et cognitives</small>, §5.2
+<small>Intelligence Artificielle</small>, §8.5 <small>Mathématiques
+et sciences du numérique pour la biologie et la santé</small>, §8.6
+<small>Révolution numérique : rapports au savoir et à la
+culture</small>. Une autre possibilité serait de faire partie d' un
+<a href=
+'https://extranet.bpifrance.fr/projets-innovants-collaboratifs'>projet
+innovant collaboratif BPI France</a>. Veuillez alors contacter
+<a href='http://starynkevitch.net/Basile/'>Basile Starynkevitch</a>
+par courriel vers <a href=
+'mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> ou
+<a href=
+'mailto:basile-freelance@starynkevitch.net'>basile-freelance@starynkevitch.net</a>
+ou <a href=
+'mailto:basile.starynkevitch@cea.fr'>basile.starynkevitch@cea.fr</a>,
+et diffuser <a href='pub-refpersys-oct2020.pdf'>cette page
+A4</a></p>
+<p lang='ru' class='cl_russian'>&nbsp;<img src='Flag_of_Russia.svg'
+alt='Russian flag'> <a href=
+'http://refpersys.org/'><i>RefPerSys</i></a> (см. сайт <a href=
+'http://refpersys.org/'>refpersys.org</a>) свободное программное
+обеспечение (ПСОК под лицензией GPLv3), для системы Linux/x86-64, в
+области симболицеского искусственного интеллекта (рефлексы,
+самоанализ, метазнание ...) по идеям Jacques Pitrat мы ищем
+партнеров в контексте <a href=
+'http://www.indiarussiainnovate.org'>www.indiarussiainnovate.org</a>
+это работа в стадии разработки. А также ищем потенциальных
+приложений и пользователей. Пожалуйста, свяжитесь со мной, <a href=
+'mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a>
+(Василий Дмитриевич Старынкевич), который плохо читает и плохо
+говорит по-русски, но свободно владеет английским и французским
+языками. Jacques Pitrat был директором моего докторского жюри (в
+области искусственного интеллекта) защищенного в 1990 году (в
+Университете Paris 6).</p>
+<p lang='en' class='cl_english'>&nbsp; <img src=
+'Flag_of_Europe.svg' height='20' width='30' alt='European flag'>
+<a href='http://refpersys.org/'><i>RefPerSys</i></a> (see <a href=
+'http://refpersys.org/'>refpersys.org</a>) is a free software
+research artificial intelligence project and open source software
+(work in progress) for Linux, inspired by the works of the late
+<a href='https://fr.wikipedia.org/wiki/Jacques_Pitrat'>Jacques
+Pitrat</a> (1934 - oct.2019). See his blog on <a href=
+'http://bootstrappingartificialintelligence.fr/WordPress3/'>bootstrappingartificialintelligence.fr</a>
+and read his book <i>Artificial Beings, the Conscience of a
+Conscious Machine</i> (ISBN 978-1848211018). We are looking for
+<b>potential applications, partnerships, collaboration and some
+funding</b> for working on this project. European R&amp;D projects
+and calls for proposals like <a href='itea3.org/'>ITEA3</a> or
+<a href=
+'https://ec.europa.eu/programmes/horizon2020/en/search/site/horizon%20europe'>
+HorizonEurope</a> or <a href='https://ecscollaborationtool.eu/'>ECS
+collaboration tool</a> or comes to mind. Contact <a href=
+'http://starynkevitch.net/Basile/index_en.html'>Basile
+Starynkevitch</a> by email to <a href=
+'mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> or
+<a href=
+'mailto:basile-freelance@starynkevitch.net'>basile-freelance@starynkevitch.net</a>
+or <a href=
+'mailto:basile.starynkevitch@cea.fr'>basile.starynkevitch@cea.fr</a>.</p>
+<nav><a class='cl_navlink' href='#wip_id'>work in progress</a>
+<a class='cl_navlink' href='#team_id'>team</a> <a class=
+'cl_navlink' href='#designideas_id'>design ideas</a> <a class=
+'cl_navlink' href='#documents_id'>documents</a> <a class=
+'cl_navlink' href='#talks_id'>talks</a> <a class='cl_navlink' href=
+'#dependencies_id'>dependencies</a> <a class='cl_navlink' href=
+'#download_id'>download code</a> <a class='cl_navlink' href=
+'#forum_id'>forum</a> <a class='cl_navlink' href=
+'#needs_id'>needs</a> <a class='cl_navlink' href=
+'#applications_id'>applications</a> <a class='cl_navlink' href=
+'#related_id'>related projects</a></nav>
+<h2>RefPerSys - <a href='http://refpersys.org/' style=
+'color: brown; font-family: Verdana, Sans-serif; font-size: 120%; font-weight: bold'>
+refpersys.org</a></h2>
+<p>An acronym for <b>Ref</b>lexive <b>Per</b>sistent <b>Sys</b>tem.
+This is an ambitious <b><a href=
+'https://en.wikipedia.org/wiki/Research' style=
+'color: red'>research</a> project</b> (still unfunded, in 2019 -
+2020 it is a hobby project; also very risky!), done on spare time
+with an <a href='https://en.wikipedia.org/wiki/Open_science'>open
+science</a> mindset and ethics.</p>
+<!-- **************************************************************** -->
+<h2 id='wip_id'>Early work in progress</h2>
+<p>We have in 2019 - 2021 a lot of ideas, and some code for
+<a href='https://en.wikipedia.org/wiki/Linux'>Linux</a>; in april
+2021: 42KLOC measured by <a href=
+'https://dwheeler.com/sloccount/'>Wheeler's <span class=
+'cl_tt'>sloccount</span></a> software. That code is on <a href=
+'https://gitlab.com/bstarynk/refpersys'><span class=
+'cl_tt'>gitlab</span></a> and <b>preferably</b> on <a href=
+'https://github.com/RefPerSys/RefPerSys'><span class=
+'cl_tt'>github.com/RefPerSys/RefPerSys</span></a>. Done by
+passionate developers on their spare time. <b>Volunteers
+wanted</b>; please send an email (introducing yourself) to <a href=
+'mailto:basile@starynkevitch.net'><span class=
+'cl_tt'>basile@starynkevitch.net</span></a> (near Paris, France,
+homepage <a href='http://starynkevitch.net/Basile/'>here</a>) for
+more.</p>
+<h3 id='team_id'>The <i>RefPerSys</i> development team</h3>
+<p>The following persons are working (in 2019 - 2021) on
+<i>RefPerSys</i> on their spare time from their home and are the
+copyright owners of the embryonic software.</p>
+<table class='cl_devtable'>
+<caption>The <i>RefPerSys</i> team of developers</caption>
+<thead>
+<tr>
+<th>who</th>
+<th>where</th>
+<th>email</th>
+<th>home page</th>
+<th>role</th>
+</tr>
+</thead>
+<tbody><!-- Basile Starynkevitch: -->
+<tr>
+<td>Basile Starynkevitch<br>
+<small>(born in 1959, PhD in AI)</small>,<br>
+<small>resume <a href=
+'http://starynkevitch.net/Basile/cv-Basile-Starynkevitch.pdf'>here</a></small></td>
+<td><a href=
+'https://en.wikipedia.org/wiki/Bourg-la-Reine'>Bourg-la-Reine</a>,<br>
 
-  <header>
-  <img class='cl_logo' src='refpersys_logo.svg' alt='refpersys logo' width='600'/><br>
-  <span class='cl_small'>SVG logo by <a href='mailto:tapon.gaetan@gmail.com'>Gaëtan Tapon</a> (Paris, France)</span>
-  </header>
-  
-  <h1><i>RefPerSys</i>, a <a href=
-  'https://www.gnu.org/philosophy/free-sw.en.html'>free
-  software</a> symbolic <a href=
-  'https://en.wikipedia.org/wiki/Artificial_general_intelligence'>artificial
-      general intelligence</a> project</h1>
-
-  <p lang='fr' class='cl_french'>&nbsp;<img src='Flag_of_France.svg'
-  alt='French
-  flag'/> <a href='http://refpersys.org/'><i>RefPerSys</i></a>
-  (voir <a href='http://refpersys.org/'>refpersys.org</a>) est un
-  projet (en 2020 et 2021, bénévole) de recherches et un logiciel
-  libre en intelligence artificielle, inspiré par les travaux de
-  feu <a href='https://fr.wikipedia.org/wiki/Jacques_Pitrat'>Jacques
-  Pitrat</a> (1934 - oct.2019). Voir
-  la <a href='https://afia.asso.fr/journee-hommage-j-pitrat/'>journée
-  d&apos;hommage à J.Pitrat</a>. Le lecteur est supposé capable de
-  lire l&apos;anglais. <br/> <b>Nous recherchons une source de
-  financement possible</b> (via <b>des applications</b>), par exemple
-  non-exhaustif (en 2021) via
-  l&apos;<a href='https://anr.fr/fr/'>Agence Nationale pour la
-  Recherche</a> - en s&apos;intégrant dans un montage de projet -,
-  appel <a href='https://anr.fr/fileadmin/aap/2021/aapg-2021-v1.1.pdf'>AAPG2021</a>,
-  axes §2.1 <small>(sciences de base pour l&apos;énergie)</small>,
-  §2.2 <small>(Une énergie durable, propre, sûre et efficace)</small>,
-  §3.8 <small>Neurosciences intégratives et cognitives</small>,
-  §5.2 <small>Intelligence Artificielle</small>,
-  §8.5 <small>Mathématiques et sciences du numérique pour la biologie
-  et la santé</small>, §8.6 <small>Révolution numérique : rapports au
-  savoir et à la culture</small>. Une autre possibilité serait de
-  faire partie d&apos;
-  un <a href='https://extranet.bpifrance.fr/projets-innovants-collaboratifs'>projet
-  innovant collaboratif BPI France</a>. Veuillez alors
-  contacter <a href='http://starynkevitch.net/Basile/'>Basile
-  Starynkevitch</a> par courriel
-  vers <a href='mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a>
-  ou <a href='mailto:basile-freelance@starynkevitch.net'>basile-freelance@starynkevitch.net</a>
-    ou <a href='mailto:basile.starynkevitch@cea.fr'>basile.starynkevitch@cea.fr</a>, et diffuser <a href='pub-refpersys-oct2020.pdf'>cette page A4</a></p>
-  
-  
-  <p lang='ru' class='cl_russian'>&nbsp;<img src='Flag_of_Russia.svg'
-					     alt='Russian flag'/>
-    <a href='http://refpersys.org/'><i>RefPerSys</i></a> (см. сайт <a href='http://refpersys.org/'>refpersys.org</a>) 
-    свободное программное обеспечение (ПСОК под лицензией GPLv3), для системы
-Linux/x86-64, в области симболицеского искусственного интеллекта (рефлексы,
-    самоанализ, метазнание ...) по идеям Jacques Pitrat 
-    мы ищем партнеров  в контексте 
-    <a href='http://www.indiarussiainnovate.org'>www.indiarussiainnovate.org</a>
- это работа в стадии разработки. А также ищем потенциальных приложений и пользователей. Пожалуйста, свяжитесь со мной,
-    <a href='mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> (Василий Дмитриевич Старынкевич), который плохо
- читает и плохо говорит по-русски, но свободно владеет английским и французским языками. Jacques Pitrat был директором 
-  моего докторского жюри (в области искусственного интеллекта) защищенного в 1990 году (в Университете Paris 6).
-  </p>
-  
-  <p lang='en' class='cl_english'>&nbsp; <img src='Flag_of_Europe.svg'
-    height='20' width='30' alt='European flag'/>
-     <a href='http://refpersys.org/'><i>RefPerSys</i></a> (see <a href='http://refpersys.org/'>refpersys.org</a>) 
-  is a free software research artificial intelligence project and open source software (work in progress) for Linux, inspired by the works of the late
-  <a href='https://fr.wikipedia.org/wiki/Jacques_Pitrat'>Jacques
-  Pitrat</a> (1934 - oct.2019). See his blog on <a href='http://bootstrappingartificialintelligence.fr/WordPress3/'>bootstrappingartificialintelligence.fr</a> and read his book
-  <i>Artificial Beings, the Conscience of a Conscious Machine</i> (ISBN 978-1848211018).
-     We are looking
-    for <b>potential applications, partnerships, collaboration and
-    some funding</b> for working on this project. European R&amp;D
-    projects and calls for proposals
-    like <a href='itea3.org/'>ITEA3</a>
-  or <a href='https://ec.europa.eu/programmes/horizon2020/en/search/site/horizon%20europe'>HorizonEurope</a> or <a href='https://ecscollaborationtool.eu/'>ECS collaboration tool</a> or 
-    comes to
-    mind. Contact <a href='http://starynkevitch.net/Basile/index_en.html'>Basile
-    Starynkevitch</a> by email
-    to <a href='mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a>
-  or <a href='mailto:basile-freelance@starynkevitch.net'>basile-freelance@starynkevitch.net</a>
-  or <a href='mailto:basile.starynkevitch@cea.fr'>basile.starynkevitch@cea.fr</a>.</p>
-  
-  <nav>
-    <a class='cl_navlink' href='#wip_id'>work in progress</a>
-    <a class='cl_navlink' href='#team_id'>team</a>
-    <a class='cl_navlink' href='#designideas_id'>design ideas</a>
-    <a class='cl_navlink' href='#documents_id'>documents</a>
-    <a class='cl_navlink' href='#talks_id'>talks</a>
-    <a class='cl_navlink' href='#dependencies_id'>dependencies</a>
-    <a class='cl_navlink' href='#download_id'>download code</a>
-    <a class='cl_navlink' href='#forum_id'>forum</a>
-    <a class='cl_navlink' href='#needs_id'>needs</a>
-    <a class='cl_navlink' href='#applications_id'>applications</a>
-    <a class='cl_navlink' href='#related_id'>related projects</a>
-  </nav>
-
-  
-  <h2>RefPerSys - <a href='http://refpersys.org/' style=
-  'color: brown; font-family: Verdana, Sans-serif; font-size: 120%; font-weight: bold'>
-  refpersys.org</a></h2>
-  <p>An acronym for <b>Ref</b>lexive <b>Per</b>sistent
-  <b>Sys</b>tem. This is an ambitious <b><a href=
-  'https://en.wikipedia.org/wiki/Research' style=
-  'color: red'>research</a> project</b> (still unfunded, in 2019 - 2020 it
-  is a hobby project; also very risky!), done on spare time with an
-  <a href='https://en.wikipedia.org/wiki/Open_science'>open
-    science</a> mindset and ethics.</p>
-
-  <!-- **************************************************************** -->
-  <h2 id='wip_id'>Early work in progress</h2>
-  <p>We have in 2019 - 2021 a lot of ideas, and some code for <a href='https://en.wikipedia.org/wiki/Linux'>Linux</a>; in april 2021: 42KLOC measured by <a href='https://dwheeler.com/sloccount/'>Wheeler&apos;s <span class='cl_tt'>sloccount</span><a> software. That code is on <a href=
-  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a> and <b>preferably</b> on <a href=
-  'https://github.com/RefPerSys/RefPerSys'><span class='cl_tt'>github.com/RefPerSys/RefPerSys</span></a>.
-  Done by passionate developers on their spare time. <b>Volunteers
-  wanted</b>; please send an email (introducing yourself) to
-  <a href=
-  'mailto:basile@starynkevitch.net'><span class='cl_tt'>basile@starynkevitch.net</span></a>
-  (near Paris, France, homepage <a href=
-  'http://starynkevitch.net/Basile/'>here</a>) for more.</p>
-  <h3 id='team_id'>The <i>RefPerSys</i> development team</h3>
-  <p>The following persons are working (in 2019 - 2021) on
-  <i>RefPerSys</i> on their spare time from their home and are the
-  copyright owners of the embryonic software.</p>
-  <table class='cl_devtable'>
-    <caption>
-      The <i>RefPerSys</i> team of developers
-    </caption>
-    <thead>
-      <tr>
-        <th>who</th>
-        <th>where</th>
-        <th>email</th>
-        <th>home page</th>
-        <th>role</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- Basile Starynkevitch: -->
-      <tr>
-        <td>Basile Starynkevitch<br>
-        <small>(born in 1959, PhD in AI)</small>,<br>
-        <small>resume <a href=
-        'http://starynkevitch.net/Basile/cv-Basile-Starynkevitch.pdf'>
-        here</a></small></td>
-        <td>
-          <a href=
-          'https://en.wikipedia.org/wiki/Bourg-la-Reine'>Bourg-la-Reine</a>,<br>
-
-          France, Europe
-        </td>
-        <td>
-          <a href=
-          'mailto:basile@starynkevitch.net'><span class='cl_tt'>basile@starynkevitch.net</span></a> <br/> or  <a href=
-          'mailto:basile-freelance@starynkevitch.net'><span class='cl_tt'>basile-freelance@starynkevitch.net</span></a>
-        </td>
-        <td>
-          <a href=
-          'http://starynkevitch.net/Basile/'><span class='cl_tt'>starynkevitch.net/Basile/</span></a>
-        </td>
-        <td>project leader and architect</td>
-      </tr><!-- Abhishek Chakravarti: -->
-      <tr>
-        <td>Abhishek Chakravarti</td>
-        <td>
-          <a href=
-          'https://en.wikipedia.org/wiki/Kolkata'>Kolkota</a>,<br>
-          West Bengal, India
-        </td>
-        <td>
-          <a href=
-          'mailto:abhishek@taranjali.org'><span class='cl_tt'>abhishek@taranjali.org</span></a>
-        </td>
-        <td>
-	  <a href='http://taranjali.org/aboutme'><span class='cl_tt'>taranjali.org/aboutme</span></a><br> and
-          <a href=
-          'https://github.com/achakravarti'><span class='cl_tt'>github.com/achakravarti</span></a><br>
-
-          and <a href=
-          'https://gitlab.com/abhishekchakravarti'><span class='cl_tt'>gitlab.com/abhishekchakravarti</span></a>
-        </td>
-        <td>software developer</td>
-      </tr><!-- Nimesh Neema: -->
-      <tr>
-        <td>Nimesh Neema</td>
-        <td>
-          <a href=
-          'https://en.wikipedia.org/wiki/Indore'>Indore</a>,<br>
-          Madhya Pradesh, India
-        </td>
-        <td>
-          <a href=
-          'mailto:nimeshneema@gmail.com'><span class='cl_tt'>nimeshneema@gmail.com</span></a>
-        </td>
-        <td>
-          <a href=
-          'https://nimeshneema.com/'><span class='cl_tt'>nimeshneema.com</span></a>
-        </td>
-        <td>software developer</td>
-      </tr>
-    </tbody>
-  </table>
-  <!-- **************************************************************** -->
-  <h2 id='designideas_id'>design ideas</h2>
-  <ul>
-    <li>a mostly <a href=
-    'https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence'>
-      symbolic artificial intelligence</a> <b>long-term</b>
-      project, with ambitious <a href=
-      'https://en.wikipedia.org/wiki/Artificial_general_intelligence'>
-      Artificial General Intelligence</a> goals.
-    </li>
-    <li>for <a href=
-    'https://en.wikipedia.org/wiki/Linux_distribution'>Linux
-    distributions</a> (such as <a href=
-    'https://www.debian.org/'>Debian</a>, <a href=
-    'https://www.archlinux.org/'>Arch</a>, <a href=
-    'https://ubuntu.com/'>Ubuntu</a>, ....), on x86-64 desktops or
-    laptops
-    </li>
-    <li>
-      <a href='https://en.wikipedia.org/wiki/Free_software'>free
-      software</a>, <a href=
-      'https://www.gnu.org/licenses/gpl-3.0.en.html'>GPLv3+</a>
-      licensed; some <b>embryonic code</b> (in C or C++, it should
-      later become generated) <b>available on <a href=
-      'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab.com/bstarynk/refpersys</span></a> and mirrored on <a href='https://github.com/RefPerSys/RefPerSys'><span class='cl_tt'>github.com/RefPerSys/RefPerSys</span></a></b>
-      (for experimentation of ideas).
-    </li>
-    <li>several ideas borrowed
-    from <a href='https://github.com/bstarynk/bismon/'>Bismon</a> (a
-    work funded
-    by <a href='https://www.chariotproject.eu/'>Chariot</a>
-    and <a href='https://www.decoder-project.eu/'>Decoder</a>
-    European <a href='https://ec.europa.eu/programmes/horizon2020/en'>H2020</a>
-    projects), but not a single line of code. See
-    also <a href='http://starynkevitch.net/Basile/bismon-doc.pdf'>this
-    draft</a> report.</li>
-    <li>
-      <a href=
-      'https://en.wikipedia.org/wiki/Reflection_(computer_programming)'>
-      reflexive</a>, <a href=
-      'https://en.wikipedia.org/wiki/Persistence_(computer_science)'>
-      persistent</a>, <a href=
-      'https://en.wikipedia.org/wiki/Thread_(computing)'>multi-threaded</a>,
-      with a heavily <a href=
-      'https://en.wikipedia.org/wiki/Metaprogramming'>metaprogramming</a>
-      and <a href=
-      'https://en.wikipedia.org/wiki/Bootstrapping'>bootstrapping</a>
-      approach (all its code -C++ files, its <span class='cl_tt'>Makefile</span>, etc...) should become generated by the
-      <i>RefPerSys</i> system, à la <a href=
-      'https://en.wikipedia.org/wiki/Quine_(computing)'>Quine</a>),
-      aiming to offer a <a href=
-      'https://en.wikipedia.org/wiki/Declarative_programming'>declarative</a>,
-      <a href=
-      'https://en.wikipedia.org/wiki/Knowledge_base'>knowledge
-      based</a> language.
-    </li>
-    
-    <li>The <i>RefPerSys</i> recurring insight is: progressively more
-    and more expressive and declarative formalization of knowledge and
-    of meta-knowledge (applicable to itself), combined with run-time
-      reflection, self-<a href='https://en.wikipedia.org/wiki/Profiling_(computer_programming)'>profiling</a> and introspection and meta-programming (notably
-    generation of C++ code) approaches. <i>RefPerSys</i> should
-    provide and contain its own
-    sort-of <a href='https://en.wikipedia.org/wiki/Integrated_development_environment'>IDE</a>,
-    using <a href='https://www.qt.io/'>Qt5</a> and will -later in 2020
-    or 2021- <i>progressively</i> incorporate
-    other <i>existing</i> <a href='https://opensource.org/'>open
-    source</a> C++ libraries
-    (perhaps <a href='https://www.tensorflow.org/'>TensorFlow</a>, <a href='https://www.bugseng.com/parma-polyhedra-library'>Parma
-    Polyhedra Library</a>, <a href='https://gudhi.inria.fr/'>Gudhi</a>
-    etc...), we hope to give more or less declarative high-level
-    know-how formalizations related to these libraries (with some
-    implementation inspiration by the past and
-    obsolete <a href='http://starynkevitch.net/Basile/gcc-melt/'>GCC
-    MELT</a> project). More and more C++ or other source code
-    of <i>RefPerSys</i> should become generated (and re-generated
-      again from even more declarative formalizations).</li>
-      
-      <li>We hope (in summer 2021) to have declarative rules and metarules with variables/ Your help is wanted.</li>
-
-    <li>In spring 2021 (e.g. around git commit `4303b8f1f8ced36`), we
-    are using <a href='https://www.gnu.org/software/readline/'>GNU
-    readline</a> for the initial REPL interface</li>
-
-    <li>In summer 2020, we are strongly considering to give up
-    <a href='https://www.qt.io/'>Qt</a> and switch instead to the
-    simpler and lighter <a href='https://www.fltk.org/'>FLTK</a> 1.4
-    GUI toolkit. See ongoing work in
-    our <i>git</i> <a href='https://gitlab.com/bstarynk/refpersys/-/tree/fltk-branch'>fltk-branch</a>,
-    which we hope to merge soon to
-    our <span class='cl_tt'>master</span> <i>git</i> branch.</li>
-    
-    <li>heavily inspired by the pionneering work of <a href=
-    'https://www.researchgate.net/publication/340156048_Jacques_Pitrat_1934-2019_An_obituary'>Jacques
-    Pitrat</a> (1934 - october 2019, France). Read notably
-    his <a href='https://www.researchgate.net/publication/287877683_Artificial_Beings_The_Conscience_of_a_Conscious_Machine'><i>Artificial
-    Beings: The Conscience of a Conscious
-    Machine</i></a> <a href='https://onlinelibrary.wiley.com/doi/book/10.1002/9780470611791'>book</a>
-      (ISBN 978-1848211018) and see <a href='http://bootstrappingartificialintelligence.fr/WordPress3/'>his blog</a>. <br/> In a few words, we dream
-    of <i>RefPerSys</i> becoming (in a decade)
-    some <a href='https://pdfs.semanticscholar.org/2117/9600b3f05c0af399f9acbfc6e7b6d24daf03.pdf'>CAIA</a> <a href='http://bootstrappingartificialintelligence.fr/WordPress3/?s=CAIA'>like</a>
-    system, but genuinely usable by a few people on Linux
-    machines. Basile Starynkevitch followed Pitrat's courses, defended
-    a PhD thesis under J.Pitrat's presidency and J-M.Fouet
-    advisorship, and met J.Pitrat in person a few times a year during
-    more than two decades, and has
-    a <a href='http://starynkevitch.net/Basile/caia-su-24feb2016.tar.bz2'>february
-    2016 snapshot</a> of <i>CAIA</i> (which is unfortunately difficult
-    to use, since without documentation; see
-    also <a href='https://github.com/bstarynk/caia-pitrat/'><span class='cl_tt'>github.com/bstarynk/caia-pitrat</span></a>). The <a href='http://jacques.pitrat.pagesperso-orange.fr/MALICE.html'><i>Malice</i></a>
-    system is a predecessor of <i>CAIA</i> (by the same J.Pitrat).
-    </li>
-  </ul>
-  <p style='font-size: 120%'>A <span style=
-  'color: brown; font-weight: bold;'>draft document</span> giving
-  some design ideas is downloadable as <a href=
-  'http://starynkevitch.net/Basile/refpersys-design.pdf'><span class='cl_tt'>refpersys-design.pdf</span></a>.
-  We are improving it in 2019-2021.</p>
-  <p>The currently <i>temporary</i> existing (in 2019 or 2021),
-  on <a href=
-  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab</span></a>
-  code base is a bit disappointing (since in summer 2020 most of it is
-  still hand-coded by us, not yet generated), even to
-  the <i>Refpersys</i> team.  But we have a lot of fun doing it. It is
-  constantly improving, publicly available, still unreleased, <a href=
-  'https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha'>
-  α-stage</a>. We are aware of
-  the <a href='https://en.wikipedia.org/wiki/Replication_crisis'>replication
-  crisis</a>. <b>We hope to generate most of <i>RefPerSys</i> C++ code
-  in 2021.</b> The external libraries used by <i>RefPerSys</i>
-  may evolve with time, with the hope to provide some partial
-  semi-formal description of their properties to the system. We are
-  aware
-  of <a href='https://en.wikipedia.org/wiki/Rice%27s_theorem'>Rice&apos;s
-  theorem</a>.</p>
-
-  <p>The major insight of <i>RefPerSys</i> is to <b>generate</b> most
-  of (and hopefully <i>all</i>) <b>its C++ code from higher level
-  representations</b>, based upon a cyclic graph of objects in virtual
-  memory. That entire graph, called <b>the persistent heap</b>, is
-  loaded at startup, and dumped at shutdown, from textual files (and
-  later, external databases). It
-  is <a href='https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)'>garbage-collected</a>.</p>
-  
-  <h3 id='valobj_id'>values and objects in <i>RefPerSys</i></h3>
-
-  <p>The persistent heap contains immutable values and mutable
-  objects. Each value is practically speaking a 64 bits word, often a
-  pointer (which can refer to an object in memory, or to a small
-  memory zone holding some data, conceptually
-  some <a href='https://en.wikipedia.org/wiki/Tagged_union'>tagged
-  union</a>). Values are hashed and ordered, and are a The <i>nil</i>
-  pointer usually represents a missing value.<br/>
-
-    <b>Immutable values</b> include:
-    <ul>
-      <li>tagged 63-bits integers</li>
-      <li>boxed floating point numbers</li>
-      <li><a href='https://utf8everywhere.org/'>UTF-8</a> encoded
-	strings</li>
-      <li>sequence of object references</li>
-      <li>finite and ordered set of object references. So membership
-	test is in <i>O(log n)</i></li>
-      <li>immutable instances (containing, like objects do, a class, a
-      set of attributes and/or a sequence of components, both being
-      fixed)</li>
-      <li>closures; the closed code is represented as an object
-      (called the connective object), and the closed values
-      (represented as a sequence) are arbitrary and could be nil.</li>
-      <li>etc... (e.g. small vector of floats or of 32 bits integers, or <a href='http://json.org'>JSON</a> values)</li>
-    </ul>
-
-    <br/>
-
-    Only <b>objects are mutable</b>. Since <i>RefPerSys</i> is
-    multi-<a href='https://en.wikipedia.org/wiki/Thread_(computing)'>threaded</a>,
-    access to or update of objects require some synchronization
-    (with <a href='https://en.wikipedia.org/wiki/Lock_(computer_science)'>mutexes</a>
-    etc...). Objects have each a (hopefully) globally
-    unique <i>objid</i> which is textually representable, for
-    example <span class='cl_tt'>_8J6vNYtP5E800eCr5t</span>. <b>Objects
-      are quite heavy but flexible data structures</b> containing:
-    <ul>
-      <li>Their unique <i>objid</i></li>
-      <li>Their mutex lock</li>
-      <li>The <b>class</b> of that object, itself an object reference</li>
-      <li>The <b>space</b> of that object, used for persistence (e.g. all
-      objects in the same space goes into the same file or database);
-	it is an object reference</li>
-      <li>The <b>modification time</b> of that object.</li>
-      <li>A finite and updatable <b>map of attributes</b>, made of
-      attribute entries. Each such entry has an attribute (itself an
-      object reference) with an associated non-nil value. All
-      attributes of a given objects are different.</li>
-      <li>An updatable and resizable <b>vector of components</b>, each component being a value or nil</li>
-      <li>optional <b>pointers to C++ functions</b> to apply closures or to get magical attributes.</li>
-      <li>Some extra optional <b>payload</b>. Object payloads contain
-	data which does not fit into the general <i>ObjVLisp</i>
-	inspired model, e.g. GUI widgets, file handles, dictionnaries
-	mapping string to values, etc...</li>
-      </ul>
-    Some of the above fields
-    are <span class='cl_tt'>std::atomic</span> in C++, for performance
-    reasons (to avoid locking the entire object). Even the
-    object&apos;s class or space or payload or internal function
-    pointers could change during runtime.</p>
-
-  <p><b>Most</b> (but not all) <b>objects are persistent</b> (so reloaded at startup
-  and dumped to disk or databases at shutdown).</p>
-  
-  <h3 id='valobj_id'>metaprogramming and introspection in <i>RefPerSys</i></h3>
-
-  <p>An important feature of <i>RefPerSys</i>
-    is <b><a href='https://en.wikipedia.org/wiki/Metaprogramming'>meta-programming</a></b>
-    and code generation. <b>During its runtime, the
-    multi-threaded <span class='cl_tt'>refpersys</span> <a href='https://en.wikipedia.org/wiki/Process_(computing)'>process</a>
-    should generate C++ or C code</b>, compile that code into
-    some <a href='https://www.akkadia.org/drepper/dsohowto.pdf'>shared
-    library</a>,
-    then <a href='http://man7.org/linux/man-pages/man3/dlopen.3.html'>dlopen</a>
-    that generated shared object, and get function pointers inside it
-    using
-    then <a href='http://man7.org/linux/man-pages/man3/dlsym.3.html'>dlsym</a>. See
-    also <a href='https://tldp.org/HOWTO/Program-Library-HOWTO/'>the
-    Program Library HOWTO</a>, and
-    the <a href='https://tldp.org/HOWTO/html_single/C++-dlopen/'>C++
-    dlopen mini HOWTO</a> and
-    the <a href='https://github.com/bstarynk/misc-basile/blob/master/manydl.c'><span class='cl_tt'>manydl.c</span>
-    example</a>. Generated C++ code could be temporary or persistent
-    (in that later case, it is version-controlled).</p>
-    
-  <p>Another important feature of <i>RefPerSys</i>
-    is <b>introspection</b> coupled with
-    runtime <a href='https://en.wikipedia.org/wiki/Profiling_(computer_programming)'>profiling</a>
-    (see
-    also <a href='http://man7.org/linux/man-pages/man7/time.7.html'>time(7)</a>...)
-    which is reasonably possible in generated C++ code with the help
-    of the garbage collector (explicit
-    GC-ed <a href='https://en.wikipedia.org/wiki/Call_stack#CALL-FRAME'>call
-    frames</a> being singly-linked lists)
-    and/or <a href='https://github.com/ianlancetaylor/libbacktrace'>Ian
-    Taylor's <span class='cl_tt'>libbacktrace</span> library</a> and
-    the <a href='http://man7.org/linux/man-pages/man3/dladdr.3.html'>dladdr(3)</a>
-    function. During its runtime, <i>RefPerSys</i> can inspect most of
-    its call stacks. <b>We later hope to use <a href='https://en.wikipedia.org/wiki/Machine_learning'>machine learning</a> techniques</b>
-    on the profiling data and get some dynamic optimization, tailored
-    to the concrete problems approached and actual applications
-    of <i>RefPerSys</i>.
-
-    <h3 id='declknow_id'>declarative knowledge and bootstrapping in <i>RefPerSys</i></h3>
-
-  <p>The insight of <i>RefPerSys</i> is to represent
-  high-level <a href='https://en.wikipedia.org/wiki/Expert_system'>expert
-  system</a> rules, fact bases and machine learning artefacts as
-  collections of objects. The C++ generator should be described by
-  meta-rules compiled by itself to C++ code. So we are taking
-  a <a href='https://en.wikipedia.org/wiki/Bootstrapping_(compilers)'>bootstrapping</a>
-  approach, first generating C++ code by hand-written C++ code, then
-  replacing some of it by generated C++ code from higher-level
-  knowledge representations, then progressively and incrementally
-  improving these representations by higher-level and more abstract
-    constructs. This should be worked on in 2021.</p>
-
-  <p>In practice, <i>RefPerSys</i> requires some graphical user
-  interface
-  with <a href='https://en.wikipedia.org/wiki/Autocomplete'>autocompletion</a>
-  facilities, and displaying graphically small parts of its heap
-  (perhaps
-  as <a href='https://en.wikipedia.org/wiki/Abstract_syntax_tree'>abstract
-  syntax trees</a> or nested boxes), inspired by the
-  past <a href='https://hal.inria.fr/inria-00075774'>Centaur
-  system.</a>. It is well known that GUI toolkits
-  like <a href='http://qt.io/'>Qt</a>
-  or <a href='https://fltk.org/'>FLTK</a> are more easily used with
-  C++ code generators, which are parts of <i>RefPerSys</i>. So we need
-  to work a lot.</p>
-    
-  <!-- **************************************************************** -->
-  <h2 id='talks_id'>talks</h2>
-
-  <p><i>RefPerSys</i> has been presented
-      at <a href='https://afia.asso.fr/journee-hommage-j-pitrat/'>a
-      seminar</a> organized by <a href='https://afia.asso.fr/'>AFIA</a> in
-      Paris</a>, on March 6<sup>th</sup>, 2020</a>, dedicated to the
-      memory
-      of <a href='http://bootstrappingartificialintelligence.fr/WordPress3/'>Jacques
-      Pitrat</a>, who died in october 2019. Contact
-  <a href='mailto:basile@starynkevitch.net'>Basile Starynkevitch</a>
-  for details. Slides
-  are <a href='Starynkevitch-CAIA-RefPerSys-2020mar06.pdf'>here</a> in
-  PDF. The video of the talk in French
-  is <a href='https://www.dailymotion.com/video/k3zZwEcSOccI97w0m6i?playlist=x6obd7'>here</a>.</p>
-
-<p>Please suggest by email
-  to <a href='mailto:team@refpersys.org/'><span class='cl_tt'>team@refpersys.org</span></a>
-  any AI conference, meeting, or workshop where this project could be
-  presented.</p>
-  
-  <!-- **************************************************************** -->
-  <h2 id='documents_id'>documents</h2>
-  <ul>
-    <li>Draft of a paper (by Basile Starynkevitch and Abhishek
-    Chakravarti) in French: <i>Le projet <b>RefPerSys</b>, un
-    succcesseur potentiel du système <b>Caia</b> de Jacques Pitrat</i>
-    - submitted in june 2021
-    to <a href='https://roia.centre-mersenne.org/'>ROIA</a>
-    journal: <a href='Starynkevitch-RefPerSys.pdf'>PDF file</a> (32
-    pages)
-    </li>
-    
-    <li>The <a href=
-    'http://starynkevitch.net/Basile/refpersys-design.pdf'>RefPerSys
-    high-level goals and design ideas</a> draft report (work in
-    progress, 2019 - 2020, mentioned above).
-    </li>
-
-    <li>Jacques
-    Pitrat's <a href='https://www.amazon.com/Artificial-Beings-Conscience-Conscious-Machine/dp/1848211015'>book</a> <i>Artificial
-    Beings: the Conscience of a Conscious Machine</i>, <small>ISBN-13:
-    978-1848211018 (Wiley ISTE),</small> is suggesting an interesting
-    roadmap and provides an inspirational approach, justifying the
-    interest of a reflexive and persistent system.</li>
-    
-    <li>A draft of a short hightlight paper (2 pages) submitted to
-    <a href='http://ecai2020.eu/'>ECAI2020</a> about the <a href=
-    'ecai2020-highlight-refpersys.pdf'>Development and Architecture
-    of RefPerSys: <small>a multi-threaded <b>Ref</b>lective
-    <b>Per</b>sistent <b>Sys</b>tem for AI</small></a> (november 2019;
-    we are aware that this conference is very selective). That paper
-    was not accepted, but one (out of three) of the reviews has been
-    very encouraging, saying : <q>The concept of the paper is
-    good. However, the writing skill / style is not
-    satisfactory.</q>. That paper explains our roadmap and vision.
-    </li>
-    
-    <li>Our <a href='https://gitlab.com/bstarynk/refpersys/-/wikis'>wiki</a>
-    contain topics which are discussed and work in progress. Notice in
-    particular
-    the <a href='https://gitlab.com/bstarynk/refpersys/-/wikis/Personal-data-in-RefPerSys'>Personal
-    data in RefPerSys</a> wikipage, which might be indirectly related
-    to European <a href='https://gdpr-info.eu/'>GDPR</a>. However, be
-    aware that we are not lawyers.</li>
-  </ul>
-  <!-- **************************************************************** -->
-  <h2 id='dependencies_id'>dependencies</h2>
-  <p>The <i>RefPerSys</i> software depends on many other common stuff,
-    notably a recent <a href='http://gcc.gnu.org/'>GCC</a> compiler
-    (in practice, <a href='https://gcc.gnu.org/gcc-10/'>GCC 10</a> in
-    summer 2021),
-    for <a href='https://en.wikipedia.org/wiki/C%2B%2B17'>C++17</a>
-    with its standard library, a
-    recent <a href='https://kernel.org/'>Linux kernel</a> and C
-    standard library
-    (e.g. <a href='https://www.gnu.org/software/libc/'>GNU glibc</a>
-    or <a href='http://musl-libc.org/'>Musl Libc</a>),
-    the <a href='https://github.com/open-source-parsers/jsoncpp'>JsonCPP</a>
-    library (for persistence) and
-    the <a href='https://www.qt.io/'>Qt</a> or
-    soon <a href='https://www.fltk.org/'>FLTK</a> graphical toolkit,
-    and the <a href='https://github.com/davidmoreno/onion/'>Onion</a>
-    HTTP server library,
-    the <a href='https://github.com/ianlancetaylor/libbacktrace'><i>libbacktrace</i>
-    library</a>. The <a href='https://logological.org/gpp'>GPP</a>
-    preprocessor is useful for some
-    documentation. The <a href='https://en.wikipedia.org/wiki/AddressSanitizer'>AddressSanitizer</a>
-    facilities of <a href='http://gcc.gnu.org/'>GCC</a> are sometimes
-    useful.</p>
-
-  <p>A multi-core <i>x86-64</i> Linux computer with more than 16Gbytes
-    of RAM and at least 100Gbytes of free disk space is
-    recommended.  <a href='https://www.qt.io/'>Qt</a> is being
-    replaced by <a href='https://www.fltk.org/'>FLTK</a>, more
-    friendly to
-    RefPerSys <a href='https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)'>garbage
-      collector</a> (since <i>Qt</i>, unlike <i>FLTK</i>, is
-    creating <a href='https://en.wikipedia.org/wiki/Thread_(computing)'>threads</a>
-    without notice).</p>
-  
-  <!-- **************************************************************** -->
-  <h2 id='download_id'>download α-stage source code</h2>
-  <p>The <a href=
-  'https://www.gnu.org/licenses/gpl-3.0.en.html'>GPLv3+
-  licensed</a> <a href=
-  'https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha'>
-  α-stage</a> embryonic <a href=
-  'https://www.gnu.org/philosophy/free-sw.en.html'>free software</a>
-  source code of <i>RefPerSys</i> is on <a href=
-  'https://gitlab.com/bstarynk/refpersys'><span class='cl_tt'>gitlab.com/bstarynk/refpersys</span></a>.<br>  We practically are
-  using <a href='http://git-scm.com'>git</a> as a <q>centralized</q>
-  version control system, because we are very few and sill don't
-  understand well in 2019 or 2020 how a genuinely
-  <a href=
-  'https://en.wikipedia.org/wiki/Distributed_version_control'>distributed
-  version control system</a> could play nice with a <a href=
-  'https://en.wikipedia.org/wiki/Reflection_(computer_programming)'>
-  reflexive</a>, orthogonally <a href=
-  'https://en.wikipedia.org/wiki/Persistence_(computer_science)'>persistent</a>,
-  <a href=
-  'https://en.wikipedia.org/wiki/Homoiconicity'>homoiconic</a>,
-  <a href=
-  'https://en.wikipedia.org/wiki/Bootstrapping'>bootstrapped</a>,
-  self-generating <a href=
-  'https://en.wikipedia.org/wiki/Quine_(computing)'>Quine</a>
-  system.</p>
-
-  <h3>Daily snapshot with source and binary</h3>
-  <p>A daily snapshot (of the <span class='cl_tt'>master</span> git
-  branch) could be downloadable
-  on <a href='refpersys-snapshot.tar.bz2'><span class='cl_tt'>refpersys-snapshot.tar.bz2</span></a>. It
-  is usually but not always automatically generated every day, so
-  could be broken or very
-  buggy. That <a href='https://www.sourceware.org/bzip2/'>bzip2</a>
-    <span class='cl_tt'>tar</span> archive contains both <b>source
-    files</b>, some log files of build, and
-    <b>binary <a href='https://en.wikipedia.org/wiki/Executable_and_Linkable_Format'>ELF</a>
-      executable</b> <span class='cl_tt'>refpersys</span> for
-      Linux/x86-64. It is made in good faith, but could be very buggy
-      and might do wrong things if you run that executable (daily
-      built on Debian/Sid/x86-64). So use
-      the <span class='cl_tt'>refpersys</span> executable in that
-      snapshot, provided with <b>no warranty</b>, at your own
-      risk. For <a href='https://en.wikipedia.org/wiki/Computer_security'>cyber-security</a>
-      reasons, <b>avoid running <span class='cl_tt'>./refpersys</span>
-      as root.</b><br/> Use <span class='cl_tt'>./refpersys
-      --help</span> to understand the program arguments and
-      environment variables, if any (they would be conventionally
-      prefixed <span class='cl_tt'>RPS_</span>
-      or <span class='cl_tt'>REFPERSYS_</span>,
-      see <a href='https://man7.org/linux/man-pages/man7/environ.7.html'><span class='cl_tt'>environ(7)</span></a>
-    for more) that could be relevant.</p>
-
-<p>It is preferable to <b>download <i>RefPerSys</i> from
-    <a href='https://gitlab.com/bstarynk/refpersys'> <span class='cl_tt'>gitlab.com/bstarynk/refpersys</span></a>
-    and look into the active <span class='cl_tt'>git</span> branches,
-    then to build it on your Linux computer.</b>  The build time
-    with <span class='cl_tt'>make</span> could last one or a few
-    minutes.</p>
-  
-  <!-- **************************************************************** -->
-  <h2 id='forum_id'>forum</h2>
-
-<p>A low-traffic forum hosted in France
-by <a href='https://framasoft.org/'>FramaSoft</a> (a non-profit
-association) is available
-on <a href='https://framalistes.org/sympa/info/refpersys-forum'><span class='cl_tt'>framalistes.org/sympa/info/refpersys-forum</span></a>. Please
-subscribe if interested. Be polite and civil there. <b>Only
-for <i>public technical</i> discussion</b> in written
-English <b>about <i>implementation</i>, <i>architecture</i>,
-or <i>running</i> issues of <i>RefPerSys</i></b>, including building
-  problems (so <b>not</b> for philosophical discussions about <i>AGI</i> or <a href='https://en.wikipedia.org/wiki/Technological_singularity'>singularity</a>). If you have issues
-in subscribing,
-contact <a href='mailto:basile-freelance@starynkevitch.net'><span class='cl_tt'>basile-freelance@starynkevitch.net</span></a>
-by email. A typical message could have
-been <a href='refpersys-Qt-based-GUI-mail-2019dec19.html'>this
-one</a>. If you have built
-some <i>RefPerSys</i> <a href='https://en.wikipedia.org/wiki/Executable'>executable</a>
-and have tried to run it, that forum is the right place to ask
-help. Mention the output of the <span class='cl_tt'>./refpersys
---version</span> command in your message.</p>
-
-<p>Thanks to Niklas Rozencrantz, a Slack channel for <i>RefPerSys</i> exists on <a href='https://refpersys.slack.com/'>refpersys.slack.com</a></p>
-
-  <!-- **************************************************************** -->
-  <h2 id='needs_id'>needs</h2>
-  
-<p><b>The <i>RefPerSys</i> project needs more volunteers
-to <i>actively</i> contribute to it, and welcome any person having
-tried to build and run it</b> (even some intern student in programming, if
-he/she is willing to contribute).  At last, some team members are
-severely under-equiped and would welcome any 4 to 16 cores x86-64,
-Linux capable, working, PC with 32 gigabytes of RAM and at least a 240
-Gb SSD disk. Sponsorship for traveling costs could also be welcome, to
-facilitate face to face meetings. <b>Opportunities to present this
-project in face to face meetings are desired</b>, and more generally a
-  <b>limited funding is welcome</b> (but we have no legal organization for that
-  in 2020). <b>Mention potential relevant funding opportunities</b>
-(e.g. <a href='https://ec.europa.eu/info/horizon-europe-next-research-and-innovation-framework-programme_en'>HorizonEurope</a>
-calls) <b>or any technical issues in building or running it</b> to us by
-email. Contact <a href='mailto:team@refpersys.org'><span class='cl_tt'>team@refpersys.org</span></a>
-for more.</p>
-
-  <!-- **************************************************************** -->
-<h2 id='applications_id'>potential applications</h2>
-
-<p><b>The <i>RefPerSys</i> project welcome potential future applications</b>
-(if in return they provide some sponsorship, contributions, or
-funding). Since it can be viewed as a
-high-level <a href='https://en.wikipedia.org/wiki/Declarative_programming'>declarative
-programming</a> environment based upon
-a <a href='https://en.wikipedia.org/wiki/Metaprogramming'>metaprogramming</a>
-and at end of 2020
-some <a href='https://en.wikipedia.org/wiki/Machine_learning'>machine
-learning</a> techniques, we believe it may become
-  useful... However, <b>the priority</b> in 2020 <b>is to generate most</b> (hopefully all) <b>of the C++ code of the  <i>RefPerSys</i> system</b>. Contact <a href='mailto:team@refpersys.org'><span class='cl_tt'>team@refpersys.org</span></a>.</p>
-
-<p>Of course, <b>any real-world potential concrete application
-    of <i>RefPerSys</i></b> (e.g. health sector, smart cities, smart grids,
-smart web, perhaps robot planning, civilian autonomous vehicles or
-drones, etc....) <b>would require some support and a little bit of
-    funding</b>. We all are excited by this project, and we all want to have
-some read-world application for it and expect such applications to
-fund partly our research work.</p>
-
-<p>An incomplete list of future applications (assuming a budget of a
-few hundreds k€ or US$ and close cooperation with other software
-developers and domain specific experts during a few years, with
-computer access to some industry or
-domain-specific <a href='https://en.wikipedia.org/wiki/Open_data'>open
-data</a> or proprietary data or communication
-in <a href='https://en.wikipedia.org/wiki/Open_format'>open
-format</a>) might include:
-
-  <ul>
-
-    <li>in
-    the <a href='https://en.wikipedia.org/wiki/Smart_city'>smart
-	city</a> vision, helping in optimizing energy, electric grids, communication grids,  and public transport networks.</li>
-
-    <li>in <a href='https://en.wikipedia.org/wiki/Fourth_Industrial_Revolution'>Industry
-    4.0</a> manufacturing plants, improving and monitoring the
-    manufacturing processes</li>
-    
-    <li>in <a href='https://en.wikipedia.org/wiki/Health_care'>health
-    care</a>, assistance in modeling and simulating the human body. In
-    particular, experts (biologists, physicians, virologists, public
-    health autorities) fighting against
-    the <a href='https://en.wikipedia.org/wiki/COVID-19_pandemic'>Covid
-    19 pandemic</a> might benefit from <i>RefPerSys</i> (communicating
-    with other <i>existing</i> software systems and hardware
-    devices</li> and partly modeling that
-    pandemic). Other <a href='https://en.wikipedia.org/wiki/Bioinformatics'>bioinformatics</a>
-    systems involve very complex software which might be monitored and
-    communicate with some <i>RefPerSys</i> process.
-    </li>
-
-    <li>Organization of, and digital assistance to, specific human
-    communities: within legal and ethical frameworks (in Europe,
-    the <a href='https://en.wikipedia.org/wiki/General_Data_Protection_Regulation'>GDPR</a>),
-    the set of members of a community or organization could be partly
-    modeled as a set of <i>RefPerSys</i> objects representing
-    some <a href='https://en.wikipedia.org/wiki/Semantic_network'>semantic
-    network</a>.</li>
-
-    <li>Against <a href='https://en.wikipedia.org/wiki/Climate_change'>climate
-    change</a>, <i>RefPerSys</i> might be used to coordinate and
-    perhaps monitor very complex
-    existing <a href='https://en.wikipedia.org/wiki/Weather_forecasting'>weather
-    forcasting</a> software systems
-    (using <a href='https://en.wikipedia.org/wiki/Finite_element_method'>finite
-    element methods</a> running on <a href='https://top500.org/'>TOP
-    500</a> supercomputers.</li>
-
-    <li>In <a href='https://en.wikipedia.org/wiki/Software_engineering'>software
-    engineering</a> of large software (as big as
-    the <a href='http://kernel.org/'>Linux kernel</a> or
-    as <a href='http://gcc.gnu.org/'>the GCC
-    compiler</a>), <i>RefPerSys</i> might help junior software
-    developers to understand the software architecture of these large
-    code base, e.g. by partly modelling
-    their <a href='https://en.wikipedia.org/wiki/Control-flow_graph'>control
-    flow graph</a>,
-    or <a href='https://en.wikipedia.org/wiki/Call_graph'>call
-    graph</a>, or navigate in
-    a <a href='https://en.wikipedia.org/wiki/Class_diagram'>class
-    diagram</a> (see also
-    the <a href='https://www.decoder-project.eu/'>DECODER</a> project)
-    perhaps extracted by
-    some <a href='https://gcc.gnu.org/onlinedocs/gccint/Plugins.html'>GCC
-    plugin</a>, whose C++ source code might be (once some funding is
-    available) generated by <i>RefPerSys</i>.</li>
-
-    <li>In <a href='https://en.wikipedia.org/wiki/Astrophysics'>astrophysics</a>, <i>RefPerSys</i>
-    might coordinate and help instrumenting very
-    complex <a href='https://en.wikipedia.org/wiki/Stellar_dynamics'>stellar
-    dynamics</a> simulation software running for months on
-    supercomputers. If the source code of these software is
-    available, <i>RefPerSys</i> might generate some instrumenting code
-      suited for them.</li>
-
-    <li>large industrial facilities
-    like <a href='https://en.wikipedia.org/wiki/Nuclear_power_plant'>nuclear
-    power plants</a>, or grids
-    of <a href='https://en.wikipedia.org/wiki/Wind_turbine'>wind
-    turbines</a> involve very complex simulation code such
-    as <a href='https://code-aster.org/'>CODE
-    ASTER</a>, <a href='http://www-cast3m.cea.fr/'>CAST3M</a> and are
-    composed of thousands of networked hardware components, which
-    could be simulated by <i>RefPerSys</i> objects (also interacting
-    with <i>existing</i> software), etc. </li>
-
-    <li>European organizations or
-    like <a href='https://bdva.eu/'>BDVA</a> might become interested
-    in <i>RefPerSys</i> or projects
-    like <a href='https://euhubs4data.eu/'>EuHubs4Data</a> could also
-    be interested.</li>
-
-
-    <li>Encyclopedical knowledge
-	(e.g. <a href='https://en.wikipedia.org/wiki/Wikipedia'>Wikipedia</a>...)
-	might profit of <i>RefPerSys</i> since it is modelling (in a
-	slightly more structured way)
-	a <a href='https://en.wikipedia.org/wiki/Semantic_network'>semantic
-	network</a>, like <i>Wikipedia</i> does already. See
-	also <a href='https://en.wikipedia.org/wiki/Cyc'>Cyc</a>
-	and <a href='https://babelnet.org/'>BabelNet</a>.</li>
-
-  </ul>
-</p>
-
-<h3>possibly relevant Horizon Europe calls</h3>
-
-<p>It could happen (contact by
-email <a href='mailto:basile.starynkevitch@cea.fr'><tt>basile.starynkevitch@cea.fr</tt></a>
-and <a href='mailto:basile@starynkevitch.net'><tt>basile@starynkevitch.net</tt></a>...)
-that the following European calls
-(see <a href='https://sciencebusiness.net/sites/default/files/inline-files/4.%20Health%20Vs6.4%20March.pdf'>this</a>)
-could be relevant (if my employer allows it) for using and
-deploying <i>RefPerSys</i> (with of course a lot of efforts, to be
-funded!):
-
-  <ul>
-    <li><tt>HORIZON-HLTH-2021-STAYHLTH-01-02</tt> (RIA, deadline: 21
-    sept 2021), with <i>RefPerSys</i> being used (amongst and with
-    other software tools and teams) as a <q> computational modelling
-    and/or artificial intelligence tools is encouraged for the
-    analysis of big, complex and heterogeneous data</q> related to
-    assisting health professionals in <q>preventing the transition
-    from mental health to mental illness</q></li>
-    </li>
-
-<li><tt>HORIZON-HLTH-2022-STAYHLTH-01-01</tt> (RIA, two stage, 01 feb
-2022) with <i>RefPerSys</i> supporting, partly implementing digitally,
-and documenting some <q>clinical guidelines, best practices,
-implementation strategies and policy recommendations to mitigate the
-mental health burden and help cope with the (combined) effects of a
-transforming Europe</q>
-</li>
-
-<li><tt>HORIZON-HLTH-2022-STAYHLTH-01-04</tt> (RIA, two-stages, 21 Apr
-2022): <q>Trustworthy artificial intelligence (AI) tools to predict
-the riskof chronic non-communicable diseases and/or their
-    progression</q></li>
-
-<li><tt>HORIZON-HLTH-2022-STAYHLTH-02-01</tt> <i>Personalised
-blueprint of chronic inflammation in health-to-disease transition</i>,
-(RIA, 21 Apr 2022) as one of several software tools to <q>Integrate
-state-of-the-art knowledge and data from suitable human studies to
-identify actionable factors linking chronic systemic and/or local
-inflammation to the health-to-disease transition.</q></li>
-
+France, Europe</td>
+<td><a href='mailto:basile@starynkevitch.net'><span class=
+'cl_tt'>basile@starynkevitch.net</span></a><br>
+or <a href='mailto:basile-freelance@starynkevitch.net'><span class=
+'cl_tt'>basile-freelance@starynkevitch.net</span></a></td>
+<td><a href='http://starynkevitch.net/Basile/'><span class=
+'cl_tt'>starynkevitch.net/Basile/</span></a></td>
+<td>project leader and architect</td>
+</tr>
+<!-- Abhishek Chakravarti: -->
+<tr>
+<td>Abhishek Chakravarti</td>
+<td><a href=
+'https://en.wikipedia.org/wiki/Kolkata'>Kolkota</a>,<br>
+West Bengal, India</td>
+<td><a href='mailto:abhishek@taranjali.org'><span class=
+'cl_tt'>abhishek@taranjali.org</span></a></td>
+<td><a href='http://taranjali.org/aboutme'><span class=
+'cl_tt'>taranjali.org/aboutme</span></a><br>
+and <a href='https://github.com/achakravarti'><span class=
+'cl_tt'>github.com/achakravarti</span></a><br>
+and <a href='https://gitlab.com/abhishekchakravarti'><span class=
+'cl_tt'>gitlab.com/abhishekchakravarti</span></a></td>
+<td>software developer</td>
+</tr>
+<!-- Nimesh Neema: -->
+<tr>
+<td>Nimesh Neema</td>
+<td><a href='https://en.wikipedia.org/wiki/Indore'>Indore</a>,<br>
+Madhya Pradesh, India</td>
+<td><a href='mailto:nimeshneema@gmail.com'><span class=
+'cl_tt'>nimeshneema@gmail.com</span></a></td>
+<td><a href='https://nimeshneema.com/'><span class=
+'cl_tt'>nimeshneema.com</span></a></td>
+<td>software developer</td>
+</tr>
+</tbody>
+</table>
+<!-- **************************************************************** -->
+<h2 id='designideas_id'>design ideas</h2>
+<ul>
+<li>a mostly <a href=
+'https://en.wikipedia.org/wiki/Symbolic_artificial_intelligence'>symbolic
+artificial intelligence</a> <b>long-term</b> project, with
+ambitious <a href=
+'https://en.wikipedia.org/wiki/Artificial_general_intelligence'>Artificial
+General Intelligence</a> goals.</li>
+<li>for <a href=
+'https://en.wikipedia.org/wiki/Linux_distribution'>Linux
+distributions</a> (such as <a href=
+'https://www.debian.org/'>Debian</a>, <a href=
+'https://www.archlinux.org/'>Arch</a>, <a href=
+'https://ubuntu.com/'>Ubuntu</a>, ....), on x86-64 desktops or
+laptops</li>
+<li><a href='https://en.wikipedia.org/wiki/Free_software'>free
+software</a>, <a href=
+'https://www.gnu.org/licenses/gpl-3.0.en.html'>GPLv3+</a> licensed;
+some <b>embryonic code</b> (in C or C++, it should later become
+generated) <b>available on <a href=
+'https://gitlab.com/bstarynk/refpersys'><span class=
+'cl_tt'>gitlab.com/bstarynk/refpersys</span></a> and mirrored on
+<a href='https://github.com/RefPerSys/RefPerSys'><span class=
+'cl_tt'>github.com/RefPerSys/RefPerSys</span></a></b> (for
+experimentation of ideas).</li>
+<li>several ideas borrowed from <a href=
+'https://github.com/bstarynk/bismon/'>Bismon</a> (a work funded by
+<a href='https://www.chariotproject.eu/'>Chariot</a> and <a href=
+'https://www.decoder-project.eu/'>Decoder</a> European <a href=
+'https://ec.europa.eu/programmes/horizon2020/en'>H2020</a>
+projects), but not a single line of code. See also <a href=
+'http://starynkevitch.net/Basile/bismon-doc.pdf'>this draft</a>
+report.</li>
+<li><a href=
+'https://en.wikipedia.org/wiki/Reflection_(computer_programming)'>reflexive</a>,
+<a href=
+'https://en.wikipedia.org/wiki/Persistence_(computer_science)'>persistent</a>,
+<a href=
+'https://en.wikipedia.org/wiki/Thread_(computing)'>multi-threaded</a>,
+with a heavily <a href=
+'https://en.wikipedia.org/wiki/Metaprogramming'>metaprogramming</a>
+and <a href=
+'https://en.wikipedia.org/wiki/Bootstrapping'>bootstrapping</a>
+approach (all its code -C++ files, its <span class=
+'cl_tt'>Makefile</span>, etc...) should become generated by the
+<i>RefPerSys</i> system, à la <a href=
+'https://en.wikipedia.org/wiki/Quine_(computing)'>Quine</a>),
+aiming to offer a <a href=
+'https://en.wikipedia.org/wiki/Declarative_programming'>declarative</a>,
+<a href='https://en.wikipedia.org/wiki/Knowledge_base'>knowledge
+based</a> language.</li>
+<li>The <i>RefPerSys</i> recurring insight is: progressively more
+and more expressive and declarative formalization of knowledge and
+of meta-knowledge (applicable to itself), combined with run-time
+reflection, self-<a href=
+'https://en.wikipedia.org/wiki/Profiling_(computer_programming)'>profiling</a>
+and introspection and meta-programming (notably generation of C++
+code) approaches. <i>RefPerSys</i> should provide and contain its
+own sort-of <a href=
+'https://en.wikipedia.org/wiki/Integrated_development_environment'>IDE</a>,
+using <a href='https://www.qt.io/'>Qt5</a> and will -later in 2020
+or 2021- <i>progressively</i> incorporate other <i>existing</i>
+<a href='https://opensource.org/'>open source</a> C++ libraries
+(perhaps <a href='https://www.tensorflow.org/'>TensorFlow</a>,
+<a href='https://www.bugseng.com/parma-polyhedra-library'>Parma
+Polyhedra Library</a>, <a href='https://gudhi.inria.fr/'>Gudhi</a>
+etc...), we hope to give more or less declarative high-level
+know-how formalizations related to these libraries (with some
+implementation inspiration by the past and obsolete <a href=
+'http://starynkevitch.net/Basile/gcc-melt/'>GCC MELT</a> project).
+More and more C++ or other source code of <i>RefPerSys</i> should
+become generated (and re-generated again from even more declarative
+formalizations).</li>
+<li>We hope (in summer 2021) to have declarative rules and
+metarules with variables/ Your help is wanted.</li>
+<li>In spring 2021 (e.g. around git commit `4303b8f1f8ced36`), we
+are using <a href='https://www.gnu.org/software/readline/'>GNU
+readline</a> for the initial REPL interface</li>
+<li>In summer 2020, we are strongly considering to give up <a href=
+'https://www.qt.io/'>Qt</a> and switch instead to the simpler and
+lighter <a href='https://www.fltk.org/'>FLTK</a> 1.4 GUI toolkit.
+See ongoing work in our <i>git</i> <a href=
+'https://gitlab.com/bstarynk/refpersys/-/tree/fltk-branch'>fltk-branch</a>,
+which we hope to merge soon to our <span class=
+'cl_tt'>master</span> <i>git</i> branch.</li>
+<li>heavily inspired by the pionneering work of <a href=
+'https://www.researchgate.net/publication/340156048_Jacques_Pitrat_1934-2019_An_obituary'>
+Jacques Pitrat</a> (1934 - october 2019, France). Read notably his
+<a href=
+'https://www.researchgate.net/publication/287877683_Artificial_Beings_The_Conscience_of_a_Conscious_Machine'>
+<i>Artificial Beings: The Conscience of a Conscious Machine</i></a>
+<a href=
+'https://onlinelibrary.wiley.com/doi/book/10.1002/9780470611791'>book</a>
+(ISBN 978-1848211018) and see <a href=
+'http://bootstrappingartificialintelligence.fr/WordPress3/'>his
+blog</a>.<br>
+In a few words, we dream of <i>RefPerSys</i> becoming (in a decade)
+some <a href=
+'https://pdfs.semanticscholar.org/2117/9600b3f05c0af399f9acbfc6e7b6d24daf03.pdf'>
+CAIA</a> <a href=
+'http://bootstrappingartificialintelligence.fr/WordPress3/?s=CAIA'>like</a>
+system, but genuinely usable by a few people on Linux machines.
+Basile Starynkevitch followed Pitrat's courses, defended a PhD
+thesis under J.Pitrat's presidency and J-M.Fouet advisorship, and
+met J.Pitrat in person a few times a year during more than two
+decades, and has a <a href=
+'http://starynkevitch.net/Basile/caia-su-24feb2016.tar.bz2'>february
+2016 snapshot</a> of <i>CAIA</i> (which is unfortunately difficult
+to use, since without documentation; see also <a href=
+'https://github.com/bstarynk/caia-pitrat/'><span class=
+'cl_tt'>github.com/bstarynk/caia-pitrat</span></a>). The <a href=
+'http://jacques.pitrat.pagesperso-orange.fr/MALICE.html'><i>Malice</i></a>
+system is a predecessor of <i>CAIA</i> (by the same J.Pitrat).</li>
 </ul>
+<p style='font-size: 120%'>A <span style=
+'color: brown; font-weight: bold;'>draft document</span> giving
+some design ideas is downloadable as <a href=
+'http://starynkevitch.net/Basile/refpersys-design.pdf'><span class=
+'cl_tt'>refpersys-design.pdf</span></a>. We are improving it in
+2019-2021.</p>
+<p>The currently <i>temporary</i> existing (in 2019 or 2021), on
+<a href='https://gitlab.com/bstarynk/refpersys'><span class=
+'cl_tt'>gitlab</span></a> code base is a bit disappointing (since
+in summer 2020 most of it is still hand-coded by us, not yet
+generated), even to the <i>Refpersys</i> team. But we have a lot of
+fun doing it. It is constantly improving, publicly available, still
+unreleased, <a href=
+'https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha'>α-stage</a>.
+We are aware of the <a href=
+'https://en.wikipedia.org/wiki/Replication_crisis'>replication
+crisis</a>. <b>We hope to generate most of <i>RefPerSys</i> C++
+code in 2021.</b> The external libraries used by <i>RefPerSys</i>
+may evolve with time, with the hope to provide some partial
+semi-formal description of their properties to the system. We are
+aware of <a href=
+'https://en.wikipedia.org/wiki/Rice%27s_theorem'>Rice's
+theorem</a>.</p>
+<p>The major insight of <i>RefPerSys</i> is to <b>generate</b> most
+of (and hopefully <i>all</i>) <b>its C++ code from higher level
+representations</b>, based upon a cyclic graph of objects in
+virtual memory. That entire graph, called <b>the persistent
+heap</b>, is loaded at startup, and dumped at shutdown, from
+textual files (and later, external databases). It is <a href=
+'https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)'>
+garbage-collected</a>.</p>
+<h3 id='valobj_id'>values and objects in <i>RefPerSys</i></h3>
+<p>The persistent heap contains immutable values and mutable
+objects. Each value is practically speaking a 64 bits word, often a
+pointer (which can refer to an object in memory, or to a small
+memory zone holding some data, conceptually some <a href=
+'https://en.wikipedia.org/wiki/Tagged_union'>tagged union</a>).
+Values are hashed and ordered, and are a The <i>nil</i> pointer
+usually represents a missing value.<br>
+<b>Immutable values</b> include:</p>
+<ul>
+<li>tagged 63-bits integers</li>
+<li>boxed floating point numbers</li>
+<li><a href='https://utf8everywhere.org/'>UTF-8</a> encoded
+strings</li>
+<li>sequence of object references</li>
+<li>finite and ordered set of object references. So membership test
+is in <i>O(log n)</i></li>
+<li>immutable instances (containing, like objects do, a class, a
+set of attributes and/or a sequence of components, both being
+fixed)</li>
+<li>closures; the closed code is represented as an object (called
+the connective object), and the closed values (represented as a
+sequence) are arbitrary and could be nil.</li>
+<li>etc... (e.g. small vector of floats or of 32 bits integers, or
+<a href='http://json.org'>JSON</a> values)</li>
+</ul>
+<br>
+Only <b>objects are mutable</b>. Since <i>RefPerSys</i> is
+multi-<a href=
+'https://en.wikipedia.org/wiki/Thread_(computing)'>threaded</a>,
+access to or update of objects require some synchronization (with
+<a href=
+'https://en.wikipedia.org/wiki/Lock_(computer_science)'>mutexes</a>
+etc...). Objects have each a (hopefully) globally unique
+<i>objid</i> which is textually representable, for example
+<span class='cl_tt'>_8J6vNYtP5E800eCr5t</span>. <b>Objects are
+quite heavy but flexible data structures</b> containing:
+<ul>
+<li>Their unique <i>objid</i></li>
+<li>Their mutex lock</li>
+<li>The <b>class</b> of that object, itself an object
+reference</li>
+<li>The <b>space</b> of that object, used for persistence (e.g. all
+objects in the same space goes into the same file or database); it
+is an object reference</li>
+<li>The <b>modification time</b> of that object.</li>
+<li>A finite and updatable <b>map of attributes</b>, made of
+attribute entries. Each such entry has an attribute (itself an
+object reference) with an associated non-nil value. All attributes
+of a given objects are different.</li>
+<li>An updatable and resizable <b>vector of components</b>, each
+component being a value or nil</li>
+<li>optional <b>pointers to C++ functions</b> to apply closures or
+to get magical attributes.</li>
+<li>Some extra optional <b>payload</b>. Object payloads contain
+data which does not fit into the general <i>ObjVLisp</i> inspired
+model, e.g. GUI widgets, file handles, dictionnaries mapping string
+to values, etc...</li>
+</ul>
+Some of the above fields are <span class='cl_tt'>std::atomic</span>
+in C++, for performance reasons (to avoid locking the entire
+object). Even the object's class or space or payload or internal
+function pointers could change during runtime.
+<p><b>Most</b> (but not all) <b>objects are persistent</b> (so
+reloaded at startup and dumped to disk or databases at
+shutdown).</p>
 
-Any potential partner in some <tt>HORIZON-HLTH</tt> submission should
-be aware that <i>RefPerSys</i> has an agile development, runs <b>on
-Linux only</b>, and would require trustful cooperation with medical
-experts and many partners. If interested in submitting a proposal
-to <tt>HORIZON-HLTH</tt> calls, email
-both <a href='mailto:basile.starynkevitch@cea.fr'><tt>basile.starynkevitch@cea.fr</tt></a>
-and <a href='mailto:basile@starynkevitch.net'><tt>basile@starynkevitch.net</tt>
-</p>
 
+<h3 id='metaprog_id'>metaprogramming and introspection in
+  <i>RefPerSys</i></h3>
+
+<p>An important feature of <i>RefPerSys</i> is <b><a href=
+'https://en.wikipedia.org/wiki/Metaprogramming'>meta-programming</a></b>
+and code generation. <b>During its runtime, the multi-threaded
+<span class='cl_tt'>refpersys</span> <a href=
+'https://en.wikipedia.org/wiki/Process_(computing)'>process</a>
+should generate C++ or C code</b>, compile that code into some
+<a href='https://www.akkadia.org/drepper/dsohowto.pdf'>shared
+library</a>, then <a href=
+'http://man7.org/linux/man-pages/man3/dlopen.3.html'>dlopen</a>
+that generated shared object, and get function pointers inside it
+using then <a href=
+'http://man7.org/linux/man-pages/man3/dlsym.3.html'>dlsym</a>. See
+also <a href='https://tldp.org/HOWTO/Program-Library-HOWTO/'>the
+Program Library HOWTO</a>, and the <a href=
+'https://tldp.org/HOWTO/html_single/C++-dlopen/'>C++ dlopen mini
+HOWTO</a> and the <a href=
+'https://github.com/bstarynk/misc-basile/blob/master/manydl.c'><span class='cl_tt'>
+manydl.c</span> example</a>. Generated C++ code could be temporary
+or persistent (in that later case, it is version-controlled).</p>
+<p>Another important feature of <i>RefPerSys</i> is
+<b>introspection</b> coupled with runtime <a href=
+'https://en.wikipedia.org/wiki/Profiling_(computer_programming)'>profiling</a>
+(see also <a href=
+'http://man7.org/linux/man-pages/man7/time.7.html'>time(7)</a>...)
+which is reasonably possible in generated C++ code with the help of
+the garbage collector (explicit GC-ed <a href=
+'https://en.wikipedia.org/wiki/Call_stack#CALL-FRAME'>call
+frames</a> being singly-linked lists) and/or <a href=
+'https://github.com/ianlancetaylor/libbacktrace'>Ian Taylor's
+<span class='cl_tt'>libbacktrace</span> library</a> and the
+<a href='http://man7.org/linux/man-pages/man3/dladdr.3.html'>dladdr(3)</a>
+function. During its runtime, <i>RefPerSys</i> can inspect most of
+its call stacks. <b>We later hope to use <a href=
+'https://en.wikipedia.org/wiki/Machine_learning'>machine
+learning</a> techniques</b> on the profiling data and get some
+dynamic optimization, tailored to the concrete problems approached
+and actual applications of <i>RefPerSys</i>.</p>
+<h3 id='declknow_id'>declarative knowledge and bootstrapping in
+<i>RefPerSys</i></h3>
+<p>The insight of <i>RefPerSys</i> is to represent high-level
+<a href='https://en.wikipedia.org/wiki/Expert_system'>expert
+system</a> rules, fact bases and machine learning artefacts as
+collections of objects. The C++ generator should be described by
+meta-rules compiled by itself to C++ code. So we are taking a
+<a href=
+'https://en.wikipedia.org/wiki/Bootstrapping_(compilers)'>bootstrapping</a>
+approach, first generating C++ code by hand-written C++ code, then
+replacing some of it by generated C++ code from higher-level
+knowledge representations, then progressively and incrementally
+improving these representations by higher-level and more abstract
+constructs. This should be worked on in 2021.</p>
+<p>In practice, <i>RefPerSys</i> requires some graphical user
+interface with <a href=
+'https://en.wikipedia.org/wiki/Autocomplete'>autocompletion</a>
+facilities, and displaying graphically small parts of its heap
+(perhaps as <a href=
+'https://en.wikipedia.org/wiki/Abstract_syntax_tree'>abstract
+syntax trees</a> or nested boxes), inspired by the past <a href=
+'https://hal.inria.fr/inria-00075774'>Centaur system.</a>. It is
+well known that GUI toolkits like <a href='http://qt.io/'>Qt</a> or
+<a href='https://fltk.org/'>FLTK</a> are more easily used with C++
+code generators, which are parts of <i>RefPerSys</i>. So we need to
+work a lot.</p>
+<!-- **************************************************************** -->
+<h2 id='talks_id'>talks</h2>
+<p><i>RefPerSys</i> has been presented at <a href=
+'https://afia.asso.fr/journee-hommage-j-pitrat/'>a seminar</a>
+organized by <a href='https://afia.asso.fr/'>AFIA</a> in Paris, on
+March 6<sup>th</sup>, 2020, dedicated to the memory of <a href=
+'http://bootstrappingartificialintelligence.fr/WordPress3/'>Jacques
+Pitrat</a>, who died in october 2019. Contact <a href=
+'mailto:basile@starynkevitch.net'>Basile Starynkevitch</a> for
+details. Slides are <a href=
+'Starynkevitch-CAIA-RefPerSys-2020mar06.pdf'>here</a> in PDF. The
+video of the talk in French is <a href=
+'https://www.dailymotion.com/video/k3zZwEcSOccI97w0m6i?playlist=x6obd7'>
+here</a>.</p>
+<p>Please suggest by email to <a href=
+'mailto:team@refpersys.org/'><span class=
+'cl_tt'>team@refpersys.org</span></a> any AI conference, meeting,
+or workshop where this project could be presented.</p>
+<!-- **************************************************************** -->
+<h2 id='documents_id'>documents</h2>
+<ul>
+<li>Draft of a paper (by Basile Starynkevitch and Abhishek
+Chakravarti) in French: <i>Le projet <b>RefPerSys</b>, un
+succcesseur potentiel du système <b>Caia</b> de Jacques Pitrat</i>
+- submitted in june 2021 to <a href=
+'https://roia.centre-mersenne.org/'>ROIA</a> journal: <a href=
+'Starynkevitch-RefPerSys.pdf'>PDF file</a> (32 pages)</li>
+<li>The <a href=
+'http://starynkevitch.net/Basile/refpersys-design.pdf'>RefPerSys
+high-level goals and design ideas</a> draft report (work in
+progress, 2019 - 2020, mentioned above).</li>
+<li>Jacques Pitrat's <a href=
+'https://www.amazon.com/Artificial-Beings-Conscience-Conscious-Machine/dp/1848211015'>
+book</a> <i>Artificial Beings: the Conscience of a Conscious
+Machine</i>, <small>ISBN-13: 978-1848211018 (Wiley ISTE),</small>
+is suggesting an interesting roadmap and provides an inspirational
+approach, justifying the interest of a reflexive and persistent
+system.</li>
+<li>A draft of a short hightlight paper (2 pages) submitted to
+<a href='http://ecai2020.eu/'>ECAI2020</a> about the <a href=
+'ecai2020-highlight-refpersys.pdf'>Development and Architecture of
+RefPerSys: <small>a multi-threaded <b>Ref</b>lective
+<b>Per</b>sistent <b>Sys</b>tem for AI</small></a> (november 2019;
+we are aware that this conference is very selective). That paper
+was not accepted, but one (out of three) of the reviews has been
+very encouraging, saying : <q>The concept of the paper is good.
+However, the writing skill / style is not satisfactory.</q>. That
+paper explains our roadmap and vision.</li>
+<li>Our <a href=
+'https://gitlab.com/bstarynk/refpersys/-/wikis'>wiki</a> contain
+topics which are discussed and work in progress. Notice in
+particular the <a href=
+'https://gitlab.com/bstarynk/refpersys/-/wikis/Personal-data-in-RefPerSys'>
+Personal data in RefPerSys</a> wikipage, which might be indirectly
+related to European <a href='https://gdpr-info.eu/'>GDPR</a>.
+However, be aware that we are not lawyers.</li>
+</ul>
+<!-- **************************************************************** -->
+<h2 id='dependencies_id'>dependencies</h2>
+<p>The <i>RefPerSys</i> software depends on many other common
+stuff, notably a recent <a href='http://gcc.gnu.org/'>GCC</a>
+compiler (in practice, <a href='https://gcc.gnu.org/gcc-10/'>GCC
+10</a> in summer 2021), for <a href=
+'https://en.wikipedia.org/wiki/C%2B%2B17'>C++17</a> with its
+standard library, a recent <a href='https://kernel.org/'>Linux
+kernel</a> and C standard library (e.g. <a href=
+'https://www.gnu.org/software/libc/'>GNU glibc</a> or <a href=
+'http://musl-libc.org/'>Musl Libc</a>), the <a href=
+'https://github.com/open-source-parsers/jsoncpp'>JsonCPP</a>
+library (for persistence) and the <a href=
+'https://www.qt.io/'>Qt</a> or soon <a href=
+'https://www.fltk.org/'>FLTK</a> graphical toolkit, and the
+<a href='https://github.com/davidmoreno/onion/'>Onion</a> HTTP
+server library, the <a href=
+'https://github.com/ianlancetaylor/libbacktrace'><i>libbacktrace</i>
+library</a>. The <a href='https://logological.org/gpp'>GPP</a>
+preprocessor is useful for some documentation. The <a href=
+'https://en.wikipedia.org/wiki/AddressSanitizer'>AddressSanitizer</a>
+facilities of <a href='http://gcc.gnu.org/'>GCC</a> are sometimes
+useful.</p>
+<p>A multi-core <i>x86-64</i> Linux computer with more than
+16Gbytes of RAM and at least 100Gbytes of free disk space is
+recommended. <a href='https://www.qt.io/'>Qt</a> is being replaced
+by <a href='https://www.fltk.org/'>FLTK</a>, more friendly to
+RefPerSys <a href=
+'https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)'>
+garbage collector</a> (since <i>Qt</i>, unlike <i>FLTK</i>, is
+creating <a href=
+'https://en.wikipedia.org/wiki/Thread_(computing)'>threads</a>
+without notice).</p>
+<!-- **************************************************************** -->
+<h2 id='download_id'>download α-stage source code</h2>
+<p>The <a href=
+'https://www.gnu.org/licenses/gpl-3.0.en.html'>GPLv3+ licensed</a>
+<a href=
+'https://en.wikipedia.org/wiki/Software_release_life_cycle#Alpha'>α-stage</a>
+embryonic <a href=
+'https://www.gnu.org/philosophy/free-sw.en.html'>free software</a>
+source code of <i>RefPerSys</i> is on <a href=
+'https://gitlab.com/bstarynk/refpersys'><span class=
+'cl_tt'>gitlab.com/bstarynk/refpersys</span></a>.<br>
+We practically are using <a href='http://git-scm.com'>git</a> as a
+<q>centralized</q> version control system, because we are very few
+and sill don't understand well in 2019 or 2020 how a genuinely
+<a href=
+'https://en.wikipedia.org/wiki/Distributed_version_control'>distributed
+version control system</a> could play nice with a <a href=
+'https://en.wikipedia.org/wiki/Reflection_(computer_programming)'>reflexive</a>,
+orthogonally <a href=
+'https://en.wikipedia.org/wiki/Persistence_(computer_science)'>persistent</a>,
+<a href=
+'https://en.wikipedia.org/wiki/Homoiconicity'>homoiconic</a>,
+<a href=
+'https://en.wikipedia.org/wiki/Bootstrapping'>bootstrapped</a>,
+self-generating <a href=
+'https://en.wikipedia.org/wiki/Quine_(computing)'>Quine</a>
+system.</p>
+<h3>Daily snapshot with source and binary</h3>
+<p>A daily snapshot (of the <span class='cl_tt'>master</span> git
+branch) could be downloadable on <a href=
+'refpersys-snapshot.tar.bz2'><span class=
+'cl_tt'>refpersys-snapshot.tar.bz2</span></a>. It is usually but
+not always automatically generated every day, so could be broken or
+very buggy. That <a href=
+'https://www.sourceware.org/bzip2/'>bzip2</a> <span class=
+'cl_tt'>tar</span> archive contains both <b>source files</b>, some
+log files of build, and <b>binary <a href=
+'https://en.wikipedia.org/wiki/Executable_and_Linkable_Format'>ELF</a>
+executable</b> <span class='cl_tt'>refpersys</span> for
+Linux/x86-64. It is made in good faith, but could be very buggy and
+might do wrong things if you run that executable (daily built on
+Debian/Sid/x86-64). So use the <span class='cl_tt'>refpersys</span>
+executable in that snapshot, provided with <b>no warranty</b>, at
+your own risk. For <a href=
+'https://en.wikipedia.org/wiki/Computer_security'>cyber-security</a>
+reasons, <b>avoid running <span class='cl_tt'>./refpersys</span> as
+root.</b><br>
+Use <span class='cl_tt'>./refpersys --help</span> to understand the
+program arguments and environment variables, if any (they would be
+conventionally prefixed <span class='cl_tt'>RPS_</span> or
+<span class='cl_tt'>REFPERSYS_</span>, see <a href=
+'https://man7.org/linux/man-pages/man7/environ.7.html'><span class=
+'cl_tt'>environ(7)</span></a> for more) that could be relevant.</p>
+<p>It is preferable to <b>download <i>RefPerSys</i> from <a href=
+'https://gitlab.com/bstarynk/refpersys'><span class=
+'cl_tt'>gitlab.com/bstarynk/refpersys</span></a> and look into the
+active <span class='cl_tt'>git</span> branches, then to build it on
+your Linux computer.</b> The build time with <span class=
+'cl_tt'>make</span> could last one or a few minutes.</p>
+<!-- **************************************************************** -->
+<h2 id='forum_id'>forum</h2>
+<p>A low-traffic forum hosted in France by <a href=
+'https://framasoft.org/'>FramaSoft</a> (a non-profit association)
+is available on <a href=
+'https://framalistes.org/sympa/info/refpersys-forum'><span class=
+'cl_tt'>framalistes.org/sympa/info/refpersys-forum</span></a>.
+Please subscribe if interested. Be polite and civil there. <b>Only
+for <i>public technical</i> discussion</b> in written English
+<b>about <i>implementation</i>, <i>architecture</i>, or
+<i>running</i> issues of <i>RefPerSys</i></b>, including building
+problems (so <b>not</b> for philosophical discussions about
+<i>AGI</i> or <a href=
+'https://en.wikipedia.org/wiki/Technological_singularity'>singularity</a>).
+If you have issues in subscribing, contact <a href=
+'mailto:basile-freelance@starynkevitch.net'><span class=
+'cl_tt'>basile-freelance@starynkevitch.net</span></a> by email. A
+typical message could have been <a href=
+'refpersys-Qt-based-GUI-mail-2019dec19.html'>this one</a>. If you
+have built some <i>RefPerSys</i> <a href=
+'https://en.wikipedia.org/wiki/Executable'>executable</a> and have
+tried to run it, that forum is the right place to ask help. Mention
+the output of the <span class='cl_tt'>./refpersys --version</span>
+command in your message.</p>
+<p>Thanks to Niklas Rozencrantz, a Slack channel for
+<i>RefPerSys</i> exists on <a href=
+'https://refpersys.slack.com/'>refpersys.slack.com</a></p>
+<!-- **************************************************************** -->
+<h2 id='needs_id'>needs</h2>
+<p><b>The <i>RefPerSys</i> project needs more volunteers to
+<i>actively</i> contribute to it, and welcome any person having
+tried to build and run it</b> (even some intern student in
+programming, if he/she is willing to contribute). At last, some
+team members are severely under-equiped and would welcome any 4 to
+16 cores x86-64, Linux capable, working, PC with 32 gigabytes of
+RAM and at least a 240 Gb SSD disk. Sponsorship for traveling costs
+could also be welcome, to facilitate face to face meetings.
+<b>Opportunities to present this project in face to face meetings
+are desired</b>, and more generally a <b>limited funding is
+welcome</b> (but we have no legal organization for that in 2020).
+<b>Mention potential relevant funding opportunities</b> (e.g.
+<a href=
+'https://ec.europa.eu/info/horizon-europe-next-research-and-innovation-framework-programme_en'>
+HorizonEurope</a> calls) <b>or any technical issues in building or
+running it</b> to us by email. Contact <a href=
+'mailto:team@refpersys.org'><span class=
+'cl_tt'>team@refpersys.org</span></a> for more.</p>
+<!-- **************************************************************** -->
+<h2 id='applications_id'>potential applications</h2>
+<p><b>The <i>RefPerSys</i> project welcome potential future
+applications</b> (if in return they provide some sponsorship,
+contributions, or funding). Since it can be viewed as a high-level
+<a href=
+'https://en.wikipedia.org/wiki/Declarative_programming'>declarative
+programming</a> environment based upon a <a href=
+'https://en.wikipedia.org/wiki/Metaprogramming'>metaprogramming</a>
+and at end of 2020 some <a href=
+'https://en.wikipedia.org/wiki/Machine_learning'>machine
+learning</a> techniques, we believe it may become useful...
+However, <b>the priority</b> in 2020 <b>is to generate most</b>
+(hopefully all) <b>of the C++ code of the <i>RefPerSys</i>
+system</b>. Contact <a href=
+'mailto:team@refpersys.org'><span class='cl_tt'>team@refpersys.org</span></a>.</p>
+<p>Of course, <b>any real-world potential concrete application of
+<i>RefPerSys</i></b> (e.g. health sector, smart cities, smart
+grids, smart web, perhaps robot planning, civilian autonomous
+vehicles or drones, etc....) <b>would require some support and a
+little bit of funding</b>. We all are excited by this project, and
+we all want to have some read-world application for it and expect
+such applications to fund partly our research work.</p>
+<p>An incomplete list of future applications (assuming a budget of
+a few hundreds k€ or US$ and close cooperation with other software
+developers and domain specific experts during a few years, with
+computer access to some industry or domain-specific <a href=
+'https://en.wikipedia.org/wiki/Open_data'>open data</a> or
+proprietary data or communication in <a href=
+'https://en.wikipedia.org/wiki/Open_format'>open format</a>) might
+include:</p>
+<ul>
+<li>in the <a href='https://en.wikipedia.org/wiki/Smart_city'>smart
+city</a> vision, helping in optimizing energy, electric grids,
+communication grids, and public transport networks.</li>
+<li>in <a href=
+'https://en.wikipedia.org/wiki/Fourth_Industrial_Revolution'>Industry
+4.0</a> manufacturing plants, improving and monitoring the
+manufacturing processes</li>
+<li>in <a href='https://en.wikipedia.org/wiki/Health_care'>health
+care</a>, assistance in modeling and simulating the human body. In
+particular, experts (biologists, physicians, virologists, public
+health autorities) fighting against the <a href=
+'https://en.wikipedia.org/wiki/COVID-19_pandemic'>Covid 19
+pandemic</a> might benefit from <i>RefPerSys</i> (communicating
+with other <i>existing</i> software systems and hardware
+devices</li>
+and partly modeling that pandemic). Other <a href=
+'https://en.wikipedia.org/wiki/Bioinformatics'>bioinformatics</a>systems
+involve very complex software which might be monitored and
+communicate with some <i>RefPerSys</i>process.
+<li>Organization of, and digital assistance to, specific human
+communities: within legal and ethical frameworks (in Europe, the
+<a href=
+'https://en.wikipedia.org/wiki/General_Data_Protection_Regulation'>GDPR</a>),
+the set of members of a community or organization could be partly
+modeled as a set of <i>RefPerSys</i> objects representing some
+<a href='https://en.wikipedia.org/wiki/Semantic_network'>semantic
+network</a>.</li>
+<li>Against <a href=
+'https://en.wikipedia.org/wiki/Climate_change'>climate change</a>,
+<i>RefPerSys</i> might be used to coordinate and perhaps monitor
+very complex existing <a href=
+'https://en.wikipedia.org/wiki/Weather_forecasting'>weather
+forcasting</a> software systems (using <a href=
+'https://en.wikipedia.org/wiki/Finite_element_method'>finite
+element methods</a> running on <a href='https://top500.org/'>TOP
+500</a> supercomputers.</li>
+<li>In <a href=
+'https://en.wikipedia.org/wiki/Software_engineering'>software
+engineering</a> of large software (as big as the <a href=
+'http://kernel.org/'>Linux kernel</a> or as <a href=
+'http://gcc.gnu.org/'>the GCC compiler</a>), <i>RefPerSys</i> might
+help junior software developers to understand the software
+architecture of these large code base, e.g. by partly modelling
+their <a href=
+'https://en.wikipedia.org/wiki/Control-flow_graph'>control flow
+graph</a>, or <a href=
+'https://en.wikipedia.org/wiki/Call_graph'>call graph</a>, or
+navigate in a <a href=
+'https://en.wikipedia.org/wiki/Class_diagram'>class diagram</a>
+(see also the <a href='https://www.decoder-project.eu/'>DECODER</a>
+project) perhaps extracted by some <a href=
+'https://gcc.gnu.org/onlinedocs/gccint/Plugins.html'>GCC
+plugin</a>, whose C++ source code might be (once some funding is
+available) generated by <i>RefPerSys</i>.</li>
+<li>In <a href=
+'https://en.wikipedia.org/wiki/Astrophysics'>astrophysics</a>,
+<i>RefPerSys</i> might coordinate and help instrumenting very
+complex <a href=
+'https://en.wikipedia.org/wiki/Stellar_dynamics'>stellar
+dynamics</a> simulation software running for months on
+supercomputers. If the source code of these software is available,
+<i>RefPerSys</i> might generate some instrumenting code suited for
+them.</li>
+<li>large industrial facilities like <a href=
+'https://en.wikipedia.org/wiki/Nuclear_power_plant'>nuclear power
+plants</a>, or grids of <a href=
+'https://en.wikipedia.org/wiki/Wind_turbine'>wind turbines</a>
+involve very complex simulation code such as <a href=
+'https://code-aster.org/'>CODE ASTER</a>, <a href=
+'http://www-cast3m.cea.fr/'>CAST3M</a> and are composed of
+thousands of networked hardware components, which could be
+simulated by <i>RefPerSys</i> objects (also interacting with
+<i>existing</i> software), etc.</li>
+<li>European organizations or like <a href=
+'https://bdva.eu/'>BDVA</a> might become interested in
+<i>RefPerSys</i> or projects like <a href=
+'https://euhubs4data.eu/'>EuHubs4Data</a> could also be
+interested.</li>
+<li>Encyclopedical knowledge (e.g. <a href=
+'https://en.wikipedia.org/wiki/Wikipedia'>Wikipedia</a>...) might
+profit of <i>RefPerSys</i> since it is modelling (in a slightly
+more structured way) a <a href=
+'https://en.wikipedia.org/wiki/Semantic_network'>semantic
+network</a>, like <i>Wikipedia</i> does already. See also <a href=
+'https://en.wikipedia.org/wiki/Cyc'>Cyc</a> and <a href=
+'https://babelnet.org/'>BabelNet</a>.</li>
+</ul>
+<h3>possibly relevant Horizon Europe calls</h3>
+<p>It could happen (contact by email <a href=
+'mailto:basile.starynkevitch@cea.fr'><tt>basile.starynkevitch@cea.fr</tt></a>
+and <a href=
+'mailto:basile@starynkevitch.net'><tt>basile@starynkevitch.net</tt></a>...)
+that the following European calls (see <a href=
+'https://sciencebusiness.net/sites/default/files/inline-files/4.%20Health%20Vs6.4%20March.pdf'>
+this</a>) could be relevant (if my employer allows it) for using
+and deploying <i>RefPerSys</i> (with of course a lot of efforts, to
+be funded!):</p>
+<ul>
+<li><tt>HORIZON-HLTH-2021-STAYHLTH-01-02</tt> (RIA, deadline: 21
+sept 2021), with <i>RefPerSys</i> being used (amongst and with
+other software tools and teams) as a <q>computational modelling
+and/or artificial intelligence tools is encouraged for the analysis
+of big, complex and heterogeneous data</q> related to assisting
+health professionals in <q>preventing the transition from mental
+health to mental illness</q></li>
+<li><tt>HORIZON-HLTH-2022-STAYHLTH-01-01</tt> (RIA, two stage, 01
+feb 2022) with <i>RefPerSys</i> supporting, partly implementing
+digitally, and documenting some <q>clinical guidelines, best
+practices, implementation strategies and policy recommendations to
+mitigate the mental health burden and help cope with the (combined)
+effects of a transforming Europe</q></li>
+<li><tt>HORIZON-HLTH-2022-STAYHLTH-01-04</tt> (RIA, two-stages, 21
+Apr 2022): <q>Trustworthy artificial intelligence (AI) tools to
+predict the riskof chronic non-communicable diseases and/or their
+progression</q></li>
+<li><tt>HORIZON-HLTH-2022-STAYHLTH-02-01</tt> <i>Personalised
+blueprint of chronic inflammation in health-to-disease
+transition</i>, (RIA, 21 Apr 2022) as one of several software tools
+to <q>Integrate state-of-the-art knowledge and data from suitable
+human studies to identify actionable factors linking chronic
+systemic and/or local inflammation to the health-to-disease
+transition.</q></li>
+</ul>
+Any potential partner in some <tt>HORIZON-HLTH</tt> submission
+should be aware that <i>RefPerSys</i> has an agile development,
+runs <b>on Linux only</b>, and would require trustful cooperation
+with medical experts and many partners. If interested in submitting
+a proposal to <tt>HORIZON-HLTH</tt> calls, email both <a href=
+'mailto:basile.starynkevitch@cea.fr'><tt>basile.starynkevitch@cea.fr</tt></a>
+and <a href=
+'mailto:basile@starynkevitch.net'><tt>basile@starynkevitch.net</tt></a>
 <p>Be aware that any technical documentation will be produced
 (probably) using <a href='https://www.latex-project.org/'>the LaTeX
-preparation system</a> (and explicitly <b>not</b> any Microsoft Word
-processor) in <a href='https://en.wikipedia.org/wiki/PDF'>PDF</a>
-format.</p>
-
-
-  <!-- **************************************************************** -->
+preparation system</a> (and explicitly <b>not</b> any Microsoft
+Word processor) in <a href=
+'https://en.wikipedia.org/wiki/PDF'>PDF</a> format.</p>
+<!-- **************************************************************** -->
 <h2 id='related_id'>related projects</h2>
-
 In no particular order:
-
 <ul>
-  <li>The <a href='http://tunes.org/'>Tunes</a> vision</li>
-  <li>The <a href='https://github.com/attila-lendvai/maru'>Maru</a> system</li>
-  <li>The <a href='http://phantomos.org/'>PhantomOS</a> persistent OS</li>
+<li>The <a href='http://tunes.org/'>Tunes</a> vision</li>
+<li>The <a href='https://github.com/attila-lendvai/maru'>Maru</a>
+system</li>
+<li>The <a href='http://phantomos.org/'>PhantomOS</a> persistent
+OS</li>
 </ul>
-
-<p class='cl_small'>
-  Please contact <a href='mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> to suggest related projects, and have an hyperlink to them. We would appreciate a reverse link.
-</p>
-
-  <!-- **************************************************************** -->
-  <hr>
-  <footer>
-    This <a href='http://refpersys.org'><span class='cl_tt'>refpersys.org</span></a>
-    website is updated quite often in 2019 or 2021, it is © <i>RefPerSys
-    team</i> 2019 - 2021, under <a rel="license" href=
-    "http://creativecommons.org/licenses/by-sa/4.0/"><img alt=
-    "Creative Commons License" style="border-width:0" src=
-    "https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
-    This web site is (except when written otherwise) licensed under a <a rel="license" href=
-    "http://creativecommons.org/licenses/by-sa/4.0/">Creative
-    Commons Attribution-ShareAlike 4.0 International License</a>.
-    The legal publisher is <span style=
-    'background-color: azure; font-family: Arial, Serif; font-size: 9pt;'
-    lang='fr'>(le responsable légal de la publication est:)</span>
-    <a href='http://starynkevitch.net/Basile/'>Basile
-      Starynkevitch</a>, living at
-      92340 <a href='https://en.wikipedia.org/wiki/Bourg-la-Reine'>Bourg
-      La Reine</a>, France. It is hosted
-      by <a href='http://ovh.com/'>OVH</a> in France. You are
-      explicitly welcome to mirror this web page with
-      the <a href='refpersys-snapshot.tar.bz2'><span class='cl_tt'>refpersys-snapshot.tar.bz2</span></a>
-      snapshot of <i>RefPerSys</i> elsewhere, but please send an email
-      to <a href='mailto:team@refpersys.org'><span class='cl_tt'>team@refpersys.org</span></a>
-      and
-  <a href=
-  'mailto:basile@starynkevitch.net'><span class='cl_tt'>basile@starynkevitch.net</span></a>
-  if you do so.
-  </footer>
+<p class='cl_small'>Please contact <a href=
+'mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> to
+suggest related projects, and have an hyperlink to them. We would
+appreciate a reverse link.</p>
+<!-- **************************************************************** -->
+<hr>
+<footer>This <a href='http://refpersys.org'><span class=
+'cl_tt'>refpersys.org</span></a> website is updated quite often in
+2019 or 2021, it is © <i>RefPerSys team</i> 2019 - 2021, under
+<a rel="license" href=
+"http://creativecommons.org/licenses/by-sa/4.0/"><img alt=
+"Creative Commons License" style="border-width:0" src=
+"https://i.creativecommons.org/l/by-sa/4.0/88x31.png"></a><br>
+This web site is (except when written otherwise) licensed under a
+<a rel="license" href=
+"http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons
+Attribution-ShareAlike 4.0 International License</a>. The legal
+publisher is <span style=
+'background-color: azure; font-family: Arial, Serif; font-size: 9pt;'
+lang='fr'>(le responsable légal de la publication est:)</span>
+<a href='http://starynkevitch.net/Basile/'>Basile
+Starynkevitch</a>, living at 92340 <a href=
+'https://en.wikipedia.org/wiki/Bourg-la-Reine'>Bourg La Reine</a>,
+France. It is hosted by <a href='http://ovh.com/'>OVH</a> in
+France. You are explicitly welcome to mirror this web page with the
+<a href='refpersys-snapshot.tar.bz2'><span class=
+'cl_tt'>refpersys-snapshot.tar.bz2</span></a> snapshot of
+<i>RefPerSys</i> elsewhere, but please send an email to <a href=
+'mailto:team@refpersys.org'><span class=
+'cl_tt'>team@refpersys.org</span></a> and <a href=
+'mailto:basile@starynkevitch.net'><span class=
+'cl_tt'>basile@starynkevitch.net</span></a> if you do so.</footer>
 </body>
 </html>
