@@ -114,7 +114,7 @@ refpersys.org</a></h2>
 This is an ambitious <b><a href=
 'https://en.wikipedia.org/wiki/Research' style=
 'color: red'>research</a> project</b> (still unfunded, in 2019 -
-2020 it is a hobby project; also very risky!), done on spare time
+2021 it is a hobby project; also very risky!), done on spare time
 with an <a href='https://en.wikipedia.org/wiki/Open_science'>open
 science</a> mindset and ethics.</p>
 <!-- **************************************************************** -->
@@ -127,7 +127,8 @@ science</a> mindset and ethics.</p>
 'https://gitlab.com/bstarynk/refpersys'><span class=
 'cl_tt'>gitlab</span></a> and <b>preferably</b> on <a href=
 'https://github.com/RefPerSys/RefPerSys'><span class=
-'cl_tt'>github.com/RefPerSys/RefPerSys</span></a>. Done by
+'cl_tt'>github.com/RefPerSys/RefPerSys</span></a> and <a href='https://github.com/RefPerSys/refpersys-in-c'><span class=
+'cl_tt'>github.com/RefPerSys/refpersys-in-c</span></a. Done by
 passionate developers on their spare time. <b>Volunteers
 wanted</b>; please send an email (introducing yourself) to <a href=
 'mailto:basile@starynkevitch.net'><span class=
@@ -257,7 +258,7 @@ and introspection and meta-programming (notably generation of C++
 code) approaches. <i>RefPerSys</i> should provide and contain its
 own sort-of <a href=
 'https://en.wikipedia.org/wiki/Integrated_development_environment'>IDE</a>,
-using <a href='https://www.qt.io/'>Qt5</a> and will -later in
+  using <a href='https://www.qt.io/'>Qt</a> or <a href='https://gtk.org/'>GTK</a> and will -later in
 2021- <i>progressively</i> incorporate other <i>existing</i>
 <a href='https://opensource.org/'>open source</a> C++ libraries
 (perhaps <a href='https://www.tensorflow.org/'>TensorFlow</a>,
@@ -270,8 +271,10 @@ implementation inspiration by the past and obsolete <a href=
 More and more C++ or other source code of <i>RefPerSys</i> should
 become generated (and re-generated again from even more declarative
 formalizations).</li>
-<li>We hope (in 2022) to have declarative rules and
-metarules with variables. Your help is wanted.</li>
+<li>We hope (in 2022) to have declarative rules and metarules with
+  variables. Your help is wanted. A rule should have
+  un <i>unordered</i> set of conditions and trigger a sequence of
+  actions.</li>
 <li>In spring 2021 (e.g. around git commit `4303b8f1f8ced36`), we
 are using <a href='https://www.gnu.org/software/readline/'>GNU
 readline</a> for the initial REPL interface</li>
@@ -452,15 +455,15 @@ and actual applications of <i>RefPerSys</i>.</p>
 <p>The insight of <i>RefPerSys</i> is to represent high-level
 <a href='https://en.wikipedia.org/wiki/Expert_system'>expert
 system</a> rules, fact bases and machine learning artefacts as
-collections of objects. The C++ generator should be described by
-meta-rules compiled by itself to C++ code. So we are taking a
+collections of objects. The C++ (or C) generator should be described by
+meta-rules compiled by itself to C++ (or C) code. So we are taking a
 <a href=
 'https://en.wikipedia.org/wiki/Bootstrapping_(compilers)'>bootstrapping</a>
-approach, first generating C++ code by hand-written C++ code, then
-replacing some of it by generated C++ code from higher-level
-knowledge representations, then progressively and incrementally
-improving these representations by higher-level and more abstract
-constructs. This should be worked on in 2021.</p>
+approach, first generating C++ or C) code by hand-written C++ (or C)
+code, then replacing some of it by generated C++ or C code from
+higher-level knowledge representations, then progressively and
+incrementally improving these representations by higher-level and more
+abstract constructs. This should be worked on in 2021.</p>
 <p>In practice, <i>RefPerSys</i> requires some graphical user
 interface with <a href=
 'https://en.wikipedia.org/wiki/Autocomplete'>autocompletion</a>
