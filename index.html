@@ -93,21 +93,25 @@ HorizonEurope</a> or <a href='https://ecscollaborationtool.eu/'>ECS
 collaboration tool</a> or <a href='https://claire-ai.org/'>CLAIRE</a> comes to mind. Contact <a href=
 'http://starynkevitch.net/Basile/index_en.html'>Basile
 Starynkevitch</a> by email to <a href=
-'mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> (home) and <a href=
-									 'mailto:basile.starynkevitch@cea.fr'>basile.starynkevitch@cea.fr</a> (office, at <a href='https://www-list.cea.fr/'>CEA, LIST</a>).</p>
-<nav><a class='cl_navlink' href='#wip_id'>work in progress</a>
-<a class='cl_navlink' href='#team_id'>team</a> <a class=
-'cl_navlink' href='#designideas_id'>design ideas</a> <a class=
-'cl_navlink' href='#documents_id'>documents</a> <a class=
-'cl_navlink' href='#talks_id'>talks</a> <a class='cl_navlink' href=
-'#dependencies_id'>dependencies</a> <a class='cl_navlink' href=
-'#download_id'>download code</a> <a class='cl_navlink' href=
-'#forum_id'>forum</a> <a class='cl_navlink' href=
-'#needs_id'>needs</a> <a class='cl_navlink' href=
-'#contributing_id'>contributing</a> <a class='cl_navlink' href=
-'#applications_id'>applications</a> <a class='cl_navlink' href=
-'#related_id'>related projects</a> <a class='cl_navlink' href=
-				      '#helping_id'>helping <i>RefPerSys</i></a></nav>
+				 'mailto:basile@starynkevitch.net'>basile@starynkevitch.net</a> (home) and
+<a href='mailto:basile.starynkevitch@cea.fr'>basile.starynkevitch@cea.fr</a>
+(office, at <a href='https://www-list.cea.fr/'>CEA, LIST</a>).</p>
+<nav>
+  <a class='cl_navlink' href='#wip_id'>work in progress</a>
+  <a class='cl_navlink' href='#team_id'>team</a>
+  <a class='cl_navlink' href='#designideas_id'>design ideas</a>
+  <a class='cl_navlink' href='#documents_id'>documents</a>
+  <a class='cl_navlink' href='#talks_id'>talks</a>
+  <a class='cl_navlink' href='#dependencies_id'>dependencies</a>
+  <a class='cl_navlink' href='#download_id'>download code</a>
+  <a class='cl_navlink' href='#forum_id'>forum</a>
+  <a class='cl_navlink' href='#needs_id'>needs</a>
+  <a class='cl_navlink' href='#contributing_id'>contributing</a>
+  <a class='cl_navlink' href='#applications_id'>applications</a>
+  <a class='cl_navlink' href='#related_id'>related projects</a>
+  <a class='cl_navlink' href='#research_id'>research questions</a>
+  <a class='cl_navlink' href='#helping_id'>helping <i>RefPerSys</i></a>
+</nav>
 <h2>RefPerSys - <a href='http://refpersys.org/' style=
 'color: brown; font-family: Verdana, Sans-serif; font-size: 120%; font-weight: bold'>
 refpersys.org</a></h2>
@@ -638,7 +642,7 @@ your Linux computer.</b> The build time with <span class=
 
 <h3>Rewrite in C</h3>
 <p>For non-technical reasons, <i>RefPerSys</i> is being rewritten in C
-  in october 2021. That software (GPLv3+) is downloadable from
+  in october 2021 to spring 2022. That software (GPLv3+) is downloadable from
   <a href='https://github.com/RefPerSys/refpersys-in-c'><span class='cl_tt'>github.com/RefPerSys/refpersys-in-c</span></a>.
 
 
@@ -1059,6 +1063,30 @@ suggest related projects, and have an hyperlink to them. We would
   appreciate a reverse link.</p>
 <br/>
 
+<h2 id='research_id'>research questions</h2>
+
+<p>Several research questions are unanswered, including:
+  <ul>
+    <li>dynamically adapting symbolic knowledge representation to the
+    current (holistic) state of the system. For example, a set
+    of objects can be first represented as an
+    unsorted <a href='https://en.wikipedia.org/wiki/Array_data_structure'>array</a>,
+    then changed to some sorted array, and then change to
+    some <a href='https://en.wikipedia.org/wiki/Linked_list'>linked
+	list</a>, some <a href='https://en.wikipedia.org/wiki/Red%E2%80%93black_tree'>red-black tree</a>
+    </li>
+    <li>using machine learning techniques to change these representations</li>
+    <li>dynamically computing the order of evaluation in expert system rules</li>
+    <li>using <a href='https://en.wikipedia.org/wiki/Meta-knowledge'>meta-knowledge</a> (expressed as rules) to generate code</li>
+    <li>using <a href='https://en.wikipedia.org/wiki/Memoization'>memoization</a> techniques</li>
+    <li>driving and configuring <a href='https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)'>garbage collection</a> (GC) by rules</li>
+    <li>generating GC code at runtime, optimized for the current heap</li>
+    <li>generating <a href='https://en.wikipedia.org/wiki/Serialization'>serialization</a> code</li>
+    <li>using machine learning techniques to <q>forget</q> some data (opposite of memoization) and code</li>
+    <li><b>etc</b>...</li>
+  </ul>
+</p>
+
 <!-- **************************************************************** -->
 <h2 id='helping_id'>Helping the <i>RefPerSys</i> project</h2>
 <p>You can help the  <i>RefPerSys</i> project by emailing <a href='mailto:team@refpersys.org'><span class='cl_tt'>team@refpersys.org</span></a> with your first and last or family name, email, geographical location, then:
@@ -1071,7 +1099,7 @@ suggest related projects, and have an hyperlink to them. We would
     <li>Email even officials or bosses inside your organization about <i>refpersys.org</i></li>
     <li>Mention <i>refpersys.org</i> in call for proposals, e.g. to <a href='https://ec.europa.eu/info/research-and-innovation/funding/funding-opportunities/funding-programmes-and-open-calls/horizon-europe_en'>HorizonEurope</a></li>
     <li>Mention <i>refpersys.org</i> on high-traffic websites like <a href='https://stackoverflow.com'>StackOverflow</a> or other forum. Some of us could be banned from <a href='https://stackoverflow.com'>StackOverflow</a>, so ask them to unban us.</li>
-    <li>Send us a postcard</li>
+    <li><b>Send us a postcard</b></li>
     <li>Send us books about computer science or Linux open source software</li>
     <li>If you write a book (on paper), mention <i>refpersys.org</i> in it.</li>
     <li>If you can print a leaflet about or mentioning <i>refpersys.org</i> at your work place, please do (and sign it)</li>
